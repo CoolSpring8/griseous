@@ -31,6 +31,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.0",
     "immer": "^9.0.5",
+    "ky": "^0.28.5",
     "lint-staged": "^11.1.2",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",
