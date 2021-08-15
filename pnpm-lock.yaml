@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
+  '@types/react-router-dom': ^5.1.8
   '@typescript-eslint/eslint-plugin': ^4.29.0
   '@typescript-eslint/parser': ^4.29.0
   '@vitejs/plugin-react-refresh': ^1.3.1
@@ -22,6 +23,7 @@ specifiers:
   prettier: 2.3.2
   react: ^17.0.0
   react-dom: ^17.0.0
+  react-router-dom: ^5.2.0
   tailwindcss: ^2.2.7
   typescript: ^4.3.2
   vite: ^2.4.4
@@ -29,10 +31,12 @@ specifiers:
 dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-router-dom: 5.2.0_react@17.0.2
 
 devDependencies:
   '@types/react': 17.0.16
   '@types/react-dom': 17.0.9
+  '@types/react-router-dom': 5.1.8
   '@typescript-eslint/eslint-plugin': 4.29.0_48ea228fa0647506aa803d17f48b59f7
   '@typescript-eslint/parser': 4.29.0_eslint@7.32.0+typescript@4.3.5
   '@vitejs/plugin-react-refresh': 1.3.6
@@ -168,6 +172,8 @@ packages:
       '@babel/template': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-optimise-call-expression/7.14.5:
@@ -190,6 +196,8 @@ packages:
       '@babel/helper-optimise-call-expression': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-simple-access/7.14.8:
@@ -223,6 +231,8 @@ packages:
       '@babel/template': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/highlight/7.14.5:
@@ -273,7 +283,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
-    dev: true
 
   /@babel/template/7.14.5:
     resolution: {integrity: sha1-qbydizM1T/blWpxg0RCSAKaJdPQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@babel/template/download/@babel/template-7.14.5.tgz}
@@ -370,6 +379,10 @@ packages:
       picomatch: 2.3.0
     dev: true
 
+  /@types/history/4.7.9:
+    resolution: {integrity: sha1-HPttYO84IsWJ8Y5w+LEvmijOhyQ=, tarball: '@types/history/download/@types/history-4.7.9.tgz'}
+    dev: true
+
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha1-l+3JA36gw4WFMgsolk3eOznkZg0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@types/json-schema/download/@types/json-schema-7.0.9.tgz}
     dev: true
@@ -385,6 +398,21 @@ packages:
   /@types/react-dom/17.0.9:
     resolution: {integrity: sha1-RBqYHanXvhFwQuGm/T2sSzD1Wt0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-17.0.9.tgz}
     dependencies:
+      '@types/react': 17.0.16
+    dev: true
+
+  /@types/react-router-dom/5.1.8:
+    resolution: {integrity: sha1-vz4cgUmz1i6qIG1YWZ3oLfAkEZI=, tarball: '@types/react-router-dom/download/@types/react-router-dom-5.1.8.tgz'}
+    dependencies:
+      '@types/history': 4.7.9
+      '@types/react': 17.0.16
+      '@types/react-router': 5.1.16
+    dev: true
+
+  /@types/react-router/5.1.16:
+    resolution: {integrity: sha1-87oEX7lmNOOLIVMcSC+a6zdgipk=, tarball: '@types/react-router/download/@types/react-router-5.1.16.tgz'}
+    dependencies:
+      '@types/history': 4.7.9
       '@types/react': 17.0.16
     dev: true
 
@@ -1578,6 +1606,23 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /history/4.10.1:
+    resolution: {integrity: sha1-MzcaZeOoOyZ0NOKz87G0xYqtTPM=, tarball: history/download/history-4.10.1.tgz}
+    dependencies:
+      '@babel/runtime': 7.14.8
+      loose-envify: 1.4.0
+      resolve-pathname: 3.0.0
+      tiny-invariant: 1.1.0
+      tiny-warning: 1.0.3
+      value-equal: 1.0.1
+    dev: false
+
+  /hoist-non-react-statics/3.3.2:
+    resolution: {integrity: sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=, tarball: hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz}
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha1-3/wL+aIcAiCQkPKqaUKeFBTa8/k=, tarball: hosted-git-info/download/hosted-git-info-2.8.9.tgz}
     dev: true
@@ -1780,6 +1825,10 @@ packages:
     resolution: {integrity: sha1-PybHaoCVk7Ur+i7LVxDtJ3m1Iqc=, tarball: is-unicode-supported/download/is-unicode-supported-0.1.0.tgz}
     engines: {node: '>=10'}
     dev: true
+
+  /isarray/0.0.1:
+    resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=, tarball: isarray/download/isarray-0.0.1.tgz}
+    dev: false
 
   /isexe/2.0.0:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, tarball: isexe/download/isexe-2.0.0.tgz}
@@ -2006,6 +2055,18 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /mini-create-react-context/0.4.1_prop-types@15.7.2+react@17.0.2:
+    resolution: {integrity: sha1-ByFxVhv9ySLaCKYMIZekl8wtHV4=, tarball: mini-create-react-context/download/mini-create-react-context-0.4.1.tgz}
+    peerDependencies:
+      prop-types: ^15.0.0
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.14.8
+      prop-types: 15.7.2
+      react: 17.0.2
+      tiny-warning: 1.0.3
+    dev: false
+
   /minimatch/3.0.4:
     resolution: {integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=, tarball: minimatch/download/minimatch-3.0.4.tgz}
     dependencies:
@@ -2226,6 +2287,12 @@ packages:
     resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, tarball: path-parse/download/path-parse-1.0.7.tgz}
     dev: true
 
+  /path-to-regexp/1.8.0:
+    resolution: {integrity: sha1-iHs7qdhDk+h6CgufTLdWGYtTVIo=, tarball: path-to-regexp/download/path-to-regexp-1.8.0.tgz}
+    dependencies:
+      isarray: 0.0.1
+    dev: false
+
   /path-type/3.0.0:
     resolution: {integrity: sha1-zvMdyOCho7sNEFwM2Xzzv0f0428=, tarball: path-type/download/path-type-3.0.0.tgz}
     engines: {node: '>=4'}
@@ -2281,6 +2348,9 @@ packages:
     engines: {node: '>= 10'}
     peerDependencies:
       ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      ts-node:
+        optional: true
     dependencies:
       import-cwd: 3.0.0
       lilconfig: 2.0.3
@@ -2349,7 +2419,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /punycode/2.1.1:
     resolution: {integrity: sha1-tYsBCsQMIsVldhbI0sLALHv0eew=, tarball: punycode/download/punycode-2.1.1.tgz}
@@ -2387,13 +2456,45 @@ packages:
     dev: false
 
   /react-is/16.13.1:
-    resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, tarball: react-is/download/react-is-16.13.1.tgz}
-    dev: true
+    resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, tarball: react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1628930630845&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz}
 
   /react-refresh/0.10.0:
     resolution: {integrity: sha1-L1NslmDAubHVAGhNnlKmXnQE9+M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/react-refresh/download/react-refresh-0.10.0.tgz}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-dom/5.2.0_react@17.0.2:
+    resolution: {integrity: sha1-nmWk0MReEyieZsexfH4XXQ6hVmI=, tarball: react-router-dom/download/react-router-dom-5.2.0.tgz}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      '@babel/runtime': 7.14.8
+      history: 4.10.1
+      loose-envify: 1.4.0
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-router: 5.2.0_react@17.0.2
+      tiny-invariant: 1.1.0
+      tiny-warning: 1.0.3
+    dev: false
+
+  /react-router/5.2.0_react@17.0.2:
+    resolution: {integrity: sha1-Qk51ZByodH+/duXsyml4GqN+opM=, tarball: react-router/download/react-router-5.2.0.tgz}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      '@babel/runtime': 7.14.8
+      history: 4.10.1
+      hoist-non-react-statics: 3.3.2
+      loose-envify: 1.4.0
+      mini-create-react-context: 0.4.1_prop-types@15.7.2+react@17.0.2
+      path-to-regexp: 1.8.0
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-is: 16.13.1
+      tiny-invariant: 1.1.0
+      tiny-warning: 1.0.3
+    dev: false
 
   /react/17.0.2:
     resolution: {integrity: sha1-0LXMUW0p6z7uOD91tihkz7aAADc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/react/download/react-17.0.2.tgz}
@@ -2436,7 +2537,6 @@ packages:
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=, tarball: regenerator-runtime/download/regenerator-runtime-0.13.9.tgz}
-    dev: true
 
   /regexp.prototype.flags/1.3.1:
     resolution: {integrity: sha1-fvNSro0VnnWMDq3Kb4/LTu8HviY=, tarball: regexp.prototype.flags/download/regexp.prototype.flags-1.3.1.tgz}
@@ -2465,6 +2565,10 @@ packages:
     resolution: {integrity: sha1-w1IlhD3493bfIcV1V7wIfp39/Gk=, tarball: resolve-from/download/resolve-from-5.0.0.tgz}
     engines: {node: '>=8'}
     dev: true
+
+  /resolve-pathname/3.0.0:
+    resolution: {integrity: sha1-mdAiJNPPJjaJvsuzk7xWAxMCXc0=, tarball: resolve-pathname/download/resolve-pathname-3.0.0.tgz}
+    dev: false
 
   /resolve/1.20.0:
     resolution: {integrity: sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=, tarball: resolve/download/resolve-1.20.0.tgz}
@@ -2794,6 +2898,14 @@ packages:
     resolution: {integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=, tarball: through/download/through-2.3.8.tgz}
     dev: true
 
+  /tiny-invariant/1.1.0:
+    resolution: {integrity: sha1-Y0xfjv3CdxS384bDXmdgmR0jCHU=, tarball: tiny-invariant/download/tiny-invariant-1.1.0.tgz}
+    dev: false
+
+  /tiny-warning/1.0.3:
+    resolution: {integrity: sha1-lKMNtFPfTGQ9D9VmBg1gqHXYR1Q=, tarball: tiny-warning/download/tiny-warning-1.0.3.tgz}
+    dev: false
+
   /tmp/0.2.1:
     resolution: {integrity: sha1-hFf8MDfc9HGcJRNnoa9lAO4czxQ=, tarball: tmp/download/tmp-0.2.1.tgz}
     engines: {node: '>=8.17.0'}
@@ -2892,6 +3004,10 @@ packages:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /value-equal/1.0.1:
+    resolution: {integrity: sha1-Hgt5THNMXAyt4XnEN9NW2TGjTWw=, tarball: value-equal/download/value-equal-1.0.1.tgz}
+    dev: false
 
   /vite/2.4.4:
     resolution: {integrity: sha1-jEAqB61F8Wj261Qovq048+Q2Pkc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/vite/download/vite-2.4.4.tgz}
