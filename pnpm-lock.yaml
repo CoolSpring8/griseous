@@ -18,6 +18,7 @@ specifiers:
   eslint-plugin-react-hooks: ^4.2.0
   eslint-plugin-simple-import-sort: ^7.0.0
   husky: ^7.0.0
+  immer: ^9.0.5
   lint-staged: ^11.1.2
   postcss: ^8.3.6
   prettier: 2.3.2
@@ -52,10 +53,11 @@ devDependencies:
   eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
   eslint-plugin-simple-import-sort: 7.0.0_eslint@7.32.0
   husky: 7.0.1
+  immer: 9.0.5
   lint-staged: 11.1.2
   postcss: 8.3.6
   prettier: 2.3.2
-  react-query: 3.19.6_react@17.0.2
+  react-query: 3.19.6_react-dom@17.0.2+react@17.0.2
   tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
   typescript: 4.3.5
   vite: 2.4.4
@@ -1677,6 +1679,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immer/9.0.5:
+    resolution: {integrity: sha1-pxVPNP5wZPFfAFVMyUxmzAv0U+w=, tarball: immer/download/immer-9.0.5.tgz}
+    dev: true
+
   /import-cwd/3.0.0:
     resolution: {integrity: sha1-IIRVR3GAFRJuqbNna3WS+4vUz5I=, tarball: import-cwd/download/import-cwd-3.0.0.tgz}
     engines: {node: '>=8'}
@@ -2507,15 +2513,23 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, tarball: react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1628930630845&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz}
 
-  /react-query/3.19.6_react@17.0.2:
+  /react-query/3.19.6_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha1-Ar2okaPwoFNJNNkCQ1DWVbJo6Cw=, tarball: react-query/download/react-query-3.19.6.tgz}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
     dependencies:
       '@babel/runtime': 7.14.8
       broadcast-channel: 3.7.0
       match-sorter: 6.3.0
       react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: true
 
   /react-refresh/0.10.0:
