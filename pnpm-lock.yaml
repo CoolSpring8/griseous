@@ -32,8 +32,11 @@ specifiers:
   vite: ^2.4.4
 
 dependencies:
+  immer: 9.0.5
+  ky: 0.28.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-query: 3.19.6_react-dom@17.0.2+react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
 
 devDependencies:
@@ -54,12 +57,9 @@ devDependencies:
   eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
   eslint-plugin-simple-import-sort: 7.0.0_eslint@7.32.0
   husky: 7.0.1
-  immer: 9.0.5
-  ky: 0.28.5
   lint-staged: 11.1.2
   postcss: 8.3.6
   prettier: 2.3.2
-  react-query: 3.19.6_react-dom@17.0.2+react@17.0.2
   tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
   typescript: 4.3.5
   vite: 2.4.4
@@ -733,12 +733,11 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
-    dev: true
 
   /big-integer/1.6.48:
     resolution: {integrity: sha1-j9iL0WMsukocjD49cVnwi7lbS54=, tarball: big-integer/download/big-integer-1.6.48.tgz}
     engines: {node: '>=0.6'}
-    dev: true
+    dev: false
 
   /binary-extensions/2.2.0:
     resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: binary-extensions/download/binary-extensions-2.2.0.tgz}
@@ -750,7 +749,6 @@ packages:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
-    dev: true
 
   /braces/3.0.2:
     resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=, tarball: braces/download/braces-3.0.2.tgz}
@@ -770,7 +768,7 @@ packages:
       oblivious-set: 1.0.0
       rimraf: 3.0.2
       unload: 2.2.0
-    dev: true
+    dev: false
 
   /browserslist/4.16.7:
     resolution: {integrity: sha1-EIsNHvM8SvG1h8VPOQ5wQReOQzU=, tarball: browserslist/download/browserslist-4.16.7.tgz?cache=0&sync_timestamp=1628517687731&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fbrowserslist%2Fdownload%2Fbrowserslist-4.16.7.tgz}
@@ -913,7 +911,6 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, tarball: concat-map/download/concat-map-0.0.1.tgz}
-    dev: true
 
   /confusing-browser-globals/1.0.10:
     resolution: {integrity: sha1-MNHn89G4grJexJM9HRraw1PSClk=, tarball: confusing-browser-globals/download/confusing-browser-globals-1.0.10.tgz}
@@ -1009,7 +1006,7 @@ packages:
 
   /detect-node/2.1.0:
     resolution: {integrity: sha1-yccHdaScPQO8LAbZpzvlUPl4+LE=, tarball: detect-node/download/detect-node-2.1.0.tgz}
-    dev: true
+    dev: false
 
   /detective/5.2.0:
     resolution: {integrity: sha1-/rKnfoW5BOzepFmtiXzJCpm9Kns=, tarball: detective/download/detective-5.2.0.tgz}
@@ -1510,7 +1507,6 @@ packages:
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: fs.realpath/download/fs.realpath-1.0.0.tgz}
-    dev: true
 
   /fsevents/2.3.2:
     resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz}
@@ -1571,7 +1567,6 @@ packages:
       minimatch: 3.0.4
       once: 1.4.0
       path-is-absolute: 1.0.1
-    dev: true
 
   /globals/11.12.0:
     resolution: {integrity: sha1-q4eVM4hooLq9hSV1gBjCp+uVxC4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/globals/download/globals-11.12.0.tgz}
@@ -1683,7 +1678,7 @@ packages:
 
   /immer/9.0.5:
     resolution: {integrity: sha1-pxVPNP5wZPFfAFVMyUxmzAv0U+w=, tarball: immer/download/immer-9.0.5.tgz}
-    dev: true
+    dev: false
 
   /import-cwd/3.0.0:
     resolution: {integrity: sha1-IIRVR3GAFRJuqbNna3WS+4vUz5I=, tarball: import-cwd/download/import-cwd-3.0.0.tgz}
@@ -1722,11 +1717,9 @@ packages:
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
-    dev: true
 
   /inherits/2.0.4:
     resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, tarball: inherits/download/inherits-2.0.4.tgz}
-    dev: true
 
   /internal-slot/1.0.3:
     resolution: {integrity: sha1-c0fjB97uovqsKsYgXUvH00ln9Zw=, tarball: internal-slot/download/internal-slot-1.0.3.tgz}
@@ -1868,7 +1861,7 @@ packages:
 
   /js-sha3/0.8.0:
     resolution: {integrity: sha1-ubel2nOvrX3t0PjEY5VMveaBiEA=, tarball: js-sha3/download/js-sha3-0.8.0.tgz}
-    dev: true
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, tarball: js-tokens/download/js-tokens-4.0.0.tgz}
@@ -1934,7 +1927,7 @@ packages:
   /ky/0.28.5:
     resolution: {integrity: sha1-S3raJPsEQMOJhAbzpJhqvmC6IT4=, tarball: ky/download/ky-0.28.5.tgz}
     engines: {node: '>=12'}
-    dev: true
+    dev: false
 
   /language-subtag-registry/0.3.21:
     resolution: {integrity: sha1-BKwhi+pG8EywOQhGAsbanniN1Fo=, tarball: language-subtag-registry/download/language-subtag-registry-0.3.21.tgz}
@@ -2079,7 +2072,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.14.8
       remove-accents: 0.4.2
-    dev: true
+    dev: false
 
   /merge-stream/2.0.0:
     resolution: {integrity: sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=, tarball: merge-stream/download/merge-stream-2.0.0.tgz}
@@ -2100,7 +2093,7 @@ packages:
 
   /microseconds/0.2.0:
     resolution: {integrity: sha1-Izsl9Qxipl2GH5eKSk+OwYeX3Dk=, tarball: microseconds/download/microseconds-0.2.0.tgz}
-    dev: true
+    dev: false
 
   /mimic-fn/2.1.0:
     resolution: {integrity: sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=, tarball: mimic-fn/download/mimic-fn-2.1.0.tgz}
@@ -2123,7 +2116,6 @@ packages:
     resolution: {integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=, tarball: minimatch/download/minimatch-3.0.4.tgz}
     dependencies:
       brace-expansion: 1.1.11
-    dev: true
 
   /minimist/1.2.5:
     resolution: {integrity: sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=, tarball: minimist/download/minimist-1.2.5.tgz}
@@ -2146,7 +2138,7 @@ packages:
     resolution: {integrity: sha1-sFVPaa2J4i0JB/ehKwmTpdlhN+8=, tarball: nano-time/download/nano-time-1.0.0.tgz}
     dependencies:
       big-integer: 1.6.48
-    dev: true
+    dev: false
 
   /nanoid/3.1.23:
     resolution: {integrity: sha1-90QIbOfCvEfuCoRyV01ceOQYOoE=, tarball: nanoid/download/nanoid-3.1.23.tgz}
@@ -2252,13 +2244,12 @@ packages:
 
   /oblivious-set/1.0.0:
     resolution: {integrity: sha1-yDFvLC+2/3sRthWNsyNMSfczxWY=, tarball: oblivious-set/download/oblivious-set-1.0.0.tgz}
-    dev: true
+    dev: false
 
   /once/1.4.0:
     resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: once/download/once-1.4.0.tgz}
     dependencies:
       wrappy: 1.0.2
-    dev: true
 
   /onetime/5.1.2:
     resolution: {integrity: sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=, tarball: onetime/download/onetime-5.1.2.tgz}
@@ -2338,7 +2329,6 @@ packages:
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=, tarball: path-is-absolute/download/path-is-absolute-1.0.1.tgz}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /path-key/3.1.1:
     resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=, tarball: path-key/download/path-key-3.1.1.tgz}
@@ -2537,7 +2527,7 @@ packages:
       match-sorter: 6.3.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-    dev: true
+    dev: false
 
   /react-refresh/0.10.0:
     resolution: {integrity: sha1-L1NslmDAubHVAGhNnlKmXnQE9+M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/react-refresh/download/react-refresh-0.10.0.tgz}
@@ -2634,7 +2624,7 @@ packages:
 
   /remove-accents/0.4.2:
     resolution: {integrity: sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=, tarball: remove-accents/download/remove-accents-0.4.2.tgz}
-    dev: true
+    dev: false
 
   /require-from-string/2.0.2:
     resolution: {integrity: sha1-iaf92TgmEmcxjq/hT5wy5ZjDaQk=, tarball: require-from-string/download/require-from-string-2.0.2.tgz}
@@ -2687,7 +2677,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.1.7
-    dev: true
 
   /rollup/2.56.1:
     resolution: {integrity: sha1-8p28BKXVMt+pBPdrYjlfNZUGIR4=, tarball: rollup/download/rollup-2.56.1.tgz}
@@ -3074,7 +3063,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.14.8
       detect-node: 2.1.0
-    dev: true
+    dev: false
 
   /uri-js/4.4.1:
     resolution: {integrity: sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=, tarball: uri-js/download/uri-js-4.4.1.tgz}
@@ -3157,7 +3146,6 @@ packages:
 
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, tarball: wrappy/download/wrappy-1.0.2.tgz}
-    dev: true
 
   /xtend/4.0.2:
     resolution: {integrity: sha1-u3J3n1+kZRhrH0OPZ0+jR/2121Q=, tarball: xtend/download/xtend-4.0.2.tgz}

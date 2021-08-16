@@ -1,9 +1,11 @@
 import React from "react";
 
+import HotTopic from "../components/HotTopic";
+
 function Home(): JSX.Element {
   return (
     <div>
-      <p>Griseous</p>
+      <HotTopic />
     </div>
   );
 }
