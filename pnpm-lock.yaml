@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@axa-fr/react-oidc-context': ^3.1.7
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@types/react-router-dom': ^5.1.8
@@ -21,6 +22,7 @@ specifiers:
   immer: ^9.0.5
   ky: ^0.28.5
   lint-staged: ^11.1.2
+  oidc-client: ^1.11.5
   postcss: ^8.3.6
   prettier: 2.3.2
   react: ^17.0.0
@@ -32,8 +34,10 @@ specifiers:
   vite: ^2.4.4
 
 dependencies:
+  '@axa-fr/react-oidc-context': 3.1.7_baa20bf36a01f22e944c15025a8aad9f
   immer: 9.0.5
   ky: 0.28.5
+  oidc-client: 1.11.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-query: 3.19.6_react-dom@17.0.2+react@17.0.2
@@ -65,6 +69,31 @@ devDependencies:
   vite: 2.4.4
 
 packages:
+
+  /@axa-fr/react-oidc-context/3.1.7_baa20bf36a01f22e944c15025a8aad9f:
+    resolution: {integrity: sha1-/JAKf60fUas4pAirMZDH+qrBStc=, tarball: '@axa-fr/react-oidc-context/download/@axa-fr/react-oidc-context-3.1.7.tgz'}
+    peerDependencies:
+      oidc-client: '>=1.8.2'
+      react: '>=16.8.6'
+      react-dom: '>=16.8.6'
+    dependencies:
+      '@axa-fr/react-oidc-core': 3.1.7_oidc-client@1.11.5+react@17.0.2
+      oidc-client: 1.11.5
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /@axa-fr/react-oidc-core/3.1.7_oidc-client@1.11.5+react@17.0.2:
+    resolution: {integrity: sha1-f9nVZKK0HkVSLZoT0FeJ9l5+AgM=, tarball: '@axa-fr/react-oidc-core/download/@axa-fr/react-oidc-core-3.1.7.tgz'}
+    peerDependencies:
+      oidc-client: '>=1.8.2'
+      react: '>=16.8.6'
+    dependencies:
+      oidc-client: 1.11.5
+      prop-types: 15.7.2
+      react: 17.0.2
+    dev: false
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha1-9K1DWqJj25NbjxDyxVLSP7cWpj8=, tarball: '@babel/code-frame/download/@babel/code-frame-7.12.11.tgz'}
@@ -577,7 +606,6 @@ packages:
     resolution: {integrity: sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=, tarball: acorn/download/acorn-7.4.1.tgz}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /aggregate-error/3.1.0:
     resolution: {integrity: sha1-kmcP9Q9TWb23o+DUDQ7DDFc3aHo=, tarball: aggregate-error/download/aggregate-error-3.1.0.tgz}
@@ -733,6 +761,10 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
+
+  /base64-js/1.5.1:
+    resolution: {integrity: sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=, tarball: base64-js/download/base64-js-1.5.1.tgz}
+    dev: false
 
   /big-integer/1.6.48:
     resolution: {integrity: sha1-j9iL0WMsukocjD49cVnwi7lbS54=, tarball: big-integer/download/big-integer-1.6.48.tgz}
@@ -927,6 +959,11 @@ packages:
     requiresBuild: true
     dev: true
 
+  /core-js/3.16.1:
+    resolution: {integrity: sha1-9Ehc5cnzxqfLGPqASI4I02IJckk=, tarball: core-js/download/core-js-3.16.1.tgz}
+    requiresBuild: true
+    dev: false
+
   /cosmiconfig/7.0.0:
     resolution: {integrity: sha1-75tE13OVnK5j3ezRIt4jhTtg+NM=, tarball: cosmiconfig/download/cosmiconfig-7.0.0.tgz}
     engines: {node: '>=10'}
@@ -946,6 +983,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha1-nkhbzwNSEEG9hYRHhrg/t2GXNs8=, tarball: crypto-js/download/crypto-js-4.1.1.tgz}
+    dev: false
 
   /css-unit-converter/1.1.2:
     resolution: {integrity: sha1-THf1oZVObb/2BpXsshTjJwQ2qyE=, tarball: css-unit-converter/download/css-unit-converter-1.1.2.tgz}
@@ -2246,6 +2287,16 @@ packages:
     resolution: {integrity: sha1-yDFvLC+2/3sRthWNsyNMSfczxWY=, tarball: oblivious-set/download/oblivious-set-1.0.0.tgz}
     dev: false
 
+  /oidc-client/1.11.5:
+    resolution: {integrity: sha1-Agqhk9aKPh+Hok/L9QBztzjekrs=, tarball: oidc-client/download/oidc-client-1.11.5.tgz}
+    dependencies:
+      acorn: 7.4.1
+      base64-js: 1.5.1
+      core-js: 3.16.1
+      crypto-js: 4.1.1
+      serialize-javascript: 4.0.0
+    dev: false
+
   /once/1.4.0:
     resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: once/download/once-1.4.0.tgz}
     dependencies:
@@ -2496,6 +2547,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /randombytes/2.1.0:
+    resolution: {integrity: sha1-32+ENy8CcNxlzfYpE0mrekc9Tyo=, tarball: randombytes/download/randombytes-2.1.0.tgz}
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1628269588141&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz}
     peerDependencies:
@@ -2701,7 +2758,6 @@ packages:
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha1-mR7GnSluAxN0fVm9/St0XDX4go0=, tarball: safe-buffer/download/safe-buffer-5.1.2.tgz}
-    dev: true
 
   /scheduler/0.20.2:
     resolution: {integrity: sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/scheduler/download/scheduler-0.20.2.tgz?cache=0&sync_timestamp=1628269660091&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fscheduler%2Fdownload%2Fscheduler-0.20.2.tgz}
@@ -2731,6 +2787,12 @@ packages:
     dependencies:
       lru-cache: 6.0.0
     dev: true
+
+  /serialize-javascript/4.0.0:
+    resolution: {integrity: sha1-tSXhI4SJpez8Qq+sw/6Z5mb0sao=, tarball: serialize-javascript/download/serialize-javascript-4.0.0.tgz}
+    dependencies:
+      randombytes: 2.1.0
+    dev: false
 
   /shebang-command/2.0.0:
     resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=, tarball: shebang-command/download/shebang-command-2.0.0.tgz}

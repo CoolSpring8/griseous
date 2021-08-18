@@ -8,8 +8,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@axa-fr/react-oidc-context": "^3.1.7",
     "immer": "^9.0.5",
     "ky": "^0.28.5",
+    "oidc-client": "^1.11.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-query": "^3.19.6",
