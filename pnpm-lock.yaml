@@ -2,6 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@axa-fr/react-oidc-context': ^3.1.7
+  '@bbob/preset-react': ^2.7.0
+  '@bbob/react': ^2.6.2
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@types/react-router-dom': ^5.1.8
@@ -35,6 +37,8 @@ specifiers:
 
 dependencies:
   '@axa-fr/react-oidc-context': 3.1.7_baa20bf36a01f22e944c15025a8aad9f
+  '@bbob/preset-react': 2.7.0
+  '@bbob/react': 2.6.2_react@17.0.2
   immer: 9.0.5
   ky: 0.28.5
   oidc-client: 1.11.5
@@ -352,6 +356,58 @@ packages:
       '@babel/helper-validator-identifier': 7.14.9
       to-fast-properties: 2.0.0
     dev: true
+
+  /@bbob/core/2.7.0:
+    resolution: {integrity: sha1-XtfuacS3FZB6CDynOSWw70w/ZW4=, tarball: '@bbob/core/download/@bbob/core-2.7.0.tgz'}
+    dependencies:
+      '@bbob/parser': 2.7.0
+    dev: false
+
+  /@bbob/html/2.7.0:
+    resolution: {integrity: sha1-MMK9EYyzbqGFzH+SL7szzZLga/Q=, tarball: '@bbob/html/download/@bbob/html-2.7.0.tgz'}
+    dependencies:
+      '@bbob/core': 2.7.0
+      '@bbob/plugin-helper': 2.7.0
+    dev: false
+
+  /@bbob/parser/2.7.0:
+    resolution: {integrity: sha1-7VahFp2faebe/kUSymXNAEqabcw=, tarball: '@bbob/parser/download/@bbob/parser-2.7.0.tgz'}
+    dependencies:
+      '@bbob/plugin-helper': 2.7.0
+    dev: false
+
+  /@bbob/plugin-helper/2.7.0:
+    resolution: {integrity: sha1-4k9KEDorTapxZ011Gvdmx5HR1XA=, tarball: '@bbob/plugin-helper/download/@bbob/plugin-helper-2.7.0.tgz'}
+    dev: false
+
+  /@bbob/preset-html5/2.7.0:
+    resolution: {integrity: sha1-F1mBcm2tA48PtagtSQtyh+uhq9s=, tarball: '@bbob/preset-html5/download/@bbob/preset-html5-2.7.0.tgz'}
+    dependencies:
+      '@bbob/plugin-helper': 2.7.0
+      '@bbob/preset': 2.7.0
+    dev: false
+
+  /@bbob/preset-react/2.7.0:
+    resolution: {integrity: sha1-wAJCf2GKIAOGfpfV557qsn3CaNc=, tarball: '@bbob/preset-react/download/@bbob/preset-react-2.7.0.tgz'}
+    dependencies:
+      '@bbob/preset-html5': 2.7.0
+    dev: false
+
+  /@bbob/preset/2.7.0:
+    resolution: {integrity: sha1-Uql6AuLsiMx4SiGH7SOYIM9rD8g=, tarball: '@bbob/preset/download/@bbob/preset-2.7.0.tgz'}
+    dev: false
+
+  /@bbob/react/2.6.2_react@17.0.2:
+    resolution: {integrity: sha1-XEL4cOI6hzN3gdpGOh9gXq+uWaQ=, tarball: '@bbob/react/download/@bbob/react-2.6.2.tgz'}
+    peerDependencies:
+      prop-types: 15.x
+      react: 15.x
+    dependencies:
+      '@bbob/core': 2.7.0
+      '@bbob/html': 2.7.0
+      '@bbob/plugin-helper': 2.7.0
+      react: 17.0.2
+    dev: false
 
   /@eslint/eslintrc/0.4.3:
     resolution: {integrity: sha1-nkKYHvA1vrPdSa3ResuW6P9vOUw=, tarball: '@eslint/eslintrc/download/@eslint/eslintrc-0.4.3.tgz'}

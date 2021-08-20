@@ -8,9 +8,19 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { OIDC_CONFIG } from "./config";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Topic from "./pages/Topic";
 import LocalStorage from "./utils/LocalStorage";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      // make less requests in development
+      refetchOnMount: false,
+      refetchOnReconnect: false,
+    },
+  },
+});
 
 function App(): JSX.Element {
   return (
@@ -24,6 +34,9 @@ function App(): JSX.Element {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/topic/:id/:page?">
+              <Topic />
             </Route>
             <Route>
               <NotFound />

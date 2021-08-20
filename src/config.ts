@@ -11,11 +11,13 @@ const OIDC_CONFIG: UserManagerSettings = {
   response_type: "code",
   scope: "openid cc98-api offline_access profile",
   authority: OPENID_ROOT,
-  // 不可用，consent_required
   silent_redirect_uri:
     "http://test.zju.today:3000/authentication/silent_callback",
   automaticSilentRenew: true,
   loadUserInfo: true,
 };
 
-export { API_ROOT, OIDC_CONFIG, OPENID_ROOT };
+// 主题帖的一页包含的回复数
+const POST_PER_TOPIC_PAGE = 10;
+
+export { API_ROOT, OIDC_CONFIG, OPENID_ROOT, POST_PER_TOPIC_PAGE as PAGE_SIZE };
