@@ -8,7 +8,7 @@ import { useQuery, UseQueryResult } from "react-query";
 import { useParams } from "react-router-dom";
 import useTitle from "react-use/lib/useTitle";
 
-import { API_ROOT, DEFAULT_TITLE, POST_PER_TOPIC_PAGE } from "../config";
+import { API_ROOT, DEFAULT_TITLE, POSTS_PER_TOPIC_PAGE } from "../config";
 
 function Topic(): JSX.Element {
   const { id, page } = useParams();
@@ -20,8 +20,8 @@ function Topic(): JSX.Element {
       ky
         .get(
           `${API_ROOT}/Topic/${id}/post?from=${
-            (realPage - 1) * POST_PER_TOPIC_PAGE
-          }&size=${POST_PER_TOPIC_PAGE}`,
+            (realPage - 1) * POSTS_PER_TOPIC_PAGE
+          }&size=${POSTS_PER_TOPIC_PAGE}`,
           { headers: { Authorization: `Bearer ${oidcUser.access_token}` } }
         )
         .json(),

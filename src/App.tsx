@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header";
 import { OIDC_CONFIG } from "./config";
+import Board from "./pages/Board";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Topic from "./pages/Topic";
@@ -39,6 +40,9 @@ function App(): JSX.Element {
             </Route>
             <Route path="/topic/:id/:page?">
               <Topic />
+            </Route>
+            <Route path="/board/:id/:page?">
+              <Board />
             </Route>
             <Route>
               <NotFound />
