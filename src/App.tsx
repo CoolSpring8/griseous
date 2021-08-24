@@ -5,6 +5,7 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Header from "./components/Header";
 import { OIDC_CONFIG } from "./config";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ function App(): JSX.Element {
         UserStore={LocalStorage}
       >
         <Router>
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />

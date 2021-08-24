@@ -20,4 +20,12 @@ const OIDC_CONFIG: UserManagerSettings = {
 // 主题帖的一页包含的回复数
 const POST_PER_TOPIC_PAGE = 10;
 
-export { API_ROOT, OIDC_CONFIG, OPENID_ROOT, POST_PER_TOPIC_PAGE as PAGE_SIZE };
+const DEFAULT_TITLE = "Griseous - an unofficial web UI for CC98";
+
+export {
+  API_ROOT,
+  DEFAULT_TITLE,
+  OIDC_CONFIG,
+  OPENID_ROOT,
+  POST_PER_TOPIC_PAGE,
+};
