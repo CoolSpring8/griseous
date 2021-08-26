@@ -25,7 +25,8 @@ function Board(): JSX.Element {
         .get(`${API_ROOT}/topic/toptopics?boardid=${id}`, {
           headers: { Authorization: `Bearer ${oidcUser.access_token}` },
         })
-        .json()
+        .json(),
+    { enabled: page === 1 }
   );
   const topics: UseQueryResult<ITopic[]> = useQuery(
     ["boardTopics", id, page],
@@ -46,11 +47,12 @@ function Board(): JSX.Element {
     <div>
       <h1>{boardInfo.data?.name}</h1>
       <div>
-        {topTopics.data?.map((t) => (
-          <Link to={`/topic/${t.id}`} className="block">
-            {t.title}
-          </Link>
-        ))}
+        {page === 1 &&
+          topTopics.data?.map((t) => (
+            <Link to={`/topic/${t.id}`} className="block">
+              {t.title}
+            </Link>
+          ))}
       </div>
       <div>
         {topics.data?.map((t) => (
