@@ -1,7 +1,7 @@
-import { useReactOidc } from "@axa-fr/react-oidc-context";
 import { IBoard, ITopic } from "@cc98/api";
 import ky from "ky";
 import * as React from "react";
+import { useAuth } from "react-oidc-context";
 import { useQuery, UseQueryResult } from "react-query";
 import { Link, useParams } from "react-router-dom";
 
@@ -10,11 +10,11 @@ import { API_ROOT, TOPICS_PER_BOARD_PAGE } from "../config";
 function Board(): JSX.Element {
   const { id, page } = useParams();
   const realPage = page ?? 1;
-  const { oidcUser } = useReactOidc();
+  const auth = useAuth();
   const boardInfo: UseQueryResult<IBoard> = useQuery(["boardInfo", id], () =>
     ky
       .get(`${API_ROOT}/board/${id}`, {
-        headers: { Authorization: `Bearer ${oidcUser.access_token}` },
+        headers: { Authorization: `Bearer ${auth.user?.access_token}` },
       })
       .json()
   );
@@ -23,7 +23,7 @@ function Board(): JSX.Element {
     () =>
       ky
         .get(`${API_ROOT}/topic/toptopics?boardid=${id}`, {
-          headers: { Authorization: `Bearer ${oidcUser.access_token}` },
+          headers: { Authorization: `Bearer ${auth.user?.access_token}` },
         })
         .json(),
     { enabled: page === 1 }
@@ -37,7 +37,7 @@ function Board(): JSX.Element {
             (realPage - 1) * TOPICS_PER_BOARD_PAGE
           }&size=${TOPICS_PER_BOARD_PAGE}`,
           {
-            headers: { Authorization: `Bearer ${oidcUser.access_token}` },
+            headers: { Authorization: `Bearer ${auth.user?.access_token}` },
           }
         )
         .json()

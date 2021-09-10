@@ -14,10 +14,12 @@ function BoardList(): JSX.Element {
   return (
     <div>
       {data?.map((boardGroup) => (
-        <div>
+        <div key={boardGroup.id}>
           <p>{boardGroup.name}</p>
           {boardGroup.boards.map((b) => (
-            <Link to={`/board/${b.id}`}>{b.name} </Link>
+            <Link to={`/board/${b.id}`} key={b.id}>
+              {b.name}{" "}
+            </Link>
           ))}
         </div>
       ))}

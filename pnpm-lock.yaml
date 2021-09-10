@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@axa-fr/react-oidc-context': ^3.1.7
+  '@bbob/preset': ^2.7.0
   '@bbob/preset-react': ^2.7.0
   '@bbob/react': ^2.6.2
   '@headlessui/react': ^1.4.0
@@ -33,6 +33,7 @@ specifiers:
   prettier: 2.3.2
   react: ^17.0.0
   react-dom: ^17.0.0
+  react-oidc-context: ^1.0.3
   react-query: ^3.19.6
   react-router-dom: ^5.2.0
   react-use: ^17.2.4
@@ -42,7 +43,7 @@ specifiers:
   vite: ^2.4.4
 
 dependencies:
-  '@axa-fr/react-oidc-context': 3.1.7_baa20bf36a01f22e944c15025a8aad9f
+  '@bbob/preset': 2.7.0
   '@bbob/preset-react': 2.7.0
   '@bbob/react': 2.6.2_react@17.0.2
   '@headlessui/react': 1.4.0_react-dom@17.0.2+react@17.0.2
@@ -54,6 +55,7 @@ dependencies:
   oidc-client: 1.11.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-oidc-context: 1.0.3_react@17.0.2
   react-query: 3.19.6_react-dom@17.0.2+react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
   react-use: 17.2.4_react-dom@17.0.2+react@17.0.2
@@ -85,31 +87,6 @@ devDependencies:
   vite: 2.4.4
 
 packages:
-
-  /@axa-fr/react-oidc-context/3.1.7_baa20bf36a01f22e944c15025a8aad9f:
-    resolution: {integrity: sha1-/JAKf60fUas4pAirMZDH+qrBStc=, tarball: '@axa-fr/react-oidc-context/download/@axa-fr/react-oidc-context-3.1.7.tgz'}
-    peerDependencies:
-      oidc-client: '>=1.8.2'
-      react: '>=16.8.6'
-      react-dom: '>=16.8.6'
-    dependencies:
-      '@axa-fr/react-oidc-core': 3.1.7_oidc-client@1.11.5+react@17.0.2
-      oidc-client: 1.11.5
-      prop-types: 15.7.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-    dev: false
-
-  /@axa-fr/react-oidc-core/3.1.7_oidc-client@1.11.5+react@17.0.2:
-    resolution: {integrity: sha1-f9nVZKK0HkVSLZoT0FeJ9l5+AgM=, tarball: '@axa-fr/react-oidc-core/download/@axa-fr/react-oidc-core-3.1.7.tgz'}
-    peerDependencies:
-      oidc-client: '>=1.8.2'
-      react: '>=16.8.6'
-    dependencies:
-      oidc-client: 1.11.5
-      prop-types: 15.7.2
-      react: 17.0.2
-    dev: false
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha1-9K1DWqJj25NbjxDyxVLSP7cWpj8=, tarball: '@babel/code-frame/download/@babel/code-frame-7.12.11.tgz'}
@@ -2810,6 +2787,16 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, tarball: react-is/download/react-is-16.13.1.tgz}
+
+  /react-oidc-context/1.0.3_react@17.0.2:
+    resolution: {integrity: sha1-4c1P78fVcP7h2EPewYe9FcUv/ag=, tarball: react-oidc-context/download/react-oidc-context-1.0.3.tgz}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      oidc-client: 1.11.5
+      react: 17.0.2
+    dev: false
 
   /react-query/3.19.6_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha1-Ar2okaPwoFNJNNkCQ1DWVbJo6Cw=, tarball: react-query/download/react-query-3.19.6.tgz}

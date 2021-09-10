@@ -1,19 +1,19 @@
-import { useReactOidc } from "@axa-fr/react-oidc-context";
-import presetReact from "@bbob/preset-react";
-import bbobReactRenderer from "@bbob/react/es/render";
+import bbobReactRender from "@bbob/react/es/render";
 import { IPost } from "@cc98/api";
 import ky from "ky";
 import * as React from "react";
+import { useAuth } from "react-oidc-context";
 import { useQuery, UseQueryResult } from "react-query";
 import { useParams } from "react-router-dom";
 import useTitle from "react-use/lib/useTitle";
 
 import { API_ROOT, DEFAULT_TITLE, POSTS_PER_TOPIC_PAGE } from "../config";
+import { ubbOptions, ubbPreset } from "../utils/Ubb";
 
 function Topic(): JSX.Element {
   const { id, page } = useParams();
   const realPage = page ?? 1;
-  const { oidcUser } = useReactOidc();
+  const auth = useAuth();
   const { data, error, isError, isLoading }: UseQueryResult<IPost[]> = useQuery(
     ["topic", id, realPage],
     () =>
@@ -22,7 +22,7 @@ function Topic(): JSX.Element {
           `${API_ROOT}/Topic/${id}/post?from=${
             (realPage - 1) * POSTS_PER_TOPIC_PAGE
           }&size=${POSTS_PER_TOPIC_PAGE}`,
-          { headers: { Authorization: `Bearer ${oidcUser.access_token}` } }
+          { headers: { Authorization: `Bearer ${auth.user?.access_token}` } }
         )
         .json(),
     { keepPreviousData: true }
@@ -51,7 +51,7 @@ function Topic(): JSX.Element {
               {post.floor}楼 {post.userName}
             </p>
             <div className="whitespace-pre-wrap">
-              {bbobReactRenderer(post.content, presetReact())}
+              {bbobReactRender(post.content, ubbPreset(), ubbOptions)}
             </div>
             <hr />
           </div>

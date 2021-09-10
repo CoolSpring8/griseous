@@ -6,14 +6,13 @@ const OPENID_ROOT = "https://openid.cc98.org";
 
 const OIDC_CONFIG: UserManagerSettings = {
   client_id: "4058b08c-291c-445e-feab-08d7b15cc548",
-  redirect_uri: "http://test.zju.today:3000/authentication/callback",
+  redirect_uri: "http://test.zju.today/auth/callback",
   // Code Flow with PKCE
   response_type: "code",
-  scope: "openid cc98-api offline_access profile",
+  scope: "openid cc98-api profile",
   authority: OPENID_ROOT,
-  silent_redirect_uri:
-    "http://test.zju.today:3000/authentication/silent_callback",
-  automaticSilentRenew: true,
+  silent_redirect_uri: "http://test.zju.today/auth/silent_callback",
+  automaticSilentRenew: false,
   loadUserInfo: true,
 };
 

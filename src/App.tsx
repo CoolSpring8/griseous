@@ -1,7 +1,7 @@
 import "./App.css";
 
-import { AuthenticationProvider, oidcLog } from "@axa-fr/react-oidc-context";
 import React from "react";
+import { AuthProvider } from "react-oidc-context";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -11,7 +11,6 @@ import Board from "./pages/Board";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Topic from "./pages/Topic";
-import LocalStorage from "./utils/LocalStorage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,11 +26,8 @@ const queryClient = new QueryClient({
 function App(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthenticationProvider
-        configuration={OIDC_CONFIG}
-        loggerLevel={oidcLog.DEBUG}
-        UserStore={LocalStorage}
-      >
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <AuthProvider {...OIDC_CONFIG}>
         <Router>
           <Header />
           <Switch>
@@ -49,7 +45,7 @@ function App(): JSX.Element {
             </Route>
           </Switch>
         </Router>
-      </AuthenticationProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
