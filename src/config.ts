@@ -13,6 +13,7 @@ const OIDC_CONFIG: UserManagerSettings = {
   authority: OPENID_ROOT,
   silent_redirect_uri: "http://test.zju.today/auth/silent_callback",
   automaticSilentRenew: false,
+  monitorSession: false,
   loadUserInfo: true,
 };
 

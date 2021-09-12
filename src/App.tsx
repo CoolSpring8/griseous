@@ -29,21 +29,23 @@ function App(): JSX.Element {
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <AuthProvider {...OIDC_CONFIG}>
         <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/topic/:id/:page?">
-              <Topic />
-            </Route>
-            <Route path="/board/:id/:page?">
-              <Board />
-            </Route>
-            <Route>
-              <NotFound />
-            </Route>
-          </Switch>
+          <div className="bg-gray-50">
+            <Header />
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/topic/:id/:page?">
+                <Topic />
+              </Route>
+              <Route path="/board/:id/:page?">
+                <Board />
+              </Route>
+              <Route>
+                <NotFound />
+              </Route>
+            </Switch>
+          </div>
         </Router>
       </AuthProvider>
     </QueryClientProvider>
