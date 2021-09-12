@@ -3,12 +3,14 @@
 import { createPreset } from "@bbob/preset";
 
 import Image from "../components/Ubb/Image";
+import { OFFICIAL_FORUM_ROOT } from "../config";
+import stickers from "./Stickers";
 
 function escapeHTML(html) {
   return document.createTextNode(html).textContent;
 }
 
-const ubbTags = {
+const ubbTagsRegular = {
   noubb: (node) => ({ tag: "code", content: escapeHTML(node.content) }),
   b: (node) => ({ tag: "b", content: node.content }),
   img: (node) => ({
@@ -128,6 +130,31 @@ const ubbTags = {
     content: node.content,
   }),
 };
+
+const ubbTagsStickers = [];
+
+for (const {
+  name,
+  has_prefix: hasPrefix,
+  file_ext: fileExtension,
+  list,
+} of stickers) {
+  const ubbTagsTmp: Record<string, unknown> = {};
+  for (const id of list) {
+    ubbTagsTmp[`${name.toLowerCase()}${id}`] = () => ({
+      tag: "img",
+      attrs: {
+        src: `${OFFICIAL_FORUM_ROOT}/static/images/${name}/${
+          hasPrefix ? name : ""
+        }${id}${fileExtension}`,
+        className: "inline w-14",
+      },
+    });
+  }
+  ubbTagsStickers.push(ubbTagsTmp);
+}
+
+const ubbTags = Object.assign(ubbTagsRegular, ...ubbTagsStickers);
 
 const ubbPreset = createPreset(ubbTags);
 

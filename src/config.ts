@@ -4,6 +4,8 @@ const API_ROOT = "https://api.cc98.org";
 
 const OPENID_ROOT = "https://openid.cc98.org";
 
+const OFFICIAL_FORUM_ROOT = "https://www.cc98.org";
+
 const OIDC_CONFIG: UserManagerSettings = {
   client_id: "4058b08c-291c-445e-feab-08d7b15cc548",
   redirect_uri: "http://test.zju.today/auth/callback",
@@ -27,6 +29,7 @@ const DEFAULT_TITLE = "Griseous - an unofficial web UI for CC98";
 export {
   API_ROOT,
   DEFAULT_TITLE,
+  OFFICIAL_FORUM_ROOT,
   OIDC_CONFIG,
   OPENID_ROOT,
   POSTS_PER_TOPIC_PAGE,
