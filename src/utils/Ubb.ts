@@ -19,35 +19,29 @@ const ubbTagsRegular = {
   }),
   i: (node) => ({ tag: "i", content: node.content }),
   size: (node) => {
-    const fontSizeToClassName = (size: string) => {
-      switch (size) {
-        case "0":
-          return "text-xs";
-        case "1":
-          return "text-sm";
-        case "2":
-          return "text-base";
-        case "3":
-          return "text-lg";
-        case "4":
-          return "text-xl";
-        case "5":
-          return "text-2xl";
-        case "6":
-          return "text-3xl";
-        case "7":
-          return "text-4xl";
-        default:
-          return null;
+    const n = Object.keys(node.attrs)[0];
+    let size;
+    if (Number.isNaN(n)) {
+      size = null;
+    } else {
+      size = Number(n);
+      if (size > 7) {
+        size = 7;
       }
-    };
+    }
     return {
       tag: "span",
-      attrs: { className: fontSizeToClassName(Object.keys(node.attrs)[0]) },
+      attrs: {
+        style: { fontSize: size === null ? null : `${size / 3 + 0.5}rem` },
+      },
       content: node.content,
     };
   },
-  quote: (node) => ({ tag: "blockquote", content: node.content }),
+  quote: (node) => ({
+    tag: "blockquote",
+    attrs: { className: "rounded-lg p-4 bg-gray-100 text-sm text-gray-500" },
+    content: node.content,
+  }),
   color: (node) => ({
     tag: "span",
     attrs: { style: { color: Object.keys(node.attrs)[0] } },
@@ -111,23 +105,30 @@ const ubbTagsRegular = {
     content: "点击下载文件",
   }),
   left: (node) => ({
-    tag: "p",
+    tag: "span",
     attrs: { className: "text-left" },
     content: node.content,
   }),
   center: (node) => ({
-    tag: "p",
+    tag: "span",
     attrs: { className: "text-center" },
     content: node.content,
   }),
   right: (node) => ({
-    tag: "p",
+    tag: "span",
     attrs: { className: "text-right" },
     content: node.content,
   }),
   table: (node) => ({
     tag: "table",
     content: node.content,
+  }),
+  line: () => ({
+    tag: "hr",
+  }),
+  needreply: () => ({
+    tag: "div",
+    content: "回复可见",
   }),
 };
 

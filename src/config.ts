@@ -8,12 +8,12 @@ const OFFICIAL_FORUM_ROOT = "https://www.cc98.org";
 
 const OIDC_CONFIG: UserManagerSettings = {
   client_id: "4058b08c-291c-445e-feab-08d7b15cc548",
-  redirect_uri: "http://test.zju.today/auth/callback",
+  redirect_uri: "http://test.zju.today/",
   // Code Flow with PKCE
   response_type: "code",
   scope: "openid cc98-api profile",
   authority: OPENID_ROOT,
-  silent_redirect_uri: "http://test.zju.today/auth/silent_callback",
+  silent_redirect_uri: "http://test.zju.today/",
   automaticSilentRenew: false,
   monitorSession: false,
   loadUserInfo: true,

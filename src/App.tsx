@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header";
+import PrivateRoute from "./components/PrivateRoute";
 import { OIDC_CONFIG } from "./config";
 import Board from "./pages/Board";
 import Home from "./pages/Home";
@@ -29,23 +30,21 @@ function App(): JSX.Element {
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <AuthProvider {...OIDC_CONFIG}>
         <Router>
-          <div className="bg-gray-50">
-            <Header />
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/topic/:id/:page?">
-                <Topic />
-              </Route>
-              <Route path="/board/:id/:page?">
-                <Board />
-              </Route>
-              <Route>
-                <NotFound />
-              </Route>
-            </Switch>
-          </div>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <PrivateRoute path="/topic/:id/:page?">
+              <Topic />
+            </PrivateRoute>
+            <PrivateRoute path="/board/:id/:page?">
+              <Board />
+            </PrivateRoute>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
         </Router>
       </AuthProvider>
     </QueryClientProvider>

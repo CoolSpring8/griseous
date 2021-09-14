@@ -1,4 +1,3 @@
-import bbobReactRender from "@bbob/react/es/render";
 import { IPost } from "@cc98/api";
 import ky from "ky";
 import * as React from "react";
@@ -7,8 +6,8 @@ import { useQuery, UseQueryResult } from "react-query";
 import { useParams } from "react-router-dom";
 import useTitle from "react-use/lib/useTitle";
 
+import Reply from "../components/Reply";
 import { API_ROOT, DEFAULT_TITLE, POSTS_PER_TOPIC_PAGE } from "../config";
-import { ubbOptions, ubbPreset } from "../utils/Ubb";
 
 function Topic(): JSX.Element {
   const { id, page } = useParams();
@@ -39,21 +38,15 @@ function Topic(): JSX.Element {
   }
 
   return (
-    <div className="w-full flex">
-      <aside className="static z-40 inset-4 w-48 height-auto flex-none">
-        <p>tset</p>
-        <p>tes</p>
+    <div className="flex">
+      <aside className="sticky top-20 left-4 z-40 w-48 h-12 flex-none">
+        <p>test</p>
+        <p>test</p>
       </aside>
-      <main className="w-full flex-auto static">
+      <main className="w-full flex-auto flex flex-col space-y-6">
         {data?.map((post) => (
           <div key={post.id}>
-            <p>
-              {post.floor}楼 {post.userName}
-            </p>
-            <div className="whitespace-pre-wrap">
-              {bbobReactRender(post.content, ubbPreset(), ubbOptions)}
-            </div>
-            <hr />
+            <Reply post={post} />
           </div>
         ))}
       </main>
