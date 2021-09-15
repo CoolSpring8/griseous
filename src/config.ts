@@ -24,6 +24,8 @@ const POSTS_PER_TOPIC_PAGE = 10;
 
 const TOPICS_PER_BOARD_PAGE = 20;
 
+const TOPICS_PER_SEARCH_PAGE = 20;
+
 const DEFAULT_TITLE = "Griseous - an unofficial web UI for CC98";
 
 export {
@@ -34,4 +36,5 @@ export {
   OPENID_ROOT,
   POSTS_PER_TOPIC_PAGE,
   TOPICS_PER_BOARD_PAGE,
+  TOPICS_PER_SEARCH_PAGE,
 };

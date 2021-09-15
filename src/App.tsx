@@ -11,6 +11,7 @@ import { OIDC_CONFIG } from "./config";
 import Board from "./pages/Board";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Search from "./pages/Search";
 import Topic from "./pages/Topic";
 
 const queryClient = new QueryClient({
@@ -40,6 +41,9 @@ function App(): JSX.Element {
             </PrivateRoute>
             <PrivateRoute path="/board/:id/:page?">
               <Board />
+            </PrivateRoute>
+            <PrivateRoute exact path="/search">
+              <Search />
             </PrivateRoute>
             <Route>
               <NotFound />
