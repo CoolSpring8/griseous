@@ -3,11 +3,13 @@ import * as React from "react";
 import { useAuth } from "react-oidc-context";
 import { Link } from "react-router-dom";
 
+import usePathWithParams from "../hooks/usePathWithParams";
 import logoURL from "../static/images/98logo.ico";
 import SearchBar from "./SearchBar";
 
 function Header(): JSX.Element {
   const auth = useAuth();
+  const path = usePathWithParams();
 
   return (
     <header className="sticky top-0 z-50 bg-white flex space-x-4 pt-2.5 pb-2.5 mb-4">
@@ -31,7 +33,16 @@ function Header(): JSX.Element {
         </div>
       ) : (
         <div className="flex-initial space-x-1 !mr-4 flex">
-          <button type="button" onClick={auth.signinRedirect}>
+          <button
+            type="button"
+            onClick={() => {
+              auth.signinRedirect({
+                state: {
+                  intended: path,
+                },
+              });
+            }}
+          >
             登录
             <LoginIcon className="h-5 w-5 inline" />
           </button>
