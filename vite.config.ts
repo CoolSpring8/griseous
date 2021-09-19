@@ -7,4 +7,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [reactRefresh(), visualizer()],
   server: { port: 80 },
+  define: {
+    "process.env.NODE_DEBUG": undefined,
+  },
 });

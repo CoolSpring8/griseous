@@ -25,10 +25,8 @@ function Search(): JSX.Element {
   return (
     <div>
       {data?.map((p) => (
-        <div>
-          <Link to={`/topic/${p.id}`} key={p.id}>
-            {p.title}
-          </Link>
+        <div key={p.id}>
+          <Link to={`/topic/${p.id}`}>{p.title}</Link>
         </div>
       ))}
     </div>

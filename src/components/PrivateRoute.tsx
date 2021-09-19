@@ -18,7 +18,6 @@ function PrivateRoute({ children, ...rest }: any): JSX.Element {
           <div>
             <p>请先登录</p>
             <p>3秒后自动跳转……</p>
-            {console.log(auth)}
             {setTimeout(auth.signinRedirect, 3000) && null}
           </div>
         )
