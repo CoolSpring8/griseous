@@ -5,6 +5,7 @@ import { useAuth } from "react-oidc-context";
 import { useQuery, UseQueryResult } from "react-query";
 import { Link, useParams } from "react-router-dom";
 
+import Loading from "../components/Loading";
 import { API_ROOT, TOPICS_PER_BOARD_PAGE } from "../config";
 
 function Board(): JSX.Element {
@@ -42,6 +43,10 @@ function Board(): JSX.Element {
         )
         .json()
   );
+
+  if (boardInfo.isLoading || topTopics.isLoading || topics.isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div>

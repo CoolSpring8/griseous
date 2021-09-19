@@ -6,6 +6,7 @@ import { useQuery, UseQueryResult } from "react-query";
 import { useParams } from "react-router-dom";
 import useTitle from "react-use/lib/useTitle";
 
+import Loading from "../components/Loading";
 import Reply from "../components/Reply";
 import { API_ROOT, DEFAULT_TITLE, POSTS_PER_TOPIC_PAGE } from "../config";
 
@@ -34,7 +35,7 @@ function Topic(): JSX.Element {
   }
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (

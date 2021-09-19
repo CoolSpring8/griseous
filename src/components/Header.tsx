@@ -12,7 +12,7 @@ function Header(): JSX.Element {
   const path = usePathWithParams();
 
   return (
-    <header className="sticky top-0 z-50 bg-white flex space-x-4 pt-2.5 pb-2.5 mb-4">
+    <header className="sticky top-0 z-40 bg-white flex space-x-4 pt-2.5 pb-2.5 mb-4">
       <Link
         to="/"
         className="inline-flex items-center flex-initial ml-4 space-x-1"
