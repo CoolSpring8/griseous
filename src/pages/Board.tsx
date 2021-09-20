@@ -54,14 +54,14 @@ function Board(): JSX.Element {
       <div>
         {page === 1 &&
           topTopics.data?.map((t) => (
-            <Link to={`/topic/${t.id}`} className="block">
+            <Link to={`/topic/${t.id}`} className="block" key={t.id}>
               {t.title}
             </Link>
           ))}
       </div>
       <div>
         {topics.data?.map((t) => (
-          <Link to={`/topic/${t.id}`} className="block">
+          <Link to={`/topic/${t.id}`} className="block" key={t.id}>
             {t.title}
           </Link>
         ))}
