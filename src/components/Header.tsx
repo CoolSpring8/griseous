@@ -1,4 +1,4 @@
-import { BellIcon, LoginIcon, LogoutIcon } from "@heroicons/react/solid";
+import { BellIcon, LoginIcon, LogoutIcon } from "@heroicons/react/outline";
 import * as React from "react";
 import { useAuth } from "react-oidc-context";
 import { Link } from "react-router-dom";

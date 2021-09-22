@@ -28,7 +28,7 @@ function Topic(): JSX.Element {
     { keepPreviousData: true }
   );
 
-  useTitle(data?.[0].title ?? DEFAULT_TITLE);
+  useTitle(data?.[0].title ?? DEFAULT_TITLE, { restoreOnUnmount: true });
 
   if (isError) {
     return <p>Error: {error}</p>;
