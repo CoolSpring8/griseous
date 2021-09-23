@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { StyledEngineProvider } from "@mui/material";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -20,9 +21,11 @@ const queryClient = new QueryClient({
 function App(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
-        <Routes />
-      </Router>
+      <StyledEngineProvider injectFirst>
+        <Router>
+          <Routes />
+        </Router>
+      </StyledEngineProvider>
     </QueryClientProvider>
   );
 }
