@@ -14,7 +14,7 @@ function MyUserCard(): JSX.Element {
   const auth = useAuth();
   const path = usePathWithParams();
   const { data }: UseQueryResult<IUser> = useQuery(
-    "me",
+    ["myInfo", auth.user?.profile.sub],
     () =>
       ky
         .get(`${API_ROOT}/me`, {

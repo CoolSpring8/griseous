@@ -31,28 +31,27 @@ function Topic(): JSX.Element {
   useTitle(data?.[0].title ?? DEFAULT_TITLE, { restoreOnUnmount: true });
 
   if (isError) {
-    return <p>Error: {error}</p>;
-  }
-
-  if (isLoading) {
-    return <Loading />;
+    return <p>错误：{error.message}</p>;
   }
 
   return (
-    <div className="flex">
-      <aside className="sticky top-20 left-4 z-40 w-48 h-12 flex-none hidden md:block">
-        <p>test</p>
-        <p>test</p>
-      </aside>
-      <main className="w-full flex-auto flex flex-col space-y-6 mx-6 md:mx-0">
-        {data?.map((post) => (
-          <div key={post.id}>
-            <Reply post={post} />
-          </div>
-        ))}
-      </main>
-      <aside className="w-60 hidden md:block">test3</aside>
-    </div>
+    <>
+      {isLoading && <Loading />}
+      <div className="flex">
+        <aside className="sticky top-20 left-4 z-40 w-48 h-12 flex-none hidden md:block">
+          <p>test</p>
+          <p>test</p>
+        </aside>
+        <main className="w-full flex-auto flex flex-col space-y-6 mx-6 md:mx-0">
+          {data?.map((post) => (
+            <div key={post.id}>
+              <Reply post={post} />
+            </div>
+          ))}
+        </main>
+        <aside className="w-60 hidden md:block">test3</aside>
+      </div>
+    </>
   );
 }
 

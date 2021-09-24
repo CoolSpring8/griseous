@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 
 import { API_ROOT } from "../config";
 
-function HotTopic(): JSX.Element {
+function HotTopics(): JSX.Element {
   const { data }: UseQueryResult<IIndex> = useQuery("hotTopic", () =>
     ky.get(`${API_ROOT}/config/index`).json()
   );
 
   return (
     <div>
-      <ul className="p-6 rounded-xl shadow-md">
+      <ul className="p-6 rounded-2xl shadow-lg bg-white">
         {data?.hotTopic.map((t) => (
           <li key={t.id}>
-            [{t.boardName}] <Link to={`/topic/${t.id}`}>{t.title}</Link>
+            <Link to={`/topic/${t.id}`}>{t.title}</Link>
           </li>
         ))}
       </ul>
@@ -24,4 +24,4 @@ function HotTopic(): JSX.Element {
   );
 }
 
-export default HotTopic;
+export default HotTopics;
