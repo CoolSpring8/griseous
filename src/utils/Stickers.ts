@@ -1,5 +1,11 @@
+/* eslint-disable camelcase */
 // 这个文件是手动创建的，未来有必要的话可以写一个自动生成的脚本
-const stickers = [
+const stickers: {
+  name: string;
+  has_prefix: boolean;
+  file_ext: string;
+  list: string[];
+}[] = [
   {
     name: "em",
     has_prefix: true,

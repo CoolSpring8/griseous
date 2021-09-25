@@ -1,6 +1,11 @@
 import { IBasicUser, ITopic } from "@cc98/api";
-import { RefreshIcon, RssIcon } from "@heroicons/react/outline";
-import { Button } from "@mui/material";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  RefreshIcon,
+  RssIcon,
+} from "@heroicons/react/outline";
+import { Button, Slider } from "@mui/material";
 import classNames from "classnames";
 import ky from "ky";
 import * as React from "react";
@@ -13,6 +18,8 @@ import {
   OFFICIAL_FORUM_ROOT,
   TOPICS_PER_NEW_TOPICS_PAGE,
 } from "../config";
+import { boardInfo } from "../utils/boardInfoJson";
+import { rtfFormat } from "../utils/TimeFormat";
 
 function NewTopics(): JSX.Element {
   const auth = useAuth();
@@ -39,9 +46,7 @@ function NewTopics(): JSX.Element {
     () =>
       ky
         .get(
-          `${API_ROOT}/user/basic?id=${users
-            ?.map((id) => `id=${id}`)
-            .join("&")}`
+          `${API_ROOT}/user/basic?${users?.map((id) => `id=${id}`).join("&")}`
         )
         .json(),
     { enabled: !!users }
@@ -54,14 +59,38 @@ function NewTopics(): JSX.Element {
           <RssIcon className="w-6 h-6" />
           <span>新帖</span>
         </div>
-        <RefreshIcon
-          className={classNames("w-6 h-6 text-blue-400 cursor-pointer", {
-            "animate-spin": isFetching && avatar.isFetching,
-          })}
-          onClick={() => {
-            queryClient.invalidateQueries("newTopics");
-          }}
-        />
+        <div className="flex items-center">
+          <Button
+            onClick={() => setPage((p) => p - 1)}
+            disabled={page <= 1 || isFetching}
+          >
+            <ChevronLeftIcon className="w-6 h-6 mr-2 text-pink-200" />
+          </Button>
+          <Slider
+            marks
+            valueLabelDisplay="auto"
+            defaultValue={page}
+            min={1}
+            max={10}
+            onChangeCommitted={(e: Event, value: number) => setPage(value)}
+            className="w-72"
+          />
+          <Button
+            className="w-6"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={isFetching}
+          >
+            <ChevronRightIcon className="w-6 h-6 ml-2 text-pink-200" />
+          </Button>
+          <RefreshIcon
+            className={classNames("w-6 h-6 text-blue-400 cursor-pointer ml-6", {
+              "animate-spin": isFetching && avatar.isFetching,
+            })}
+            onClick={() => {
+              queryClient.invalidateQueries("newTopics");
+            }}
+          />
+        </div>
       </div>
       {!auth.isAuthenticated ? (
         <div className="text-2xl leading-10 font-medium text-gray-300 text-center pb-2">
@@ -69,14 +98,14 @@ function NewTopics(): JSX.Element {
           <p>登录后才能查看哦</p>
         </div>
       ) : (
-        <>
+        <div>
           <div>
             {data?.map((topic) => (
               <div
                 key={topic.id}
-                className="border-gray-100 border-b-2 flex items-center py-2"
+                className="border-gray-100 border-b-2 flex items-center py-3"
               >
-                <div>
+                <div className="flex-shrink-0">
                   <img
                     src={
                       topic.isAnonymous
@@ -85,31 +114,58 @@ function NewTopics(): JSX.Element {
                             ?.portraitUrl
                     }
                     alt=""
-                    className="w-12 h-12 rounded-lg"
+                    className="w-12 h-12 rounded-lg bg-purple-300"
                   />
                 </div>
-                <div className="ml-2">
+                <div className="ml-2 self-stretch flex flex-col space-y-1">
                   <div>
-                    <Link to={`/topic/${topic.id}`} className="text-gray-800">
+                    <Link to={`/topic/${topic.id}`} className="text-gray-600">
                       {topic.title}
                     </Link>
                   </div>
-                  <div>
-                    <Link
-                      to={`/user/id/${topic.id}`}
-                      className="text-xs font-medium text-gray-400"
-                    >
-                      {topic.isAnonymous ? "匿名用户" : topic.userName}
-                    </Link>
+                  <div className="text-xs text-gray-400 flex items-center">
+                    <div className="bg-gray-100 rounded-lg p-1 mr-1.5">
+                      <Link to={`/board/${topic.boardId}`}>
+                        {boardInfo.find((b) => b.id === topic.boardId)?.name ??
+                          "未知版面"}
+                      </Link>
+                    </div>
+                    <div className="space-x-1.5 mr-2.5">
+                      <span className="font-semibold">
+                        <Link to={`/user/id/${topic.id}`}>
+                          {topic.isAnonymous ? "匿名用户" : topic.userName}
+                        </Link>
+                      </span>
+                      <span>{rtfFormat(topic.time)}</span>
+                    </div>
+                    {topic.replyCount === 0 ? null : (
+                      <>
+                        <span>/</span>
+                        <div className="space-x-1.5 ml-2.5">
+                          <span className="font-semibold">
+                            {topic.isAnonymous
+                              ? "匿名用户"
+                              : topic.lastPostUser}
+                          </span>
+                          <span>{rtfFormat(topic.lastPostTime)}</span>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
+                {topic.replyCount === 0 ? null : (
+                  <div className="ml-auto text-white bg-gray-400 font-bold text-sm px-2 rounded-lg">
+                    {topic.replyCount}
+                  </div>
+                )}
               </div>
             ))}
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center mt-2 space-x-2">
             <Button
               onClick={() => {
                 setPage((p) => p - 1);
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               disabled={page <= 1 || isFetching}
             >
@@ -119,13 +175,14 @@ function NewTopics(): JSX.Element {
             <Button
               onClick={() => {
                 setPage((p) => p + 1);
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               disabled={isFetching}
             >
               下一页
             </Button>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
