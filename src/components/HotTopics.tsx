@@ -1,4 +1,5 @@
 import { IIndex } from "@cc98/api";
+import { FireIcon } from "@heroicons/react/outline";
 import ky from "ky";
 import React from "react";
 import { useQuery, UseQueryResult } from "react-query";
@@ -12,14 +13,27 @@ function HotTopics(): JSX.Element {
   );
 
   return (
-    <div>
-      <ul className="p-6 rounded-2xl shadow-lg bg-white">
-        {data?.hotTopic.map((t) => (
-          <li key={t.id}>
-            <Link to={`/topic/${t.id}`}>{t.title}</Link>
-          </li>
+    <div className="p-6 rounded-2xl shadow-lg bg-white flex flex-col">
+      <div className="flex items-center text-gray-500 text-2xl font-medium mb-2">
+        <FireIcon className="w-6 h-6" />
+        <span>十大</span>
+      </div>
+      <div className="">
+        {data?.hotTopic.map((t, index) => (
+          <div
+            key={t.id}
+            className="even:bg-gray-100 rounded py-1 flex items-center"
+          >
+            <span className="text-xl text-gray-400 mr-3">{index + 1}</span>
+            <Link to={`/topic/${t.id}`} className="text-sm text-gray-800">
+              {t.title}
+            </Link>
+            <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto">
+              <Link to={`/board/${t.boardId}`}>{t.boardName}</Link>
+            </span>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

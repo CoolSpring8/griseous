@@ -7,11 +7,11 @@ import NewTopics from "../components/NewTopics";
 
 function Home(): JSX.Element {
   return (
-    <div className="px-16 grid grid-cols-3 gap-8">
-      <main className="col-span-2">
+    <div className="px-16 md:grid md:grid-cols-3 gap-8">
+      <main className="md:col-span-2">
         <NewTopics />
       </main>
-      <aside className="col-span-1 space-y-4">
+      <aside className="hidden md:block md:col-span-1 space-y-4">
         <MyUserCard />
         <HotTopics />
         <BoardList />

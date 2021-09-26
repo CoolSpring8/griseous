@@ -62,7 +62,7 @@ function NewTopics(): JSX.Element {
         </div>
         <div className="flex items-center">
           {!auth.isAuthenticated ? null : (
-            <>
+            <div className="hidden md:flex">
               <button
                 type="button"
                 onClick={() => {
@@ -91,7 +91,7 @@ function NewTopics(): JSX.Element {
               >
                 <ChevronRightIcon className="w-6 h-6 text-pink-300" />
               </button>
-            </>
+            </div>
           )}
           <button
             type="button"
