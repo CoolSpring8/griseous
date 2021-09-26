@@ -66,7 +66,7 @@ function NewTopics(): JSX.Element {
               <button
                 type="button"
                 onClick={() => {
-                  setPage((p) => p + 1);
+                  setPage((p) => p - 1);
                 }}
                 disabled={page <= 1 || isFetching}
               >
