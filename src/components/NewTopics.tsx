@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 
 import {
   API_ROOT,
+  NEW_TOPICS_PAGINATION_MAX_SIZE,
   OFFICIAL_FORUM_ROOT,
   TOPICS_PER_NEW_TOPICS_PAGE,
 } from "../config";
@@ -60,36 +61,51 @@ function NewTopics(): JSX.Element {
           <span>新帖</span>
         </div>
         <div className="flex items-center">
-          <Button
-            onClick={() => setPage((p) => p - 1)}
-            disabled={page <= 1 || isFetching}
-          >
-            <ChevronLeftIcon className="w-6 h-6 mr-2 text-pink-200" />
-          </Button>
-          <Slider
-            marks
-            valueLabelDisplay="auto"
-            defaultValue={page}
-            min={1}
-            max={10}
-            onChangeCommitted={(e: Event, value: number) => setPage(value)}
-            className="w-72"
-          />
-          <Button
-            className="w-6"
-            onClick={() => setPage((p) => p + 1)}
-            disabled={isFetching}
-          >
-            <ChevronRightIcon className="w-6 h-6 ml-2 text-pink-200" />
-          </Button>
-          <RefreshIcon
-            className={classNames("w-6 h-6 text-blue-400 cursor-pointer ml-6", {
-              "animate-spin": isFetching && avatar.isFetching,
-            })}
+          {!auth.isAuthenticated ? null : (
+            <>
+              <button
+                type="button"
+                onClick={() => {
+                  setPage((p) => p + 1);
+                }}
+                disabled={page <= 1 || isFetching}
+              >
+                <ChevronLeftIcon className="w-6 h-6 text-pink-300" />
+              </button>
+              <Slider
+                marks
+                valueLabelDisplay="auto"
+                value={page}
+                min={1}
+                max={NEW_TOPICS_PAGINATION_MAX_SIZE}
+                onChangeCommitted={(e: Event, value: number) => setPage(value)}
+                className="w-72 mx-2"
+              />
+              <button
+                type="button"
+                className="w-6"
+                onClick={() => {
+                  setPage((p) => p + 1);
+                }}
+                disabled={page >= NEW_TOPICS_PAGINATION_MAX_SIZE || isFetching}
+              >
+                <ChevronRightIcon className="w-6 h-6 text-pink-300" />
+              </button>
+            </>
+          )}
+          <button
+            type="button"
             onClick={() => {
               queryClient.invalidateQueries("newTopics");
             }}
-          />
+            className="ml-8"
+          >
+            <RefreshIcon
+              className={classNames("w-6 h-6 text-blue-400", {
+                "animate-spin": isFetching && avatar.isFetching,
+              })}
+            />
+          </button>
         </div>
       </div>
       {!auth.isAuthenticated ? (
@@ -155,13 +171,19 @@ function NewTopics(): JSX.Element {
                 </div>
                 {topic.replyCount === 0 ? null : (
                   <div className="ml-auto text-white bg-gray-400 font-bold text-sm px-2 rounded-lg">
-                    {topic.replyCount}
+                    <Link
+                      to={`/topic/${topic.id}/${Math.ceil(
+                        topic.replyCount / 10
+                      )}#${topic.replyCount % 10}`}
+                    >
+                      {topic.replyCount}
+                    </Link>
                   </div>
                 )}
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center mt-2 space-x-2">
+          <div className="flex items-center justify-center mt-2 space-x-3">
             <Button
               onClick={() => {
                 setPage((p) => p - 1);
@@ -177,7 +199,7 @@ function NewTopics(): JSX.Element {
                 setPage((p) => p + 1);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              disabled={isFetching}
+              disabled={page >= NEW_TOPICS_PAGINATION_MAX_SIZE || isFetching}
             >
               下一页
             </Button>
