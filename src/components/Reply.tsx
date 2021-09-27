@@ -1,5 +1,5 @@
 import BBCode from "@bbob/react/es/Component";
-import { IPost } from "@cc98/api";
+import { IPost, IUser } from "@cc98/api";
 import { ThumbDownIcon, ThumbUpIcon } from "@heroicons/react/outline";
 import {
   ThumbDownIcon as ThumbDownIconSolid,
@@ -9,20 +9,38 @@ import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+import { OFFICIAL_FORUM_ROOT } from "../config";
 import { dtfFormat, rtfFormat } from "../utils/TimeFormat";
 import { ubbOptions, ubbPreset } from "../utils/Ubb";
 
-function Reply({ post }: { post: IPost }): JSX.Element {
+function Reply({
+  post,
+  user,
+}: {
+  post: IPost;
+  user: IUser | undefined;
+}): JSX.Element {
   const [timeFormat, setTimeFormat] = React.useState("relative");
   const toggleTimeFormat = () =>
     setTimeFormat((f) => (f === "relative" ? "absolute" : "relative"));
 
   return (
     <div className="whitespace-pre-wrap bg-white rounded-md shadow p-4 flex flex-col space-y-2">
-      <p className="flex items-center space-x-2">
-        <span>{post.userName}</span>
+      <p className="flex items-center">
+        <div>
+          <img
+            src={
+              post.isAnonymous
+                ? `${OFFICIAL_FORUM_ROOT}/static/images/心灵头像.gif`
+                : user?.portraitUrl
+            }
+            alt=""
+            className="w-6 h-6 rounded-md bg-purple-300"
+          />
+        </div>
+        <span className="ml-1.5 text-sm">{post.userName}</span>
         <span
-          className="text-xs text-gray-500 flex-1 cursor-pointer"
+          className="ml-2 text-xs text-gray-500 flex-1 cursor-pointer"
           onClick={toggleTimeFormat}
           onKeyUp={(e) => {
             if (e.key === "Enter") toggleTimeFormat();
