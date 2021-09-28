@@ -6,8 +6,11 @@ import { useQuery, UseQueryResult } from "react-query";
 import { Link } from "react-router-dom";
 
 import { API_ROOT } from "../config";
+import TopicDrawer from "./TopicDrawer";
 
 function HotTopics(): JSX.Element {
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [activeTopic, setActiveTopic] = React.useState(0);
   const { data }: UseQueryResult<IIndex> = useQuery("hotTopic", () =>
     ky.get(`${API_ROOT}/config/index`).json()
   );
@@ -25,12 +28,31 @@ function HotTopics(): JSX.Element {
             className="even:bg-gray-100 rounded py-1 flex items-center"
           >
             <span className="text-xl text-gray-400 mr-3">{index + 1}</span>
-            <Link to={`/topic/${t.id}`} className="text-sm text-gray-800">
+            <button
+              type="button"
+              className="text-sm text-gray-800 text-left"
+              onClick={() => {
+                setActiveTopic(t.id);
+                setDrawerOpen(true);
+              }}
+            >
               {t.title}
-            </Link>
+            </button>
             <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto">
               <Link to={`/board/${t.boardId}`}>{t.boardName}</Link>
             </span>
+            {activeTopic === t.id && (
+              <TopicDrawer
+                open={drawerOpen}
+                topicId={t.id}
+                onOpen={() => {
+                  setDrawerOpen(true);
+                }}
+                onClose={() => {
+                  setDrawerOpen(false);
+                }}
+              />
+            )}
           </div>
         ))}
       </div>

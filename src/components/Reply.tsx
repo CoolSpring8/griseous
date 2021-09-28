@@ -26,7 +26,7 @@ function Reply({
 
   return (
     <div className="whitespace-pre-wrap bg-white rounded-md shadow p-4 flex flex-col space-y-2">
-      <p className="flex items-center">
+      <div className="flex items-center">
         <div>
           <img
             src={
@@ -53,7 +53,7 @@ function Reply({
             : dtfFormat(post.time)}
         </span>
         <span className="text-gray-500">#{post.floor}</span>
-      </p>
+      </div>
       <article>
         {post.contentType === 1 ? (
           <ReactMarkdown remarkPlugins={[remarkGfm]}>

@@ -21,11 +21,14 @@ import {
 } from "../config";
 import { boardInfo } from "../utils/boardInfoJson";
 import { rtfFormat } from "../utils/TimeFormat";
+import TopicDrawer from "./TopicDrawer";
 
 function NewTopics(): JSX.Element {
   const auth = useAuth();
   const queryClient = useQueryClient();
   const [page, setPage] = React.useState(1);
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [activeTopic, setActiveTopic] = React.useState(0);
   const { data, isFetching }: UseQueryResult<ITopic[]> = useQuery(
     ["newTopics", page],
     () =>
@@ -135,12 +138,19 @@ function NewTopics(): JSX.Element {
                 </div>
                 <div className="ml-2 self-stretch flex flex-col space-y-1">
                   <div>
-                    <Link to={`/topic/${topic.id}`} className="text-gray-600">
+                    <button
+                      type="button"
+                      className="text-gray-600 text-left"
+                      onClick={() => {
+                        setActiveTopic(topic.id);
+                        setDrawerOpen(true);
+                      }}
+                    >
                       {topic.title}
-                    </Link>
+                    </button>
                   </div>
                   <div className="text-xs text-gray-400 flex items-center">
-                    <div className="bg-gray-100 rounded-lg p-1 mr-1.5">
+                    <div className="bg-gray-100 rounded-lg p-1 mr-1.5 whitespace-nowrap">
                       <Link to={`/board/${topic.boardId}`}>
                         {boardInfo.find((b) => b.id === topic.boardId)?.name ??
                           "未知版面"}
@@ -179,6 +189,18 @@ function NewTopics(): JSX.Element {
                       {topic.replyCount}
                     </Link>
                   </div>
+                )}
+                {activeTopic === topic.id && (
+                  <TopicDrawer
+                    open={drawerOpen}
+                    topicId={topic.id}
+                    onOpen={() => {
+                      setDrawerOpen(true);
+                    }}
+                    onClose={() => {
+                      setDrawerOpen(false);
+                    }}
+                  />
                 )}
               </div>
             ))}
