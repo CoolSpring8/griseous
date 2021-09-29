@@ -25,9 +25,11 @@ function HotTopics(): JSX.Element {
         {data?.hotTopic.map((t, index) => (
           <div
             key={t.id}
-            className="even:bg-gray-100 rounded py-1 flex items-center"
+            className="even:bg-gray-100 rounded py-2 px-1 flex items-center"
           >
-            <span className="text-xl text-gray-400 mr-3">{index + 1}</span>
+            <span className="text-lg text-gray-400 mr-3">
+              {(index + 1).toString().padStart(2, "0")}
+            </span>
             <button
               type="button"
               className="text-sm text-gray-800 text-left"

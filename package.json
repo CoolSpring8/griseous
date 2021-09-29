@@ -24,12 +24,14 @@
     "oidc-client": "^1.11.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-infinite-scroll-hook": "^4.0.1",
     "react-markdown": "^7.0.1",
     "react-oidc-context": "^1.0.3",
     "react-query": "^3.19.6",
     "react-router-dom": "^5.2.0",
     "react-use": "^17.2.4",
-    "remark-gfm": "^2.0.0"
+    "remark-gfm": "^2.0.0",
+    "zustand": "^3.5.11"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
