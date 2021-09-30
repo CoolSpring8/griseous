@@ -35,7 +35,7 @@ specifiers:
   lint-staged: 11.1.2
   oidc-client: 1.11.5
   postcss: 8.3.8
-  prettier: 2.3.2
+  prettier: 2.4.1
   react: 17.0.2
   react-dom: 17.0.2
   react-infinite-scroll-hook: 4.0.1
@@ -98,7 +98,7 @@ devDependencies:
   husky: registry.npmmirror.com/husky/7.0.2
   lint-staged: registry.npmmirror.com/lint-staged/11.1.2
   postcss: registry.npmmirror.com/postcss/8.3.8
-  prettier: 2.3.2
+  prettier: registry.npmmirror.com/prettier/2.4.1
   rollup-plugin-visualizer: registry.npmmirror.com/rollup-plugin-visualizer/5.5.2
   tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_d90402d1bb3b165c9c83046beac13a8b
   typescript: registry.npmmirror.com/typescript/4.4.3
@@ -318,12 +318,6 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.3
       es-abstract: 1.18.5
-    dev: true
-
-  /prettier/2.3.2:
-    resolution: {integrity: sha1-7ygKBewlNxLkhiM9tcbyNEHnNC0=, tarball: prettier/download/prettier-2.3.2.tgz}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /side-channel/1.0.4:
@@ -1046,6 +1040,9 @@ packages:
     peerDependencies:
       '@types/react': ^16.8.6 || ^17.0.0
       react: ^17.0.2
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
       '@mui/utils': registry.npmmirror.com/@mui/utils/5.0.1_react@17.0.2
@@ -1064,6 +1061,11 @@ packages:
       '@emotion/react': ^11.4.1
       '@emotion/styled': ^11.3.0
       react: ^17.0.2
+    peerDependenciesMeta:
+      '@emotion/react':
+        optional: true
+      '@emotion/styled':
+        optional: true
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
       '@emotion/cache': registry.npmmirror.com/@emotion/cache/11.4.0
@@ -1113,6 +1115,9 @@ packages:
     version: 7.0.0
     peerDependencies:
       '@types/react': '*'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
     dependencies:
       '@types/react': registry.npmmirror.com/@types/react/17.0.25
     dev: false
@@ -4933,6 +4938,9 @@ packages:
     engines: {node: '>= 10'}
     peerDependencies:
       ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      ts-node:
+        optional: true
     dependencies:
       import-cwd: registry.npmmirror.com/import-cwd/3.0.0
       lilconfig: registry.npmmirror.com/lilconfig/2.0.3
@@ -4990,6 +4998,14 @@ packages:
     name: prelude-ls
     version: 1.2.1
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  registry.npmmirror.com/prettier/2.4.1:
+    resolution: {integrity: sha1-Zx4RyJwUpM/Ids5WQQbEpnJsn1w=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/prettier/download/prettier-2.4.1.tgz}
+    name: prettier
+    version: 2.4.1
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   registry.npmmirror.com/pretty-hrtime/1.0.3:
