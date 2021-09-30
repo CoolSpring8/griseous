@@ -28,7 +28,7 @@ function HotTopics(): JSX.Element {
             className="even:bg-gray-100 rounded py-2 px-1 flex items-center"
           >
             <span className="text-lg text-gray-400 mr-3">
-              {(index + 1).toString().padStart(2, "0")}
+              {`${index + 1}`.padStart(2, "0")}
             </span>
             <button
               type="button"

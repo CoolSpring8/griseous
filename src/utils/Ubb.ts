@@ -6,12 +6,8 @@ import Image from "../components/Ubb/Image";
 import { OFFICIAL_FORUM_ROOT } from "../config";
 import stickers from "./Stickers";
 
-function escapeHTML(html) {
-  return document.createTextNode(html).textContent;
-}
-
 const ubbTagsRegular = {
-  noubb: (node) => ({ tag: "code", content: escapeHTML(node.content) }),
+  noubb: (node) => ({ tag: "code", content: `${node.content}` }),
   b: (node) => ({ tag: "b", content: node.content }),
   img: (node) => ({
     tag: Image,
@@ -87,7 +83,7 @@ const ubbTagsRegular = {
   }),
   code: (node) => ({
     tag: "code",
-    content: escapeHTML(node.content),
+    content: `${node.content}`,
   }),
   font: (node) => ({
     tag: "span",

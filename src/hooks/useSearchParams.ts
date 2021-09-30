@@ -5,8 +5,8 @@ export default function useSearchParams(): Record<string, string> {
   const proxy = new Proxy(
     {},
     {
-      get(obj, prop) {
-        return sp.get(prop.toString());
+      get(obj: Record<string, never>, prop: string) {
+        return sp.get(prop);
       },
     }
   );
