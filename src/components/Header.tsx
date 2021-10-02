@@ -4,7 +4,7 @@ import { useAuth } from "react-oidc-context";
 import { Link } from "react-router-dom";
 
 import usePathWithParams from "../hooks/usePathWithParams";
-import logoURL from "../static/images/98logo.ico";
+import logoURL from "../static/images/98LOGO.ico";
 import SearchBar from "./SearchBar";
 
 function Header(): JSX.Element {
