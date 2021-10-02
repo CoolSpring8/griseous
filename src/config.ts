@@ -6,13 +6,15 @@ const OPENID_ROOT = "https://openid.cc98.org";
 
 const OFFICIAL_FORUM_ROOT = "https://www.cc98.org";
 
+const CURRENT_ROOT = window.location.origin;
+
 const OIDC_CONFIG: UserManagerSettings = {
   client_id: "4058b08c-291c-445e-feab-08d7b15cc548",
   response_type: "code",
   scope: "openid cc98-api offline_access",
   authority: OPENID_ROOT,
-  redirect_uri: "http://test.zju.today/",
-  silent_redirect_uri: "http://test.zju.today/",
+  redirect_uri: `${CURRENT_ROOT}/`,
+  silent_redirect_uri: `${CURRENT_ROOT}/`,
   userStore: new WebStorageStateStore({ store: window.localStorage }),
   monitorSession: false,
   automaticSilentRenew: true,
@@ -36,6 +38,7 @@ const DEFAULT_TITLE = "Griseous - an unofficial web UI for CC98";
 
 export {
   API_ROOT,
+  CURRENT_ROOT,
   DEFAULT_TITLE,
   NEW_TOPICS_PAGINATION_MAX_SIZE,
   OFFICIAL_FORUM_ROOT,
