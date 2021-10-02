@@ -46,7 +46,7 @@ function TopicDrawer({
     error,
     isError,
     fetchNextPage,
-    isLoading,
+    isFetching,
     hasNextPage,
   }: UseInfiniteQueryResult<IPost[], Error> = useInfiniteQuery(
     ["topicPosts", topicId],
@@ -80,8 +80,8 @@ function TopicDrawer({
       ky
         .get(
           `${API_ROOT}/user?${pageParam
-            ?.map((userId: number) => `id=${userId}`)
             .filter(Boolean)
+            .map((userId: number) => `id=${userId}`)
             .join("&")}`
         )
         .json(),
@@ -91,13 +91,9 @@ function TopicDrawer({
   );
 
   const [sentryRef] = useInfiniteScroll({
-    loading: isLoading,
+    loading: isFetching,
     hasNextPage: hasNextPage ?? true,
     onLoadMore: () => {
-      // TODO: 第一页数据加载完成后还未显示时，由于加载框还在viewport内，会立即触发一次onLoadMore
-      if (isLoading) {
-        return;
-      }
       fetchNextPage().then((posts) =>
         userInfo.fetchNextPage({
           pageParam: posts.data?.pages
@@ -145,7 +141,7 @@ function TopicDrawer({
           </React.Fragment>
         ))}
       </div>
-      {(isLoading || hasNextPage) && (
+      {(isFetching || hasNextPage) && (
         <div ref={sentryRef} className="flex justify-center mt-4">
           <svg
             className="animate-spin h-5 w-5"

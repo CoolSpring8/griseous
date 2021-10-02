@@ -35,7 +35,10 @@ const ubbTagsRegular = {
   },
   quote: (node) => ({
     tag: "blockquote",
-    attrs: { className: "rounded-lg p-4 bg-gray-100 text-sm text-gray-500" },
+    attrs: {
+      className:
+        "rounded-lg p-4 bg-gray-100 text-sm text-gray-500 border-l-4 border-gray-200 rounded-l-none",
+    },
     content: node.content,
   }),
   color: (node) => ({
