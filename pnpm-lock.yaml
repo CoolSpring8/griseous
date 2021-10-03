@@ -49,7 +49,7 @@ specifiers:
   tailwindcss: 2.2.16
   typescript: 4.4.3
   vite: 2.6.2
-  zustand: 3.5.11
+  zustand: 3.5.12
 
 dependencies:
   '@bbob/preset': registry.npmmirror.com/@bbob/preset/2.7.0
@@ -75,7 +75,7 @@ dependencies:
   react-router-dom: registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2
   react-use: registry.npmmirror.com/react-use/17.3.1_react-dom@17.0.2+react@17.0.2
   remark-gfm: registry.npmmirror.com/remark-gfm/2.0.0
-  zustand: registry.npmmirror.com/zustand/3.5.11_react@17.0.2
+  zustand: registry.npmmirror.com/zustand/3.5.12_react@17.0.2
 
 devDependencies:
   '@types/react': registry.npmmirror.com/@types/react/17.0.26
@@ -6471,12 +6471,12 @@ packages:
       yargs-parser: registry.npmmirror.com/yargs-parser/20.2.9
     dev: true
 
-  registry.npmmirror.com/zustand/3.5.11_react@17.0.2:
-    resolution: {integrity: sha1-Oo/ST3pj0CplMqsjCszCEIBR1jU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/zustand/download/zustand-3.5.11.tgz}
-    id: registry.npmmirror.com/zustand/3.5.11
+  registry.npmmirror.com/zustand/3.5.12_react@17.0.2:
+    resolution: {integrity: sha1-QHqGhesoajLX9WDnSWaZO7/x2ug=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/zustand/download/zustand-3.5.12.tgz}
+    id: registry.npmmirror.com/zustand/3.5.12
     name: zustand
-    version: 3.5.11
-    engines: {node: '>=12'}
+    version: 3.5.12
+    engines: {node: '>=12.7.0'}
     peerDependencies:
       react: '>=16.8'
     peerDependenciesMeta:
