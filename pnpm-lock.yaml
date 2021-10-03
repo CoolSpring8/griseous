@@ -25,7 +25,7 @@ specifiers:
   eslint-import-resolver-typescript: 2.5.0
   eslint-plugin-import: 2.24.2
   eslint-plugin-jsx-a11y: 6.4.1
-  eslint-plugin-react: 7.26.0
+  eslint-plugin-react: 7.26.1
   eslint-plugin-react-hooks: 4.2.0
   eslint-plugin-simple-import-sort: 7.0.0
   formik: 2.2.9
@@ -87,12 +87,12 @@ devDependencies:
   assert: registry.npmmirror.com/assert/2.0.0
   autoprefixer: registry.npmmirror.com/autoprefixer/10.3.6_postcss@8.3.8
   eslint: registry.npmmirror.com/eslint/7.32.0
-  eslint-config-airbnb: 18.2.1_d09752a374c106d7445cadaeba3c9e01
+  eslint-config-airbnb: 18.2.1_df13c4295769c00420d879625722d10a
   eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.3.0_eslint@7.32.0
   eslint-import-resolver-typescript: registry.npmmirror.com/eslint-import-resolver-typescript/2.5.0_b7a4de75e7d0094cbe979e30a9a325ab
   eslint-plugin-import: registry.npmmirror.com/eslint-plugin-import/2.24.2_eslint@7.32.0
   eslint-plugin-jsx-a11y: registry.npmmirror.com/eslint-plugin-jsx-a11y/6.4.1_eslint@7.32.0
-  eslint-plugin-react: registry.npmmirror.com/eslint-plugin-react/7.26.0_eslint@7.32.0
+  eslint-plugin-react: registry.npmmirror.com/eslint-plugin-react/7.26.1_eslint@7.32.0
   eslint-plugin-react-hooks: registry.npmmirror.com/eslint-plugin-react-hooks/4.2.0_eslint@7.32.0
   eslint-plugin-simple-import-sort: registry.npmmirror.com/eslint-plugin-simple-import-sort/7.0.0_eslint@7.32.0
   husky: registry.npmmirror.com/husky/7.0.2
@@ -170,7 +170,7 @@ packages:
       object.entries: 1.1.4
     dev: true
 
-  /eslint-config-airbnb/18.2.1_d09752a374c106d7445cadaeba3c9e01:
+  /eslint-config-airbnb/18.2.1_df13c4295769c00420d879625722d10a:
     resolution: {integrity: sha1-t/4rQvn4Fz6CW3PIAUtZLkScmNk=, tarball: eslint-config-airbnb/download/eslint-config-airbnb-18.2.1.tgz}
     engines: {node: '>= 6'}
     peerDependencies:
@@ -184,7 +184,7 @@ packages:
       eslint-config-airbnb-base: 14.2.1_b7a4de75e7d0094cbe979e30a9a325ab
       eslint-plugin-import: registry.npmmirror.com/eslint-plugin-import/2.24.2_eslint@7.32.0
       eslint-plugin-jsx-a11y: registry.npmmirror.com/eslint-plugin-jsx-a11y/6.4.1_eslint@7.32.0
-      eslint-plugin-react: registry.npmmirror.com/eslint-plugin-react/7.26.0_eslint@7.32.0
+      eslint-plugin-react: registry.npmmirror.com/eslint-plugin-react/7.26.1_eslint@7.32.0
       eslint-plugin-react-hooks: registry.npmmirror.com/eslint-plugin-react-hooks/4.2.0_eslint@7.32.0
       object.assign: 4.1.2
       object.entries: 1.1.4
@@ -2700,11 +2700,11 @@ packages:
       eslint: registry.npmmirror.com/eslint/7.32.0
     dev: true
 
-  registry.npmmirror.com/eslint-plugin-react/7.26.0_eslint@7.32.0:
-    resolution: {integrity: sha1-OuAZo11UK5jlr54vlricIyx0tVs=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/eslint-plugin-react/download/eslint-plugin-react-7.26.0.tgz}
-    id: registry.npmmirror.com/eslint-plugin-react/7.26.0
+  registry.npmmirror.com/eslint-plugin-react/7.26.1_eslint@7.32.0:
+    resolution: {integrity: sha1-Qbz+PjnmpawECXHBr5RDfIDapA4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/eslint-plugin-react/download/eslint-plugin-react-7.26.1.tgz}
+    id: registry.npmmirror.com/eslint-plugin-react/7.26.1
     name: eslint-plugin-react
-    version: 7.26.0
+    version: 7.26.1
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
