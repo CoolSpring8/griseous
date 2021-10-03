@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 import { API_ROOT } from "../config";
 
-function BoardList(): JSX.Element {
+function BoardList({ className }: { className?: string }): JSX.Element {
   const { data }: UseQueryResult<IBoardGroup[]> = useQuery("boardList", () =>
     ky.get(`${API_ROOT}/Board/all`).json()
   );
 
   return (
-    <div>
+    <div className={className}>
       {data?.map((boardGroup) => (
         <div key={boardGroup.id}>
           <p>{boardGroup.name}</p>

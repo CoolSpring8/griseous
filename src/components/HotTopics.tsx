@@ -25,14 +25,14 @@ function HotTopics(): JSX.Element {
         {data?.hotTopic.map((t, index) => (
           <div
             key={t.id}
-            className="even:bg-gray-100 rounded py-2 px-1 flex items-center"
+            className="even:bg-gray-100 rounded py-2 px-1 flex items-start gap-2"
           >
-            <span className="text-lg text-gray-400 mr-3">
+            <span className="text-lg font-semibold text-gray-400 mr-1">
               {`${index + 1}`.padStart(2, "0")}
             </span>
             <button
               type="button"
-              className="text-sm text-gray-800 text-left"
+              className="text-sm text-gray-600 text-left"
               onClick={() => {
                 setActiveTopic(t.id);
                 setDrawerOpen(true);
@@ -40,7 +40,7 @@ function HotTopics(): JSX.Element {
             >
               {t.title}
             </button>
-            <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto">
+            <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto self-center">
               <Link to={`/board/${t.boardId}`}>{t.boardName}</Link>
             </span>
             {activeTopic === t.id && (

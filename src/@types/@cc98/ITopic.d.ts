@@ -8,6 +8,7 @@ declare module "@cc98/api" {
      * 版面 ID
      */
     boardId: number;
+    boardName: string;
     /**
      * 标题
      */
