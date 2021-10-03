@@ -41,7 +41,7 @@ specifiers:
   react-infinite-scroll-hook: 4.0.1
   react-markdown: 7.0.1
   react-oidc-context: 1.1.0
-  react-query: 3.24.5
+  react-query: 3.25.0
   react-router-dom: 5.3.0
   react-use: 17.3.1
   remark-gfm: 2.0.0
@@ -71,7 +71,7 @@ dependencies:
   react-infinite-scroll-hook: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_e79ceb4a9ecca84ea40dbf4bef5d274a
   react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
-  react-query: registry.npmmirror.com/react-query/3.24.5_react-dom@17.0.2+react@17.0.2
+  react-query: registry.npmmirror.com/react-query/3.25.0_react-dom@17.0.2+react@17.0.2
   react-router-dom: registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2
   react-use: registry.npmmirror.com/react-use/17.3.1_react-dom@17.0.2+react@17.0.2
   remark-gfm: registry.npmmirror.com/remark-gfm/2.0.0
@@ -5182,11 +5182,11 @@ packages:
       react: registry.npmmirror.com/react/17.0.2
     dev: false
 
-  registry.npmmirror.com/react-query/3.24.5_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha1-0xKKhvpYMKm3ClUAhcGN89GLxHA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-query/download/react-query-3.24.5.tgz}
-    id: registry.npmmirror.com/react-query/3.24.5
+  registry.npmmirror.com/react-query/3.25.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha1-T2f4Bh4FTFyXHLbjbsPVcD54AhA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-query/download/react-query-3.25.0.tgz}
+    id: registry.npmmirror.com/react-query/3.25.0
     name: react-query
-    version: 3.24.5
+    version: 3.25.0
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: '*'
