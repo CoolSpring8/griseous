@@ -44,7 +44,7 @@ specifiers:
   react-query: 3.25.0
   react-router-dom: 5.3.0
   react-use: 17.3.1
-  remark-gfm: 2.0.0
+  remark-gfm: 3.0.0
   rollup-plugin-visualizer: 5.5.2
   tailwindcss: 2.2.16
   typescript: 4.4.3
@@ -74,7 +74,7 @@ dependencies:
   react-query: registry.npmmirror.com/react-query/3.25.0_react-dom@17.0.2+react@17.0.2
   react-router-dom: registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2
   react-use: registry.npmmirror.com/react-use/17.3.1_react-dom@17.0.2+react@17.0.2
-  remark-gfm: registry.npmmirror.com/remark-gfm/2.0.0
+  remark-gfm: registry.npmmirror.com/remark-gfm/3.0.0
   zustand: registry.npmmirror.com/zustand/3.5.12_react@17.0.2
 
 devDependencies:
@@ -1482,6 +1482,12 @@ packages:
     version: 1.9.5
     dev: false
 
+  registry.npmmirror.com/acorn-es7-plugin/1.1.7:
+    resolution: {integrity: sha1-8u4fMiipDurRJF+asZIusucdM2s=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/acorn-es7-plugin/download/acorn-es7-plugin-1.1.7.tgz}
+    name: acorn-es7-plugin
+    version: 1.1.7
+    dev: false
+
   registry.npmmirror.com/acorn-jsx/5.3.2_acorn@7.4.1:
     resolution: {integrity: sha1-ftW7VZCLOy8bxVxq8WU7rafweTc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/acorn-jsx/download/acorn-jsx-5.3.2.tgz}
     id: registry.npmmirror.com/acorn-jsx/5.3.2
@@ -1509,6 +1515,14 @@ packages:
     version: 7.2.0
     engines: {node: '>=0.4.0'}
     dev: true
+
+  registry.npmmirror.com/acorn/5.7.4:
+    resolution: {integrity: sha1-Po2KmUfQWZoXltECJddDL0pKz14=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/acorn/download/acorn-5.7.4.tgz}
+    name: acorn
+    version: 5.7.4
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
 
   registry.npmmirror.com/acorn/7.4.1:
     resolution: {integrity: sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/acorn/download/acorn-7.4.1.tgz}
@@ -1622,6 +1636,12 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
       '@babel/runtime-corejs3': registry.npmmirror.com/@babel/runtime-corejs3/7.14.9
     dev: true
+
+  registry.npmmirror.com/array-filter/1.0.0:
+    resolution: {integrity: sha1-uveeYubvTCpMC4MSMtr/7CUfnYM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/array-filter/download/array-filter-1.0.0.tgz}
+    name: array-filter
+    version: 1.0.0
+    dev: false
 
   registry.npmmirror.com/array-includes/3.1.3:
     resolution: {integrity: sha1-x/YZs4KtKvr1Mmzd/cCvxhr3aQo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/array-includes/download/array-includes-3.1.3.tgz}
@@ -1831,6 +1851,13 @@ packages:
       function-bind: registry.npmmirror.com/function-bind/1.1.1
       get-intrinsic: registry.npmmirror.com/get-intrinsic/1.1.1
     dev: true
+
+  registry.npmmirror.com/call-signature/0.0.2:
+    resolution: {integrity: sha1-qEq8glpV70yysCi9dOIFpluaSZY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/call-signature/download/call-signature-0.0.2.tgz}
+    name: call-signature
+    version: 0.0.2
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   registry.npmmirror.com/callsites/3.1.0:
     resolution: {integrity: sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/callsites/download/callsites-3.1.0.tgz}
@@ -2059,6 +2086,14 @@ packages:
     requiresBuild: true
     dev: true
 
+  registry.npmmirror.com/core-js/2.6.12:
+    resolution: {integrity: sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/core-js/download/core-js-2.6.12.tgz}
+    name: core-js
+    version: 2.6.12
+    deprecated: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+    requiresBuild: true
+    dev: false
+
   registry.npmmirror.com/core-js/3.16.1:
     resolution: {integrity: sha1-9Ehc5cnzxqfLGPqASI4I02IJckk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/core-js/download/core-js-3.16.1.tgz}
     name: core-js
@@ -2226,7 +2261,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       object-keys: registry.npmmirror.com/object-keys/1.1.1
-    dev: true
 
   registry.npmmirror.com/defined/1.0.0:
     resolution: {integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/defined/download/defined-1.0.0.tgz}
@@ -2257,6 +2291,12 @@ packages:
     name: didyoumean
     version: 1.2.2
     dev: true
+
+  registry.npmmirror.com/diff-match-patch/1.0.5:
+    resolution: {integrity: sha1-q7WE1fEM0Rlt/FWqA3AVkq4/ezc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/diff-match-patch/download/diff-match-patch-1.0.5.tgz}
+    name: diff-match-patch
+    version: 1.0.5
+    dev: false
 
   registry.npmmirror.com/dir-glob/3.0.1:
     resolution: {integrity: sha1-Vtv3PZkqSpO6FYT0U0Bj/S5BcX8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/dir-glob/download/dir-glob-3.0.1.tgz}
@@ -2300,6 +2340,12 @@ packages:
       csstype: registry.npmmirror.com/csstype/3.0.9
     dev: false
 
+  registry.npmmirror.com/eastasianwidth/0.2.0:
+    resolution: {integrity: sha1-aWzi7Aqg5uqTo5f/zySqeEDIJ8s=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/eastasianwidth/download/eastasianwidth-0.2.0.tgz}
+    name: eastasianwidth
+    version: 0.2.0
+    dev: false
+
   registry.npmmirror.com/electron-to-chromium/1.3.854:
     resolution: {integrity: sha1-AD8LnIDszDW+DvBKDgscMaELkNU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/electron-to-chromium/download/electron-to-chromium-1.3.854.tgz}
     name: electron-to-chromium
@@ -2317,6 +2363,24 @@ packages:
     name: emoji-regex
     version: 9.2.2
     dev: true
+
+  registry.npmmirror.com/empower-core/1.2.0:
+    resolution: {integrity: sha1-zj+ySE1Rh/opwj+6g0Swsv31YBw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/empower-core/download/empower-core-1.2.0.tgz}
+    name: empower-core
+    version: 1.2.0
+    dependencies:
+      call-signature: registry.npmmirror.com/call-signature/0.0.2
+      core-js: registry.npmmirror.com/core-js/2.6.12
+    dev: false
+
+  registry.npmmirror.com/empower/1.3.1:
+    resolution: {integrity: sha1-dol5y7s21x2PXtqrZj3qy52rkWw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/empower/download/empower-1.3.1.tgz}
+    name: empower
+    version: 1.3.1
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      empower-core: registry.npmmirror.com/empower-core/1.2.0
+    dev: false
 
   registry.npmmirror.com/enquirer/2.3.6:
     resolution: {integrity: sha1-Kn/l3WNKHkElqXXsmU/1RW3Dc00=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/enquirer/download/enquirer-2.3.6.tgz}
@@ -2862,6 +2926,14 @@ packages:
     hasBin: true
     dev: true
 
+  registry.npmmirror.com/espurify/1.8.1:
+    resolution: {integrity: sha1-V0bGwatC0wLeEL0dW/fw6MBRUFY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/espurify/download/espurify-1.8.1.tgz}
+    name: espurify
+    version: 1.8.1
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+    dev: false
+
   registry.npmmirror.com/esquery/1.4.0:
     resolution: {integrity: sha1-IUj/w4uC6McFff7UhCWz5h8PJKU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esquery/download/esquery-1.4.0.tgz}
     name: esquery
@@ -2885,7 +2957,6 @@ packages:
     name: estraverse
     version: 4.3.0
     engines: {node: '>=4.0'}
-    dev: true
 
   registry.npmmirror.com/estraverse/5.2.0:
     resolution: {integrity: sha1-MH30JUfmzHMk088DwVXVzbjFOIA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/estraverse/download/estraverse-5.2.0.tgz}
@@ -3374,6 +3445,12 @@ packages:
     version: 4.0.0
     engines: {node: '>=8'}
     dev: true
+
+  registry.npmmirror.com/indexof/0.0.1:
+    resolution: {integrity: sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/indexof/download/indexof-0.0.1.tgz}
+    name: indexof
+    version: 0.0.1
+    dev: false
 
   registry.npmmirror.com/inflight/1.0.6:
     resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/inflight/download/inflight-1.0.6.tgz}
@@ -4062,6 +4139,17 @@ packages:
       micromark-util-character: registry.npmmirror.com/micromark-util-character/1.1.0
     dev: false
 
+  registry.npmmirror.com/mdast-util-gfm-footnote/1.0.0:
+    resolution: {integrity: sha1-NVwejcnhfocdGz+l2ogkkj/HVuA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mdast-util-gfm-footnote/download/mdast-util-gfm-footnote-1.0.0.tgz}
+    name: mdast-util-gfm-footnote
+    version: 1.0.0
+    dependencies:
+      '@types/mdast': registry.npmmirror.com/@types/mdast/3.0.10
+      mdast-util-to-markdown: registry.npmmirror.com/mdast-util-to-markdown/1.2.2
+      micromark-util-normalize-identifier: registry.npmmirror.com/micromark-util-normalize-identifier/1.0.0
+      unist-util-visit: registry.npmmirror.com/unist-util-visit/4.0.0
+    dev: false
+
   registry.npmmirror.com/mdast-util-gfm-strikethrough/1.0.0:
     resolution: {integrity: sha1-bMcu9dlTn0zudq8/Fd0Nqp469A8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mdast-util-gfm-strikethrough/download/mdast-util-gfm-strikethrough-1.0.0.tgz}
     name: mdast-util-gfm-strikethrough
@@ -4089,12 +4177,13 @@ packages:
       mdast-util-to-markdown: registry.npmmirror.com/mdast-util-to-markdown/1.2.2
     dev: false
 
-  registry.npmmirror.com/mdast-util-gfm/1.0.0:
-    resolution: {integrity: sha1-XL7eq65yviw9/x7JWDlOL5VT7EM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mdast-util-gfm/download/mdast-util-gfm-1.0.0.tgz}
+  registry.npmmirror.com/mdast-util-gfm/2.0.0:
+    resolution: {integrity: sha1-JUWFa8GKZtXMY/vvCwl6AgqOnj0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mdast-util-gfm/download/mdast-util-gfm-2.0.0.tgz}
     name: mdast-util-gfm
-    version: 1.0.0
+    version: 2.0.0
     dependencies:
       mdast-util-gfm-autolink-literal: registry.npmmirror.com/mdast-util-gfm-autolink-literal/1.0.1
+      mdast-util-gfm-footnote: registry.npmmirror.com/mdast-util-gfm-footnote/1.0.0
       mdast-util-gfm-strikethrough: registry.npmmirror.com/mdast-util-gfm-strikethrough/1.0.0
       mdast-util-gfm-table: registry.npmmirror.com/mdast-util-gfm-table/1.0.1
       mdast-util-gfm-task-list-item: registry.npmmirror.com/mdast-util-gfm-task-list-item/1.0.0
@@ -4194,6 +4283,20 @@ packages:
       micromark-util-types: registry.npmmirror.com/micromark-util-types/1.0.1
     dev: false
 
+  registry.npmmirror.com/micromark-extension-gfm-footnote/1.0.1:
+    resolution: {integrity: sha1-zY1e+cI9MWtjHdx8hsQHaiLp29c=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micromark-extension-gfm-footnote/download/micromark-extension-gfm-footnote-1.0.1.tgz}
+    name: micromark-extension-gfm-footnote
+    version: 1.0.1
+    dependencies:
+      micromark-core-commonmark: registry.npmmirror.com/micromark-core-commonmark/1.0.1
+      micromark-factory-space: registry.npmmirror.com/micromark-factory-space/1.0.0
+      micromark-util-character: registry.npmmirror.com/micromark-util-character/1.1.0
+      micromark-util-normalize-identifier: registry.npmmirror.com/micromark-util-normalize-identifier/1.0.0
+      micromark-util-sanitize-uri: registry.npmmirror.com/micromark-util-sanitize-uri/1.0.0
+      micromark-util-symbol: registry.npmmirror.com/micromark-util-symbol/1.0.0
+      power-assert: registry.npmmirror.com/power-assert/1.6.1
+    dev: false
+
   registry.npmmirror.com/micromark-extension-gfm-strikethrough/1.0.1:
     resolution: {integrity: sha1-n1OrT13IwFJaiJhQuuYV8HSpiic=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micromark-extension-gfm-strikethrough/download/micromark-extension-gfm-strikethrough-1.0.1.tgz}
     name: micromark-extension-gfm-strikethrough
@@ -4236,12 +4339,13 @@ packages:
       micromark-util-types: registry.npmmirror.com/micromark-util-types/1.0.1
     dev: false
 
-  registry.npmmirror.com/micromark-extension-gfm/1.0.0:
-    resolution: {integrity: sha1-ehzuDfIA4/KrFMtj16XqaCCoLx0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micromark-extension-gfm/download/micromark-extension-gfm-1.0.0.tgz}
+  registry.npmmirror.com/micromark-extension-gfm/2.0.0:
+    resolution: {integrity: sha1-2dG4KWf0PDRqM1hkBgwWtzXjhh8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/micromark-extension-gfm/download/micromark-extension-gfm-2.0.0.tgz}
     name: micromark-extension-gfm
-    version: 1.0.0
+    version: 2.0.0
     dependencies:
       micromark-extension-gfm-autolink-literal: registry.npmmirror.com/micromark-extension-gfm-autolink-literal/1.0.0
+      micromark-extension-gfm-footnote: registry.npmmirror.com/micromark-extension-gfm-footnote/1.0.1
       micromark-extension-gfm-strikethrough: registry.npmmirror.com/micromark-extension-gfm-strikethrough/1.0.1
       micromark-extension-gfm-table: registry.npmmirror.com/micromark-extension-gfm-table/1.0.0
       micromark-extension-gfm-tagfilter: registry.npmmirror.com/micromark-extension-gfm-tagfilter/1.0.0
@@ -4651,7 +4755,6 @@ packages:
     name: object-keys
     version: 1.1.1
     engines: {node: '>= 0.4'}
-    dev: true
 
   registry.npmmirror.com/object.assign/4.1.2:
     resolution: {integrity: sha1-DtVKNC7Os3s4/3brgxoOeIy2OUA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/object.assign/download/object.assign-4.1.2.tgz}
@@ -5001,6 +5104,116 @@ packages:
       nanoid: registry.npmmirror.com/nanoid/3.1.28
       source-map-js: registry.npmmirror.com/source-map-js/0.6.2
     dev: true
+
+  registry.npmmirror.com/power-assert-context-formatter/1.2.0:
+    resolution: {integrity: sha1-j75yaSKI7FpyA83yFci4OKYGHSo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-context-formatter/download/power-assert-context-formatter-1.2.0.tgz}
+    name: power-assert-context-formatter
+    version: 1.2.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      power-assert-context-traversal: registry.npmmirror.com/power-assert-context-traversal/1.2.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-context-reducer-ast/1.2.0:
+    resolution: {integrity: sha1-x8ocnjmm+3F/esX+nnbhkr9SXfM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-context-reducer-ast/download/power-assert-context-reducer-ast-1.2.0.tgz}
+    name: power-assert-context-reducer-ast
+    version: 1.2.0
+    dependencies:
+      acorn: registry.npmmirror.com/acorn/5.7.4
+      acorn-es7-plugin: registry.npmmirror.com/acorn-es7-plugin/1.1.7
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      espurify: registry.npmmirror.com/espurify/1.8.1
+      estraverse: registry.npmmirror.com/estraverse/4.3.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-context-traversal/1.2.0:
+    resolution: {integrity: sha1-9ucUVLr2QN5cHJwnA0n1yasLLpQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-context-traversal/download/power-assert-context-traversal-1.2.0.tgz}
+    name: power-assert-context-traversal
+    version: 1.2.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      estraverse: registry.npmmirror.com/estraverse/4.3.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-formatter/1.4.1:
+    resolution: {integrity: sha1-XcEl7VCj37HdomwZNH879Y7CiEo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-formatter/download/power-assert-formatter-1.4.1.tgz}
+    name: power-assert-formatter
+    version: 1.4.1
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      power-assert-context-formatter: registry.npmmirror.com/power-assert-context-formatter/1.2.0
+      power-assert-context-reducer-ast: registry.npmmirror.com/power-assert-context-reducer-ast/1.2.0
+      power-assert-renderer-assertion: registry.npmmirror.com/power-assert-renderer-assertion/1.2.0
+      power-assert-renderer-comparison: registry.npmmirror.com/power-assert-renderer-comparison/1.2.0
+      power-assert-renderer-diagram: registry.npmmirror.com/power-assert-renderer-diagram/1.2.0
+      power-assert-renderer-file: registry.npmmirror.com/power-assert-renderer-file/1.2.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-renderer-assertion/1.2.0:
+    resolution: {integrity: sha1-Pbb/zaEGs3vB4GQyrQ10imgrFHo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-renderer-assertion/download/power-assert-renderer-assertion-1.2.0.tgz}
+    name: power-assert-renderer-assertion
+    version: 1.2.0
+    dependencies:
+      power-assert-renderer-base: registry.npmmirror.com/power-assert-renderer-base/1.1.1
+      power-assert-util-string-width: registry.npmmirror.com/power-assert-util-string-width/1.2.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-renderer-base/1.1.1:
+    resolution: {integrity: sha1-lqZQxv0F7hvB9mtUrWFELIs/Y+s=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-renderer-base/download/power-assert-renderer-base-1.1.1.tgz}
+    name: power-assert-renderer-base
+    version: 1.1.1
+    dev: false
+
+  registry.npmmirror.com/power-assert-renderer-comparison/1.2.0:
+    resolution: {integrity: sha1-5PiBEyJaab6KpYbq0FrvmUYsBJU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-renderer-comparison/download/power-assert-renderer-comparison-1.2.0.tgz}
+    name: power-assert-renderer-comparison
+    version: 1.2.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      diff-match-patch: registry.npmmirror.com/diff-match-patch/1.0.5
+      power-assert-renderer-base: registry.npmmirror.com/power-assert-renderer-base/1.1.1
+      stringifier: registry.npmmirror.com/stringifier/1.4.0
+      type-name: registry.npmmirror.com/type-name/2.0.2
+    dev: false
+
+  registry.npmmirror.com/power-assert-renderer-diagram/1.2.0:
+    resolution: {integrity: sha1-N/ZuhULlZ3xbWObXKwHA2aMOIhk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-renderer-diagram/download/power-assert-renderer-diagram-1.2.0.tgz}
+    name: power-assert-renderer-diagram
+    version: 1.2.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      power-assert-renderer-base: registry.npmmirror.com/power-assert-renderer-base/1.1.1
+      power-assert-util-string-width: registry.npmmirror.com/power-assert-util-string-width/1.2.0
+      stringifier: registry.npmmirror.com/stringifier/1.4.0
+    dev: false
+
+  registry.npmmirror.com/power-assert-renderer-file/1.2.0:
+    resolution: {integrity: sha1-P0vr2eFFXXXPKsVB57tRWofUzks=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-renderer-file/download/power-assert-renderer-file-1.2.0.tgz}
+    name: power-assert-renderer-file
+    version: 1.2.0
+    dependencies:
+      power-assert-renderer-base: registry.npmmirror.com/power-assert-renderer-base/1.1.1
+    dev: false
+
+  registry.npmmirror.com/power-assert-util-string-width/1.2.0:
+    resolution: {integrity: sha1-bgbV41gbuHbF03fFMQn/+pW9kaA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert-util-string-width/download/power-assert-util-string-width-1.2.0.tgz}
+    name: power-assert-util-string-width
+    version: 1.2.0
+    dependencies:
+      eastasianwidth: registry.npmmirror.com/eastasianwidth/0.2.0
+    dev: false
+
+  registry.npmmirror.com/power-assert/1.6.1:
+    resolution: {integrity: sha1-soy8Aq6Aiv0UMdDNUJOjmsWlsf4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/power-assert/download/power-assert-1.6.1.tgz}
+    name: power-assert
+    version: 1.6.1
+    dependencies:
+      define-properties: registry.npmmirror.com/define-properties/1.1.3
+      empower: registry.npmmirror.com/empower/1.3.1
+      power-assert-formatter: registry.npmmirror.com/power-assert-formatter/1.4.1
+      universal-deep-strict-equal: registry.npmmirror.com/universal-deep-strict-equal/1.2.2
+      xtend: registry.npmmirror.com/xtend/4.0.2
+    dev: false
 
   registry.npmmirror.com/prelude-ls/1.2.1:
     resolution: {integrity: sha1-3rxkidem5rDnYRiIzsiAM30xY5Y=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/prelude-ls/download/prelude-ls-1.2.1.tgz}
@@ -5378,14 +5591,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  registry.npmmirror.com/remark-gfm/2.0.0:
-    resolution: {integrity: sha1-T+9NezWvor080EENMT0yFpY0BRw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/remark-gfm/download/remark-gfm-2.0.0.tgz}
+  registry.npmmirror.com/remark-gfm/3.0.0:
+    resolution: {integrity: sha1-ou+wbs64RyYQ8JXMv/gtF9qh9BU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/remark-gfm/download/remark-gfm-3.0.0.tgz}
     name: remark-gfm
-    version: 2.0.0
+    version: 3.0.0
     dependencies:
       '@types/mdast': registry.npmmirror.com/@types/mdast/3.0.10
-      mdast-util-gfm: registry.npmmirror.com/mdast-util-gfm/1.0.0
-      micromark-extension-gfm: registry.npmmirror.com/micromark-extension-gfm/1.0.0
+      mdast-util-gfm: registry.npmmirror.com/mdast-util-gfm/2.0.0
+      micromark-extension-gfm: registry.npmmirror.com/micromark-extension-gfm/2.0.0
       unified: registry.npmmirror.com/unified/10.1.0
     dev: false
 
@@ -5862,6 +6075,16 @@ packages:
       define-properties: registry.npmmirror.com/define-properties/1.1.3
     dev: true
 
+  registry.npmmirror.com/stringifier/1.4.0:
+    resolution: {integrity: sha1-1wRYFWf0UmJl0A7Y7LNUoCw/7Cg=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/stringifier/download/stringifier-1.4.0.tgz}
+    name: stringifier
+    version: 1.4.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      traverse: registry.npmmirror.com/traverse/0.6.6
+      type-name: registry.npmmirror.com/type-name/2.0.2
+    dev: false
+
   registry.npmmirror.com/stringify-object/3.3.0:
     resolution: {integrity: sha1-cDBlrvyhkwDTzoivT1s5VtdVZik=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/stringify-object/download/stringify-object-3.3.0.tgz}
     name: stringify-object
@@ -6058,6 +6281,12 @@ packages:
     version: 1.0.6
     dev: false
 
+  registry.npmmirror.com/traverse/0.6.6:
+    resolution: {integrity: sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/traverse/download/traverse-0.6.6.tgz}
+    name: traverse
+    version: 0.6.6
+    dev: false
+
   registry.npmmirror.com/trough/2.0.2:
     resolution: {integrity: sha1-lKOqnVzjefxWH2JEkFs/NrdFjZY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/trough/download/trough-2.0.2.tgz}
     name: trough
@@ -6137,6 +6366,12 @@ packages:
     version: 0.21.3
     engines: {node: '>=10'}
     dev: true
+
+  registry.npmmirror.com/type-name/2.0.2:
+    resolution: {integrity: sha1-7+fUEj2KxSr/9/QMfk3sUmYAj7Q=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/type-name/download/type-name-2.0.2.tgz}
+    name: type-name
+    version: 2.0.2
+    dev: false
 
   registry.npmmirror.com/typescript/4.4.3:
     resolution: {integrity: sha1-vcVAfKorEJ79T4L+EwZW+XeikyQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/typescript/download/typescript-4.4.3.tgz}
@@ -6241,6 +6476,16 @@ packages:
       '@types/unist': registry.npmmirror.com/@types/unist/2.0.6
       unist-util-is: registry.npmmirror.com/unist-util-is/5.1.1
       unist-util-visit-parents: registry.npmmirror.com/unist-util-visit-parents/5.0.0
+    dev: false
+
+  registry.npmmirror.com/universal-deep-strict-equal/1.2.2:
+    resolution: {integrity: sha1-DaSsL3PP95JMgfpN4BjKViyisKc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/universal-deep-strict-equal/download/universal-deep-strict-equal-1.2.2.tgz}
+    name: universal-deep-strict-equal
+    version: 1.2.2
+    dependencies:
+      array-filter: registry.npmmirror.com/array-filter/1.0.0
+      indexof: registry.npmmirror.com/indexof/0.0.1
+      object-keys: registry.npmmirror.com/object-keys/1.1.1
     dev: false
 
   registry.npmmirror.com/universalify/2.0.0:
@@ -6428,7 +6673,6 @@ packages:
     name: xtend
     version: 4.0.2
     engines: {node: '>=0.4'}
-    dev: true
 
   registry.npmmirror.com/y18n/5.0.8:
     resolution: {integrity: sha1-f0k00PfKjFb5UxSTndzS3ZHOHVU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/y18n/download/y18n-5.0.8.tgz}
