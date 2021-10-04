@@ -17,7 +17,7 @@ specifiers:
   '@typescript-eslint/parser': 4.33.0
   '@vitejs/plugin-react-refresh': 1.3.6
   assert: 2.0.0
-  autoprefixer: 10.3.6
+  autoprefixer: 10.3.7
   classnames: 2.3.1
   eslint: 7.32.0
   eslint-config-airbnb: 18.2.1
@@ -85,7 +85,7 @@ devDependencies:
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/4.33.0_eslint@7.32.0+typescript@4.4.3
   '@vitejs/plugin-react-refresh': registry.npmmirror.com/@vitejs/plugin-react-refresh/1.3.6
   assert: registry.npmmirror.com/assert/2.0.0
-  autoprefixer: registry.npmmirror.com/autoprefixer/10.3.6_postcss@8.3.8
+  autoprefixer: registry.npmmirror.com/autoprefixer/10.3.7_postcss@8.3.8
   eslint: registry.npmmirror.com/eslint/7.32.0
   eslint-config-airbnb: 18.2.1_df13c4295769c00420d879625722d10a
   eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.3.0_eslint@7.32.0
@@ -100,7 +100,7 @@ devDependencies:
   postcss: registry.npmmirror.com/postcss/8.3.8
   prettier: registry.npmmirror.com/prettier/2.4.1
   rollup-plugin-visualizer: registry.npmmirror.com/rollup-plugin-visualizer/5.5.2
-  tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_d90402d1bb3b165c9c83046beac13a8b
+  tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_87b0e2f9b24fd47f660d150d4fbd34c5
   typescript: registry.npmmirror.com/typescript/4.4.3
   vite: registry.npmmirror.com/vite/2.6.2
 
@@ -1191,7 +1191,7 @@ packages:
       tailwindcss: '>=2.0.0'
     dependencies:
       mini-svg-data-uri: registry.npmmirror.com/mini-svg-data-uri/1.3.3
-      tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_d90402d1bb3b165c9c83046beac13a8b
+      tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_87b0e2f9b24fd47f660d150d4fbd34c5
     dev: false
 
   registry.npmmirror.com/@types/debug/4.1.7:
@@ -1710,21 +1710,21 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  registry.npmmirror.com/autoprefixer/10.3.6_postcss@8.3.8:
-    resolution: {integrity: sha1-U3yKBG4y7Ea/5Si8yeKl8th81MQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/autoprefixer/download/autoprefixer-10.3.6.tgz}
-    id: registry.npmmirror.com/autoprefixer/10.3.6
+  registry.npmmirror.com/autoprefixer/10.3.7_postcss@8.3.8:
+    resolution: {integrity: sha1-zvJWIFhAa9N4yUqs2ja7Rql7MYY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/autoprefixer/download/autoprefixer-10.3.7.tgz}
+    id: registry.npmmirror.com/autoprefixer/10.3.7
     name: autoprefixer
-    version: 10.3.6
+    version: 10.3.7
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: registry.npmmirror.com/browserslist/4.17.1
-      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001261
+      browserslist: registry.npmmirror.com/browserslist/4.17.3
+      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001264
       fraction.js: registry.npmmirror.com/fraction.js/4.1.1
-      nanocolors: registry.npmmirror.com/nanocolors/0.2.12
       normalize-range: registry.npmmirror.com/normalize-range/0.1.2
+      picocolors: registry.npmmirror.com/picocolors/0.2.1
       postcss: registry.npmmirror.com/postcss/8.3.8
       postcss-value-parser: registry.npmmirror.com/postcss-value-parser/4.1.0
     dev: true
@@ -1836,6 +1836,20 @@ packages:
       node-releases: registry.npmmirror.com/node-releases/1.1.76
     dev: true
 
+  registry.npmmirror.com/browserslist/4.17.3:
+    resolution: {integrity: sha1-KETNbuvhTRI4SwEi0hdVAWDS1iQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/browserslist/download/browserslist-4.17.3.tgz}
+    name: browserslist
+    version: 4.17.3
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001264
+      electron-to-chromium: registry.npmmirror.com/electron-to-chromium/1.3.857
+      escalade: registry.npmmirror.com/escalade/3.1.1
+      node-releases: registry.npmmirror.com/node-releases/1.1.77
+      picocolors: registry.npmmirror.com/picocolors/0.2.1
+    dev: true
+
   registry.npmmirror.com/bytes/3.1.0:
     resolution: {integrity: sha1-9s95M6Ng4FiPqf3oVlHNx/gF0fY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/bytes/download/bytes-3.1.0.tgz}
     name: bytes
@@ -1876,6 +1890,12 @@ packages:
     resolution: {integrity: sha1-ltiYE8B26gYSCaTgQNjc8MZqHQE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001261.tgz}
     name: caniuse-lite
     version: 1.0.30001261
+    dev: true
+
+  registry.npmmirror.com/caniuse-lite/1.0.30001264:
+    resolution: {integrity: sha1-iPYlpg77ZyTHxirGmLyNvZdX5Vs=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001264.tgz}
+    name: caniuse-lite
+    version: 1.0.30001264
     dev: true
 
   registry.npmmirror.com/ccount/2.0.0:
@@ -2353,6 +2373,12 @@ packages:
     resolution: {integrity: sha1-AD8LnIDszDW+DvBKDgscMaELkNU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/electron-to-chromium/download/electron-to-chromium-1.3.854.tgz}
     name: electron-to-chromium
     version: 1.3.854
+    dev: true
+
+  registry.npmmirror.com/electron-to-chromium/1.3.857:
+    resolution: {integrity: sha1-3MI5/4oStuS1AealrSD9DVoyEPk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/electron-to-chromium/download/electron-to-chromium-1.3.857.tgz}
+    name: electron-to-chromium
+    version: 1.3.857
     dev: true
 
   registry.npmmirror.com/emoji-regex/8.0.0:
@@ -4671,6 +4697,12 @@ packages:
     version: 1.1.76
     dev: true
 
+  registry.npmmirror.com/node-releases/1.1.77:
+    resolution: {integrity: sha1-ULDP7ehV3TdOdYW/Io/zTlfBwy4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/node-releases/download/node-releases-1.1.77.tgz}
+    name: node-releases
+    version: 1.1.77
+    dev: true
+
   registry.npmmirror.com/normalize-package-data/2.5.0:
     resolution: {integrity: sha1-5m2xg4sgDB38IzIl0SyzZSDiNKg=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/normalize-package-data/download/normalize-package-data-2.5.0.tgz}
     name: normalize-package-data
@@ -4976,6 +5008,12 @@ packages:
     name: path-type
     version: 4.0.0
     engines: {node: '>=8'}
+
+  registry.npmmirror.com/picocolors/0.2.1:
+    resolution: {integrity: sha1-VwZw95NkaFHRuhNZlpYqutWHhZ8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/picocolors/download/picocolors-0.2.1.tgz}
+    name: picocolors
+    version: 0.2.1
+    dev: true
 
   registry.npmmirror.com/picomatch/2.3.0:
     resolution: {integrity: sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/picomatch/download/picomatch-2.3.0.tgz}
@@ -6164,7 +6202,7 @@ packages:
       strip-ansi: registry.npmmirror.com/strip-ansi/6.0.0
     dev: true
 
-  registry.npmmirror.com/tailwindcss/2.2.16_d90402d1bb3b165c9c83046beac13a8b:
+  registry.npmmirror.com/tailwindcss/2.2.16_87b0e2f9b24fd47f660d150d4fbd34c5:
     resolution: {integrity: sha1-Mvgb3xdYtjnLg7nTC/fL7N2knl4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/tailwindcss/download/tailwindcss-2.2.16.tgz}
     id: registry.npmmirror.com/tailwindcss/2.2.16
     name: tailwindcss
@@ -6176,7 +6214,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: registry.npmmirror.com/arg/5.0.1
-      autoprefixer: registry.npmmirror.com/autoprefixer/10.3.6_postcss@8.3.8
+      autoprefixer: registry.npmmirror.com/autoprefixer/10.3.7_postcss@8.3.8
       bytes: registry.npmmirror.com/bytes/3.1.0
       chalk: registry.npmmirror.com/chalk/4.1.2
       chokidar: registry.npmmirror.com/chokidar/3.5.2
