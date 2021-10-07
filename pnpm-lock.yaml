@@ -48,7 +48,7 @@ specifiers:
   rollup-plugin-visualizer: 5.5.2
   tailwindcss: 2.2.16
   typescript: 4.4.3
-  vite: 2.6.3
+  vite: 2.6.4
   zustand: 3.5.12
 
 dependencies:
@@ -102,7 +102,7 @@ devDependencies:
   rollup-plugin-visualizer: registry.npmmirror.com/rollup-plugin-visualizer/5.5.2
   tailwindcss: registry.npmmirror.com/tailwindcss/2.2.16_96f83969316717847b3edf58a3f353f3
   typescript: registry.npmmirror.com/typescript/4.4.3
-  vite: registry.npmmirror.com/vite/2.6.3
+  vite: registry.npmmirror.com/vite/2.6.4
 
 packages:
 
@@ -6614,10 +6614,10 @@ packages:
       vfile-message: registry.npmmirror.com/vfile-message/3.0.2
     dev: false
 
-  registry.npmmirror.com/vite/2.6.3:
-    resolution: {integrity: sha1-W7wdP8/2v+6cXjwNCmibGOWXSzg=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/vite/download/vite-2.6.3.tgz}
+  registry.npmmirror.com/vite/2.6.4:
+    resolution: {integrity: sha1-uTJzXx7N9pJWzm6q4NQaexXXdZk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/vite/download/vite-2.6.4.tgz?cache=0&sync_timestamp=1633608971153&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fvite%2Fdownload%2Fvite-2.6.4.tgz}
     name: vite
-    version: 2.6.3
+    version: 2.6.4
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
