@@ -18,6 +18,7 @@ specifiers:
   '@vitejs/plugin-react-refresh': 1.3.6
   assert: 2.0.0
   autoprefixer: 10.3.7
+  buffer: ^6.0.3
   classnames: 2.3.1
   eslint: 7.32.0
   eslint-config-airbnb: 18.2.1
@@ -38,6 +39,7 @@ specifiers:
   prettier: 2.4.1
   react: 17.0.2
   react-dom: 17.0.2
+  react-hook-form: ^7.17.1
   react-infinite-scroll-hook: 4.0.1
   react-markdown: 7.0.1
   react-oidc-context: 1.1.0
@@ -68,6 +70,7 @@ dependencies:
   oidc-client: registry.npmmirror.com/oidc-client/1.11.5
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
+  react-hook-form: registry.npmmirror.com/react-hook-form/7.17.1_react@17.0.2
   react-infinite-scroll-hook: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_b094b78811fc8d2f00a90f13d0251fb6
   react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
@@ -86,6 +89,7 @@ devDependencies:
   '@vitejs/plugin-react-refresh': registry.npmmirror.com/@vitejs/plugin-react-refresh/1.3.6
   assert: registry.npmmirror.com/assert/2.0.0
   autoprefixer: registry.npmmirror.com/autoprefixer/10.3.7_postcss@8.3.9
+  buffer: 6.0.3
   eslint: registry.npmmirror.com/eslint/7.32.0
   eslint-config-airbnb: 18.2.1_df13c4295769c00420d879625722d10a
   eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.3.0_eslint@7.32.0
@@ -105,6 +109,17 @@ devDependencies:
   vite: registry.npmmirror.com/vite/2.6.5
 
 packages:
+
+  /base64-js/1.5.1:
+    resolution: {integrity: sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=, tarball: base64-js/download/base64-js-1.5.1.tgz}
+    dev: true
+
+  /buffer/6.0.3:
+    resolution: {integrity: sha1-Ks5XhFnMj74qcKqo9S7mO2p0xsY=, tarball: buffer/download/buffer-6.0.3.tgz}
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+    dev: true
 
   /call-bind/1.0.2:
     resolution: {integrity: sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=, tarball: call-bind/download/call-bind-1.0.2.tgz}
@@ -190,6 +205,13 @@ packages:
       object.entries: 1.1.4
     dev: true
 
+  /fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /function-bind/1.1.1:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
     dev: true
@@ -223,6 +245,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: true
+
+  /ieee754/1.2.1:
+    resolution: {integrity: sha1-jrehCmP/8l0VpXsAFYbRd9Gw01I=, tarball: ieee754/download/ieee754-1.2.1.tgz}
     dev: true
 
   /internal-slot/1.0.3:
@@ -5353,6 +5379,17 @@ packages:
     version: 2.0.4
     dev: false
 
+  registry.npmmirror.com/react-hook-form/7.17.1_react@17.0.2:
+    resolution: {integrity: sha1-3CV6XjSzw1NGDs27ulI24GbPgLE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-hook-form/download/react-hook-form-7.17.1.tgz}
+    id: registry.npmmirror.com/react-hook-form/7.17.1
+    name: react-hook-form
+    version: 7.17.1
+    peerDependencies:
+      react: ^16.8.0 || ^17
+    dependencies:
+      react: registry.npmmirror.com/react/17.0.2
+    dev: false
+
   registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2:
     resolution: {integrity: sha1-D+qd56hHZJdarRIJuu/yhmgdg7k=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-infinite-scroll-hook/download/react-infinite-scroll-hook-4.0.1.tgz}
     id: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1
@@ -6638,7 +6675,7 @@ packages:
       resolve: registry.npmmirror.com/resolve/1.20.0
       rollup: registry.npmmirror.com/rollup/2.57.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.npmmirror.com/which-boxed-primitive/1.0.2:

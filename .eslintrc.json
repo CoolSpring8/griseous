@@ -29,7 +29,21 @@
         "import/no-unresolved": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "jsx-a11y/label-has-associated-control": [
+          "error",
+          {
+            "labelComponents": [],
+            "labelAttributes": [],
+            "controlComponents": [],
+            "assert": "either",
+            "depth": 25
+          }
+        ],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"]
       }
     }
   ],

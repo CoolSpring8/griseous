@@ -25,7 +25,7 @@ function HotTopics(): JSX.Element {
         {data?.hotTopic.map((t, index) => (
           <div
             key={t.id}
-            className="even:bg-gray-100 rounded py-2 px-1 flex items-start gap-2"
+            className="even:bg-gray-100 rounded py-2 px-1 flex gap-2"
           >
             <span className="text-lg font-semibold text-gray-400 mr-1">
               {`${index + 1}`.padStart(2, "0")}

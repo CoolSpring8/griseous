@@ -9,10 +9,13 @@ import { useQuery, UseQueryResult } from "react-query";
 
 import { API_ROOT } from "../config";
 import usePathWithParams from "../hooks/usePathWithParams";
+import PreferenceDialog from "./PreferenceDialog";
 
 function MyUserCard(): JSX.Element {
   const auth = useAuth();
   const path = usePathWithParams();
+  const [open, setOpen] = React.useState(false);
+
   const { data }: UseQueryResult<IUser> = useQuery(
     ["myInfo", auth.user?.profile.sub],
     () =>
@@ -68,17 +71,22 @@ function MyUserCard(): JSX.Element {
           </div>
         </div>
         <div className="flex ml-auto whitespace-nowrap">
-          <Button className="min-w-min">
+          <Button
+            className="min-w-min"
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
             <CogIcon className="w-5 h-5" />
             <span className="hidden lg:block">设置</span>
           </Button>
-          <Button className="min-w-min">
-            <LogoutIcon
-              className="w-5 h-5"
-              onClick={() => {
-                auth.signoutPopup();
-              }}
-            />
+          <Button
+            className="min-w-min"
+            onClick={() => {
+              auth.signoutPopup();
+            }}
+          >
+            <LogoutIcon className="w-5 h-5" />
             <span className="hidden lg:block">退出</span>
           </Button>
         </div>
@@ -102,6 +110,12 @@ function MyUserCard(): JSX.Element {
           <p className="text-gray-500">财富值</p>
         </div>
       </div>
+      <PreferenceDialog
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+      />
     </div>
   );
 }
