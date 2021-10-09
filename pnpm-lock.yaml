@@ -33,7 +33,7 @@ specifiers:
   husky: 7.0.2
   immer: 9.0.6
   ky: 0.28.5
-  lint-staged: 11.2.0
+  lint-staged: 11.2.1
   oidc-client: 1.11.5
   postcss: 8.3.9
   prettier: 2.4.1
@@ -100,7 +100,7 @@ devDependencies:
   eslint-plugin-react-hooks: registry.npmmirror.com/eslint-plugin-react-hooks/4.2.0_eslint@7.32.0
   eslint-plugin-simple-import-sort: registry.npmmirror.com/eslint-plugin-simple-import-sort/7.0.0_eslint@7.32.0
   husky: registry.npmmirror.com/husky/7.0.2
-  lint-staged: registry.npmmirror.com/lint-staged/11.2.0
+  lint-staged: registry.npmmirror.com/lint-staged/11.2.1
   postcss: registry.npmmirror.com/postcss/8.3.9
   prettier: registry.npmmirror.com/prettier/2.4.1
   rollup-plugin-visualizer: registry.npmmirror.com/rollup-plugin-visualizer/5.5.2
@@ -3970,10 +3970,10 @@ packages:
     name: lines-and-columns
     version: 1.1.6
 
-  registry.npmmirror.com/lint-staged/11.2.0:
-    resolution: {integrity: sha1-a5d0p0s+tL71xZ+2R1v/hNaFMAg=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/lint-staged/download/lint-staged-11.2.0.tgz}
+  registry.npmmirror.com/lint-staged/11.2.1:
+    resolution: {integrity: sha1-5JEEy06wHvNnQlMThb4u/iuF7ZQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/lint-staged/download/lint-staged-11.2.1.tgz?cache=0&sync_timestamp=1633754781388&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Flint-staged%2Fdownload%2Flint-staged-11.2.1.tgz}
     name: lint-staged
-    version: 11.2.0
+    version: 11.2.1
     hasBin: true
     dependencies:
       cli-truncate: registry.npmmirror.com/cli-truncate/2.1.0
