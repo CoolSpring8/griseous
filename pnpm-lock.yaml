@@ -32,7 +32,7 @@ specifiers:
   formik: 2.2.9
   husky: 7.0.2
   immer: 9.0.6
-  ky: 0.28.5
+  ky: 0.28.6
   lint-staged: 11.2.3
   oidc-client: 1.11.5
   postcss: 8.3.9
@@ -66,7 +66,7 @@ dependencies:
   classnames: registry.npmmirror.com/classnames/2.3.1
   formik: registry.npmmirror.com/formik/2.2.9_react@17.0.2
   immer: registry.npmmirror.com/immer/9.0.6
-  ky: registry.npmmirror.com/ky/0.28.5
+  ky: registry.npmmirror.com/ky/0.28.6
   oidc-client: registry.npmmirror.com/oidc-client/1.11.5
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
@@ -2582,7 +2582,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-arm64/0.13.3:
-    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz?cache=0&sync_timestamp=1634092635648&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fesbuild-freebsd-arm64%2Fdownload%2Fesbuild-freebsd-arm64-0.13.3.tgz}
+    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz}
     name: esbuild-freebsd-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -3998,10 +3998,10 @@ packages:
       object.assign: registry.npmmirror.com/object.assign/4.1.2
     dev: true
 
-  registry.npmmirror.com/ky/0.28.5:
-    resolution: {integrity: sha1-S3raJPsEQMOJhAbzpJhqvmC6IT4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/ky/download/ky-0.28.5.tgz}
+  registry.npmmirror.com/ky/0.28.6:
+    resolution: {integrity: sha1-Pf56M74+PTyZoZ0XA+x6XctmLsU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/ky/download/ky-0.28.6.tgz}
     name: ky
-    version: 0.28.5
+    version: 0.28.6
     engines: {node: '>=12'}
     dev: false
 
