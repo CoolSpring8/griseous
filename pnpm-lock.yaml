@@ -39,7 +39,7 @@ specifiers:
   prettier: 2.4.1
   react: 17.0.2
   react-dom: 17.0.2
-  react-hook-form: 7.17.2
+  react-hook-form: 7.17.3
   react-infinite-scroll-hook: 4.0.1
   react-markdown: 7.0.1
   react-oidc-context: 1.1.0
@@ -70,7 +70,7 @@ dependencies:
   oidc-client: registry.npmmirror.com/oidc-client/1.11.5
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
-  react-hook-form: registry.npmmirror.com/react-hook-form/7.17.2_react@17.0.2
+  react-hook-form: registry.npmmirror.com/react-hook-form/7.17.3_react@17.0.2
   react-infinite-scroll-hook: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_26a96a4441ab225e0159f41c8a2ae043
   react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
@@ -2582,7 +2582,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-arm64/0.13.3:
-    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz}
+    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz?cache=0&sync_timestamp=1634092635648&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fesbuild-freebsd-arm64%2Fdownload%2Fesbuild-freebsd-arm64-0.13.3.tgz}
     name: esbuild-freebsd-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -5395,11 +5395,11 @@ packages:
     version: 2.0.4
     dev: false
 
-  registry.npmmirror.com/react-hook-form/7.17.2_react@17.0.2:
-    resolution: {integrity: sha1-I18Vu2XBPnoRmNM/LbJLzJ4nswM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-hook-form/download/react-hook-form-7.17.2.tgz}
-    id: registry.npmmirror.com/react-hook-form/7.17.2
+  registry.npmmirror.com/react-hook-form/7.17.3_react@17.0.2:
+    resolution: {integrity: sha1-Pthb7TpqpNAT4AJ6k3mdZoBkwgE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-hook-form/download/react-hook-form-7.17.3.tgz}
+    id: registry.npmmirror.com/react-hook-form/7.17.3
     name: react-hook-form
-    version: 7.17.2
+    version: 7.17.3
     peerDependencies:
       react: ^16.8.0 || ^17
     dependencies:
