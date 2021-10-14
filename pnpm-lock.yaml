@@ -8,7 +8,7 @@ specifiers:
   '@emotion/styled': 11.3.0
   '@headlessui/react': 1.4.1
   '@heroicons/react': 1.0.4
-  '@mui/material': 5.0.3
+  '@mui/material': 5.0.4
   '@tailwindcss/forms': 0.3.4
   '@types/react': 17.0.30
   '@types/react-dom': 17.0.9
@@ -61,7 +61,7 @@ dependencies:
   '@emotion/styled': registry.npmmirror.com/@emotion/styled/11.3.0_6f94b2783421bb5436eb17c111598043
   '@headlessui/react': registry.npmmirror.com/@headlessui/react/1.4.1_react-dom@17.0.2+react@17.0.2
   '@heroicons/react': registry.npmmirror.com/@heroicons/react/1.0.4_react@17.0.2
-  '@mui/material': registry.npmmirror.com/@mui/material/5.0.3_dbdd924696a105d41a67e616819acc62
+  '@mui/material': registry.npmmirror.com/@mui/material/5.0.4_dbdd924696a105d41a67e616819acc62
   '@tailwindcss/forms': registry.npmmirror.com/@tailwindcss/forms/0.3.4_tailwindcss@2.2.17
   classnames: registry.npmmirror.com/classnames/2.3.1
   formik: registry.npmmirror.com/formik/2.2.9_react@17.0.2
@@ -970,11 +970,11 @@ packages:
     version: 1.2.0
     dev: true
 
-  registry.npmmirror.com/@mui/core/5.0.0-alpha.50_7510db4ec16e957d3f42221e7066b6f6:
-    resolution: {integrity: sha1-BVt8z4VX+Eno5ho5qOOUP4q62bA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/core/download/@mui/core-5.0.0-alpha.50.tgz}
-    id: registry.npmmirror.com/@mui/core/5.0.0-alpha.50
+  registry.npmmirror.com/@mui/core/5.0.0-alpha.51_7510db4ec16e957d3f42221e7066b6f6:
+    resolution: {integrity: sha1-PF9xWg7lqxI+CYcEe45GUZZOzFQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/core/download/@mui/core-5.0.0-alpha.51.tgz}
+    id: registry.npmmirror.com/@mui/core/5.0.0-alpha.51
     name: '@mui/core'
-    version: 5.0.0-alpha.50
+    version: 5.0.0-alpha.51
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@types/react': ^16.8.6 || ^17.0.0
@@ -995,11 +995,11 @@ packages:
       react-is: registry.npmmirror.com/react-is/17.0.2
     dev: false
 
-  registry.npmmirror.com/@mui/material/5.0.3_dbdd924696a105d41a67e616819acc62:
-    resolution: {integrity: sha1-WsTZ99ljXvyc9zRzc+SdtB8bBls=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/material/download/@mui/material-5.0.3.tgz}
-    id: registry.npmmirror.com/@mui/material/5.0.3
+  registry.npmmirror.com/@mui/material/5.0.4_dbdd924696a105d41a67e616819acc62:
+    resolution: {integrity: sha1-OLhCpBOu1hw/4WmhZ+gkMZ/I8bE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/material/download/@mui/material-5.0.4.tgz}
+    id: registry.npmmirror.com/@mui/material/5.0.4
     name: '@mui/material'
-    version: 5.0.3
+    version: 5.0.4
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@emotion/react': ^11.4.1
@@ -1018,8 +1018,8 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
       '@emotion/react': registry.npmmirror.com/@emotion/react/11.4.1_0d9ae6029f9b6856f7d6fb45bd27ecc7
       '@emotion/styled': registry.npmmirror.com/@emotion/styled/11.3.0_6f94b2783421bb5436eb17c111598043
-      '@mui/core': registry.npmmirror.com/@mui/core/5.0.0-alpha.50_7510db4ec16e957d3f42221e7066b6f6
-      '@mui/system': registry.npmmirror.com/@mui/system/5.0.3_bd9e7c0066765b274bcf9c42bba9ced9
+      '@mui/core': registry.npmmirror.com/@mui/core/5.0.0-alpha.51_7510db4ec16e957d3f42221e7066b6f6
+      '@mui/system': registry.npmmirror.com/@mui/system/5.0.4_bd9e7c0066765b274bcf9c42bba9ced9
       '@mui/types': registry.npmmirror.com/@mui/types/7.0.0_@types+react@17.0.30
       '@mui/utils': registry.npmmirror.com/@mui/utils/5.0.1_react@17.0.2
       '@popperjs/core': registry.npmmirror.com/@popperjs/core/2.10.1
@@ -1044,9 +1044,6 @@ packages:
     peerDependencies:
       '@types/react': ^16.8.6 || ^17.0.0
       react: ^17.0.2
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
       '@mui/utils': registry.npmmirror.com/@mui/utils/5.0.1_react@17.0.2
@@ -1079,11 +1076,11 @@ packages:
       react: registry.npmmirror.com/react/17.0.2
     dev: false
 
-  registry.npmmirror.com/@mui/system/5.0.3_bd9e7c0066765b274bcf9c42bba9ced9:
-    resolution: {integrity: sha1-bBJr5cJ5b+ia+Tqg520cPG3Mz0U=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/system/download/@mui/system-5.0.3.tgz}
-    id: registry.npmmirror.com/@mui/system/5.0.3
+  registry.npmmirror.com/@mui/system/5.0.4_bd9e7c0066765b274bcf9c42bba9ced9:
+    resolution: {integrity: sha1-z/gGUzyQY+/J4cbsmXMbZKwGMug=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@mui/system/download/@mui/system-5.0.4.tgz}
+    id: registry.npmmirror.com/@mui/system/5.0.4
     name: '@mui/system'
-    version: 5.0.3
+    version: 5.0.4
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@emotion/react': ^11.4.1
@@ -1281,7 +1278,7 @@ packages:
     name: '@types/react-is'
     version: 17.0.2
     dependencies:
-      '@types/react': registry.npmmirror.com/@types/react/17.0.27
+      '@types/react': registry.npmmirror.com/@types/react/17.0.30
     dev: false
 
   registry.npmmirror.com/@types/react-router-dom/5.3.1:
@@ -1308,7 +1305,7 @@ packages:
     name: '@types/react-transition-group'
     version: 4.4.3
     dependencies:
-      '@types/react': registry.npmmirror.com/@types/react/17.0.27
+      '@types/react': registry.npmmirror.com/@types/react/17.0.30
     dev: false
 
   registry.npmmirror.com/@types/react/17.0.25:
@@ -1329,6 +1326,7 @@ packages:
       '@types/prop-types': registry.npmmirror.com/@types/prop-types/15.7.4
       '@types/scheduler': registry.npmmirror.com/@types/scheduler/0.16.2
       csstype: registry.npmmirror.com/csstype/3.0.9
+    dev: true
 
   registry.npmmirror.com/@types/react/17.0.30:
     resolution: {integrity: sha1-L45vWrZBXAkcxeVxlC7pBksXYJ4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@types/react/download/@types/react-17.0.30.tgz?cache=0&sync_timestamp=1634223341594&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-17.0.30.tgz}
@@ -1338,7 +1336,6 @@ packages:
       '@types/prop-types': registry.npmmirror.com/@types/prop-types/15.7.4
       '@types/scheduler': registry.npmmirror.com/@types/scheduler/0.16.2
       csstype: registry.npmmirror.com/csstype/3.0.9
-    dev: true
 
   registry.npmmirror.com/@types/scheduler/0.16.2:
     resolution: {integrity: sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz}
