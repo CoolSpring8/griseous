@@ -39,7 +39,7 @@ specifiers:
   prettier: 2.4.1
   react: 17.0.2
   react-dom: 17.0.2
-  react-hook-form: 7.17.3
+  react-hook-form: 7.17.4
   react-infinite-scroll-hook: 4.0.1
   react-markdown: 7.0.1
   react-oidc-context: 1.1.0
@@ -70,7 +70,7 @@ dependencies:
   oidc-client: registry.npmmirror.com/oidc-client/1.11.5
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
-  react-hook-form: registry.npmmirror.com/react-hook-form/7.17.3_react@17.0.2
+  react-hook-form: registry.npmmirror.com/react-hook-form/7.17.4_react@17.0.2
   react-infinite-scroll-hook: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_26a96a4441ab225e0159f41c8a2ae043
   react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
@@ -5109,6 +5109,9 @@ packages:
     engines: {node: '>= 10'}
     peerDependencies:
       ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      ts-node:
+        optional: true
     dependencies:
       import-cwd: registry.npmmirror.com/import-cwd/3.0.0
       lilconfig: registry.npmmirror.com/lilconfig/2.0.3
@@ -5375,11 +5378,11 @@ packages:
     version: 2.0.4
     dev: false
 
-  registry.npmmirror.com/react-hook-form/7.17.3_react@17.0.2:
-    resolution: {integrity: sha1-Pthb7TpqpNAT4AJ6k3mdZoBkwgE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-hook-form/download/react-hook-form-7.17.3.tgz}
-    id: registry.npmmirror.com/react-hook-form/7.17.3
+  registry.npmmirror.com/react-hook-form/7.17.4_react@17.0.2:
+    resolution: {integrity: sha1-IytqrM3bketKIorCCxVKvZCGb9s=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-hook-form/download/react-hook-form-7.17.4.tgz}
+    id: registry.npmmirror.com/react-hook-form/7.17.4
     name: react-hook-form
-    version: 7.17.3
+    version: 7.17.4
     peerDependencies:
       react: ^16.8.0 || ^17
     dependencies:
