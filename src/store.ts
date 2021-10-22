@@ -11,8 +11,7 @@ const immer =
       (partial, replace) => {
         const nextState =
           typeof partial === "function"
-            ? // eslint-disable-next-line no-unused-vars
-              produce(partial as (state: Draft<T>) => T)
+            ? produce(partial as (state: Draft<T>) => T)
             : (partial as T);
         return set(nextState, replace);
       },

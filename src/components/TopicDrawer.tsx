@@ -125,7 +125,7 @@ function TopicDrawer({
       onClose={onClose}
     >
       <div className="w-70vw md:w-160 lg:w-200 flex flex-col space-y-6 mx-6">
-        {data?.pages.map((page, i) => (
+        {data?.pages.map((page, i, pages) => (
           // eslint-disable-next-line react/no-array-index-key
           <React.Fragment key={i}>
             {page.map((post) => (
@@ -135,6 +135,7 @@ function TopicDrawer({
                   user={userInfo.data?.pages
                     .flat()
                     .find((user) => user.id === post.userId)}
+                  pages={pages}
                 />
               </div>
             ))}
