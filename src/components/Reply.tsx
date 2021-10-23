@@ -2,6 +2,7 @@ import BBCode from "@bbob/react/es/Component";
 import { IPost, IUser } from "@cc98/api";
 import { ThumbDownIcon, ThumbUpIcon } from "@heroicons/react/outline";
 import {
+  PencilIcon,
   ReplyIcon,
   ThumbDownIcon as ThumbDownIconSolid,
   ThumbUpIcon as ThumbUpIconSolid,
@@ -33,6 +34,18 @@ function Reply({
   const parentPost = hasParent
     ? pages?.flat().find((p) => p.id === post.parentId)
     : null;
+  const hasAwards = !!post.awards?.length;
+  const awardsAcc: Record<string, number> = {};
+  const awardsStats = hasAwards
+    ? post.awards.reduce((acc, cur) => {
+        if (acc[cur.content]) {
+          acc[cur.content] += 1;
+        } else {
+          acc[cur.content] = 1;
+        }
+        return acc;
+      }, awardsAcc)
+    : null;
 
   return (
     <>
@@ -41,14 +54,14 @@ function Reply({
       ) : (
         <div className="whitespace-pre-wrap bg-white rounded-2xl shadow overflow-hidden">
           {hasParent && (
-            <div className="bg-yellow-50 text-gray-400 text-sm px-4 py-2 flex items-center">
+            <div className="bg-yellow-50 text-gray-500 text-sm px-4 py-2 flex items-center">
               <ReplyIcon className="w-4 h-4 mr-2" />
               <span>{parentPost?.userName}：</span>
               <span className="flex-1 whitespace-nowrap overflow-hidden overflow-ellipsis">
                 {parentPost?.content
                   .replace(/\[quote\](.+)\[\/quote\]/s, "")
-                  .replaceAll(/\[\/?.+\]/g, "")
-                  .replaceAll(/\n/g, "")}
+                  .replaceAll(/\[\/?.+?\]/g, "")
+                  .replaceAll("\n", " ")}
               </span>
               <span>#{parentPost?.floor}</span>
             </div>
@@ -72,20 +85,39 @@ function Reply({
                 />
               </div>
               <span className="ml-1.5 text-sm">{post.userName}</span>
-              <span
-                className="ml-2 text-xs text-gray-500 flex-1 cursor-pointer"
-                onClick={toggleTimeFormat}
-                onKeyUp={(e) => {
-                  if (e.key === "Enter") toggleTimeFormat();
-                }}
-                role="button"
-                tabIndex={0}
-              >
-                {timeFormat === "relative"
-                  ? rtfFormat(post.time)
-                  : dtfFormat(post.time)}
-              </span>
-              <span className="text-gray-500">#{post.floor}</span>
+              <div className="ml-2 flex items-center text-xs text-gray-500">
+                <span
+                  className="cursor-pointer"
+                  onClick={toggleTimeFormat}
+                  onKeyUp={(e) => {
+                    if (e.key === "Enter") toggleTimeFormat();
+                  }}
+                  role="button"
+                  tabIndex={0}
+                >
+                  {timeFormat === "relative"
+                    ? rtfFormat(post.time)
+                    : dtfFormat(post.time)}
+                </span>
+                {post.lastUpdateTime && (
+                  <div className="flex">
+                    <PencilIcon className="ml-2 w-4 h-4" />
+                    <span>
+                      {timeFormat === "relative"
+                        ? rtfFormat(post.lastUpdateTime)
+                        : dtfFormat(post.lastUpdateTime)}
+                    </span>
+                    {post.lastUpdateAuthor !== post.userName &&
+                      post.lastUpdateAuthor !== "匿名" && (
+                        <>
+                          <span> by </span>
+                          <span>{post.lastUpdateAuthor}</span>
+                        </>
+                      )}
+                  </div>
+                )}
+              </div>
+              <span className="ml-auto text-gray-500">#{post.floor}</span>
             </div>
             <article>
               {post.contentType === 1 ? (
@@ -100,7 +132,7 @@ function Reply({
                 </BBCode>
               )}
             </article>
-            <div className="flex items-center space-x-3 text-purple-300 !mt-5">
+            <div className="flex items-center text-sm space-x-3 text-purple-300 !mt-5">
               <div className="flex space-x-1">
                 <div className="w-4 h-4">
                   {post.likeState === 1 ? (
@@ -109,7 +141,7 @@ function Reply({
                     <ThumbUpIcon />
                   )}
                 </div>
-                <span className="text-sm">{post.likeCount}</span>
+                <span className="">{post.likeCount}</span>
               </div>
               <div className="flex space-x-1">
                 <div className="w-4 h-4">
@@ -119,8 +151,18 @@ function Reply({
                     <ThumbDownIcon />
                   )}
                 </div>
-                <span className="text-sm">{post.dislikeCount}</span>
+                <span className="">{post.dislikeCount}</span>
               </div>
+              {awardsStats && (
+                <div className="flex gap-2">
+                  {Object.entries(awardsStats).map((a) => (
+                    <div className="shadow rounded-xl bg-gray-100 px-2 py-1 flex gap-2">
+                      <span className="text-gray-500">{a[0]}</span>
+                      <span className="text-yellow-600">×{a[1]}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

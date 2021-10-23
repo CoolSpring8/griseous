@@ -11,8 +11,7 @@ function Image({ src, isHiding }: ImageProps): JSX.Element {
     );
   }
 
-  // eslint-disable-next-line jsx-a11y/alt-text
-  return <img src={src} />;
+  return <img src={src} className="max-w-[70%]" alt="" />;
 }
 
 type ImageProps = {
