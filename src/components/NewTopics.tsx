@@ -1,5 +1,6 @@
 import { IBasicUser, ITopic } from "@cc98/api";
 import {
+  ChevronDoubleLeftIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   RefreshIcon,
@@ -99,6 +100,15 @@ function NewTopics(): JSX.Element {
           <button
             type="button"
             onClick={() => {
+              setPage(1);
+            }}
+            className="block md:hidden"
+          >
+            <ChevronDoubleLeftIcon className="w-6 h-6 text-pink-300" />
+          </button>
+          <button
+            type="button"
+            onClick={() => {
               queryClient.invalidateQueries("newTopics");
             }}
             className="ml-8"
@@ -140,7 +150,7 @@ function NewTopics(): JSX.Element {
                   <div>
                     <button
                       type="button"
-                      className="text-gray-600 text-left"
+                      className="text-gray-600 text-left text-sm sm:text-base"
                       onClick={() => {
                         setActiveTopic(topic.id);
                         setDrawerOpen(true);
@@ -166,8 +176,8 @@ function NewTopics(): JSX.Element {
                     </div>
                     {topic.replyCount === 0 ? null : (
                       <>
-                        <span>/</span>
-                        <div className="space-x-1.5 ml-2.5">
+                        <span className="hidden sm:inline">/</span>
+                        <div className="space-x-1.5 ml-2.5 hidden sm:inline">
                           <span className="font-semibold">
                             {topic.isAnonymous
                               ? "匿名用户"

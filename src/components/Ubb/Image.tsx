@@ -11,7 +11,7 @@ function Image({ src, isHiding }: ImageProps): JSX.Element {
     );
   }
 
-  return <img src={src} className="max-w-[70%]" alt="" />;
+  return <img src={src} className="max-h-[70vh]" alt="" />;
 }
 
 type ImageProps = {

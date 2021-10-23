@@ -40,7 +40,7 @@ function HotTopics(): JSX.Element {
             >
               {t.title}
             </button>
-            <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto self-center">
+            <span className="text-xs text-gray-400 bg-gray-200 rounded py-0.5 px-1 whitespace-nowrap ml-auto self-center hidden lg:inline">
               <Link to={`/board/${t.boardId}`}>{t.boardName}</Link>
             </span>
             {activeTopic === t.id && (
