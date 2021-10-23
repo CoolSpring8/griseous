@@ -2,6 +2,7 @@ import BBCode from "@bbob/react/es/Component";
 import { IPost, IUser } from "@cc98/api";
 import { ThumbDownIcon, ThumbUpIcon } from "@heroicons/react/outline";
 import {
+  ReplyIcon,
   ThumbDownIcon as ThumbDownIconSolid,
   ThumbUpIcon as ThumbUpIconSolid,
 } from "@heroicons/react/solid";
@@ -28,31 +29,33 @@ function Reply({
   const [timeFormat, setTimeFormat] = React.useState("relative");
   const toggleTimeFormat = () =>
     setTimeFormat((f) => (f === "relative" ? "absolute" : "relative"));
+  const hasParent = post.parentId !== 0;
+  const parentPost = hasParent
+    ? pages?.flat().find((p) => p.id === post.parentId)
+    : null;
 
   return (
     <>
       {blockedUsers.includes(post.userName) ? (
         <div data-blocked-user />
       ) : (
-        <div className="whitespace-pre-wrap bg-white rounded-md shadow">
-          {post.parentId !== 0 && (
-            <div className="bg-yellow-50 text-gray-400 text-sm whitespace-nowrap overflow-hidden overflow-ellipsis px-4 py-2">
-              <span>
-                {pages?.flat().find((p) => p.id === post.parentId)?.userName}：
-              </span>
-              <span>
-                {pages
-                  ?.flat()
-                  .find((p) => p.id === post.parentId)
-                  ?.content.replace(/\[quote\](.+)\[\/quote\]/s, "")
+        <div className="whitespace-pre-wrap bg-white rounded-2xl shadow overflow-hidden">
+          {hasParent && (
+            <div className="bg-yellow-50 text-gray-400 text-sm px-4 py-2 flex items-center">
+              <ReplyIcon className="w-4 h-4 mr-2" />
+              <span>{parentPost?.userName}：</span>
+              <span className="flex-1 whitespace-nowrap overflow-hidden overflow-ellipsis">
+                {parentPost?.content
+                  .replace(/\[quote\](.+)\[\/quote\]/s, "")
                   .replaceAll(/\[\/?.+\]/g, "")
                   .replaceAll(/\n/g, "")}
               </span>
+              <span>#{parentPost?.floor}</span>
             </div>
           )}
           <div
             className={classNames("p-4 flex flex-col space-y-2", {
-              "before:bg-blue-500 before:absolute before:left-4 before:w-2 before:h-16 before:rounded-l":
+              "before:bg-blue-500 before:absolute before:left-4 before:w-2 before:h-12 before:rounded-l":
                 post.isLZ,
             })}
           >
@@ -93,7 +96,7 @@ function Reply({
                 <BBCode plugins={[ubbPreset()]} options={ubbOptions}>
                   {post.content
                     ?.replace(/\[quote\](.+)\[\/quote\]/s, "")
-                    .trim()}
+                    .trim() ?? ""}
                 </BBCode>
               )}
             </article>
