@@ -58,6 +58,8 @@ Mew 在社区形态与交互界面上做出的许多创新是引发我写这个�
   - [heroicons](https://github.com/tailwindlabs/heroicons)
 - 工具与规范
   - [Vite](https://github.com/vitejs/vite)
+    - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa)
+    - [Rollup Plugin Visualizer](https://github.com/btd/rollup-plugin-visualizer)
   - [pnpm](https://github.com/pnpm/pnpm)
   - [ESLint](https://github.com/eslint/eslint)
     - [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
@@ -66,7 +68,6 @@ Mew 在社区形态与交互界面上做出的许多创新是引发我写这个�
   - [husky](https://github.com/typicode/husky)
   - [lint-staged](https://github.com/okonet/lint-staged)
   - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [Rollup Plugin Visualizer](https://github.com/btd/rollup-plugin-visualizer)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 

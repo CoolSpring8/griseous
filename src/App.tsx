@@ -5,6 +5,7 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import ReloadPrompt from "./components/ReloadPrompt";
 import Routes from "./Routes";
 
 const queryClient = new QueryClient({
@@ -25,6 +26,7 @@ function App(): JSX.Element {
         <Router>
           <Routes />
         </Router>
+        <ReloadPrompt />
       </StyledEngineProvider>
     </QueryClientProvider>
   );
