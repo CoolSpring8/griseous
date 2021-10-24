@@ -1,6 +1,8 @@
 // https://github.com/ZJU-CC98/Forum/blob/dev/CC98.Forum/CC98.Forum/Ubb/UbbCodeExtension.tsx
 
 import { createPreset } from "@bbob/preset";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import Image from "../components/Ubb/Image";
 import { OFFICIAL_FORUM_ROOT } from "../config";
@@ -121,6 +123,54 @@ const ubbTagsRegular = {
   table: (node) => ({
     tag: "table",
     content: node.content,
+  }),
+  td: (node) => ({
+    tag: "td",
+    attrs: {
+      rowspan: Object.keys(node.attrs)[0] ?? 1,
+      colspan: Object.keys(node.attrs)[1] ?? 1,
+    },
+    content: node.content,
+  }),
+  th: (node) => ({
+    tag: "th",
+    attrs: {
+      rowspan: Object.keys(node.attrs)[0] ?? 1,
+      colspan: Object.keys(node.attrs)[1] ?? 1,
+    },
+    content: node.content,
+  }),
+  tr: (node) => ({
+    tag: "tr",
+    content: node.content,
+  }),
+  topic: (node) => ({
+    tag: "a",
+    attrs: { href: `/topic/${Object.keys(node.attrs)[0]}` },
+    content: node.content,
+  }),
+  md: (node) => ({
+    tag: ReactMarkdown,
+    attrs: { remarkPlugins: [remarkGfm] },
+    content: node.content,
+  }),
+  pm: (node) => ({
+    tag: "a",
+    attrs: { href: `/message/message?name=${Object.keys(node.attrs)[0]}` },
+    content: node.content,
+  }),
+  // TODO：处理参数为av号或整个网址的情况
+  // TODO：responsive iframe？
+  bili: (node) => ({
+    tag: "iframe",
+    attrs: {
+      src: `//player.bilibili.com/player.html?bvid=${node.content}&page=${
+        Object.keys(node.attrs)[0] ?? 1
+      }`,
+      width: "640",
+      height: "480",
+      allow: "fullscreen",
+    },
   }),
   line: () => ({
     tag: "hr",
