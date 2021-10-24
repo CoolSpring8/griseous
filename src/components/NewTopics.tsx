@@ -150,7 +150,7 @@ function NewTopics(): JSX.Element {
                   <div>
                     <button
                       type="button"
-                      className="text-gray-600 text-left text-sm sm:text-base"
+                      className="text-gray-600 text-left"
                       onClick={() => {
                         setActiveTopic(topic.id);
                         setDrawerOpen(true);
