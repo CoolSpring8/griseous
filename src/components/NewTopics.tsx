@@ -124,7 +124,7 @@ function NewTopics(): JSX.Element {
       {!auth.isAuthenticated ? (
         <div className="text-2xl leading-10 font-medium text-gray-300 text-center pb-2">
           <p>( ° ∀ ° )ﾉﾞ</p>
-          <p>登录后才能查看哦</p>
+          <p>校网下授权登录后才能查看哦</p>
         </div>
       ) : (
         <div>

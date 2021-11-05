@@ -33,10 +33,13 @@ function MyUserCard(): JSX.Element {
         <div className="flex items-center mb-4">
           <CheckCircleIcon className="h-8 w-8" />
           <span className="text-3xl ml-1">登录</span>
-          <div className="flex items-center ml-auto">
+          <Button
+            className="flex items-center ml-auto text-white"
+            href="https://github.com/CoolSpring8/griseous"
+          >
             <QuestionMarkCircleIcon className="w-5 h-5" />
             <span className="ml-1 text-sm">关于本站</span>
-          </div>
+          </Button>
         </div>
         <div>
           <Button

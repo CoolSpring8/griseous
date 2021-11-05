@@ -4,7 +4,7 @@ import { createPreset } from "@bbob/preset";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import Image from "../components/Ubb/Image";
+import Image from "../components/ubb/Image";
 import { OFFICIAL_FORUM_ROOT } from "../config";
 import stickers from "./Stickers";
 
