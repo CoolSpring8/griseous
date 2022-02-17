@@ -42,7 +42,7 @@ specifiers:
   react-hook-form: 7.17.4
   react-infinite-scroll-hook: 4.0.1
   react-markdown: 7.0.1
-  react-oidc-context: 1.1.0
+  react-oidc-context: 2.1.0
   react-query: 3.27.0
   react-router-dom: 5.3.0
   react-use: 17.3.1
@@ -75,7 +75,7 @@ dependencies:
   react-hook-form: registry.npmmirror.com/react-hook-form/7.17.4_react@17.0.2
   react-infinite-scroll-hook: registry.npmmirror.com/react-infinite-scroll-hook/4.0.1_react@17.0.2
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_0d9ae6029f9b6856f7d6fb45bd27ecc7
-  react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
+  react-oidc-context: registry.npmmirror.com/react-oidc-context/2.1.0_react@17.0.2
   react-query: registry.npmmirror.com/react-query/3.27.0_react-dom@17.0.2+react@17.0.2
   react-router-dom: registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2
   react-use: registry.npmmirror.com/react-use/17.3.1_react-dom@17.0.2+react@17.0.2
@@ -4065,7 +4065,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/esbuild-android-arm64/0.13.3:
-    resolution: {integrity: sha1-73NMdu7/QujFOs3/6QHaCQFkqJA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/download/esbuild-android-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-jc9E8vGTHkzb0Vwl74H8liANV9BWsqtzLHaKvcsRgf1M+aVCBSF0gUheduAKfDsbDMT0judeMLhwBP34EUesTA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/-/esbuild-android-arm64-0.13.3.tgz}
     name: esbuild-android-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4075,7 +4075,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-darwin-64/0.13.3:
-    resolution: {integrity: sha1-NfKTdrdFGt158GQJgGg++SM2U4U=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/download/esbuild-darwin-64-0.13.3.tgz}
+    resolution: {integrity: sha512-8bG3Zq+ZNuLlIJebOO2+weI7P2LVf33sOzaUfHj8MuJ+1Ixe4KtQxfYp7qhFnP6xP2ToJaYHxGUfLeiUCEz9hw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/-/esbuild-darwin-64-0.13.3.tgz}
     name: esbuild-darwin-64
     version: 0.13.3
     cpu: [x64]
@@ -4085,7 +4085,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-darwin-arm64/0.13.3:
-    resolution: {integrity: sha1-UwoTJufRjWLJpUttznDyt37VDuw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-5E81eImYtTgh8pY7Gq4WQHhWkR/LvYadUXmuYeZBiP+3ADZJZcG60UFceZrjqNPaFOWKr/xmh4aNocwagEubcA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.13.3.tgz}
     name: esbuild-darwin-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4095,7 +4095,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-64/0.13.3:
-    resolution: {integrity: sha1-ziiWrDYuBuuCyl3sBrJWiQHrWvw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/download/esbuild-freebsd-64-0.13.3.tgz}
+    resolution: {integrity: sha512-ou+f91KkTGexi8HvF/BdtsITL6plbciQfZGys7QX6/QEwyE96PmL5KnU6ZQwoU7E99Ts6Sc9bUDq8HXJubKtBA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.13.3.tgz}
     name: esbuild-freebsd-64
     version: 0.13.3
     cpu: [x64]
@@ -4105,7 +4105,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-arm64/0.13.3:
-    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-F1zV7nySjHswJuvIgjkiG5liZ63MeazDGXGKViTCeegjZ71sAhOChcaGhKcu6vq9+vqZxlfEi1fmXlx6Pc3coQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.13.3.tgz}
     name: esbuild-freebsd-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4115,7 +4115,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-32/0.13.3:
-    resolution: {integrity: sha1-rVbxggjs8AfNmrFs05YmygMSuO4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-32/download/esbuild-linux-32-0.13.3.tgz}
+    resolution: {integrity: sha512-mHHc2v6uLrHH4zaaq5RB/5IWzgimEJ1HGldzf1qtGI513KZWfH0HRRQ8p1di4notJgBn7tDzWQ1f34ZHy69viQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-32/-/esbuild-linux-32-0.13.3.tgz}
     name: esbuild-linux-32
     version: 0.13.3
     cpu: [ia32]
@@ -4125,7 +4125,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-64/0.13.3:
-    resolution: {integrity: sha1-vh6rrfaNFTiX7Yh2ePdJbTlJgQ8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-64/download/esbuild-linux-64-0.13.3.tgz}
+    resolution: {integrity: sha512-FJ1De2O89mrOuqtaEXu41qIYJU6R41F+OA6vheNwcAQcX8fu0aiA13FJeLABq29BYJuTVgRj3cyC8q+tz19/dQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.13.3.tgz}
     name: esbuild-linux-64
     version: 0.13.3
     cpu: [x64]
@@ -4135,7 +4135,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-arm/0.13.3:
-    resolution: {integrity: sha1-s7MWfJ1dMDiJT7x1sZSk++k+rwk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/download/esbuild-linux-arm-0.13.3.tgz}
+    resolution: {integrity: sha512-9BJNRtLwBh3OP22cln9g3AJdbAQUcjRHqA4BScx9k4RZpGqPokFr548zpeplxWhcwrIjT8qPebwH9CrRVy8Bsw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/-/esbuild-linux-arm-0.13.3.tgz}
     name: esbuild-linux-arm
     version: 0.13.3
     cpu: [arm]
@@ -4145,7 +4145,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-arm64/0.13.3:
-    resolution: {integrity: sha1-MpNIu0oZz7XpBGzF2XulAX2PdK0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/download/esbuild-linux-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-Cauhr45KSo+wRUojs+1qfycQqQCAXTOvsWvkZ6xmEMAXLAm+f8RQGDQeP8CAf8Yeelnegcn6UNdvzdzLHhWDFg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.13.3.tgz}
     name: esbuild-linux-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4155,7 +4155,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-mips64le/0.13.3:
-    resolution: {integrity: sha1-6haH8o6iyFOZ7ML+I6SKs0O3s10=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.13.3.tgz}
+    resolution: {integrity: sha512-YVzJUGCncuuLm2boYyVeuMFsak4ZAhdiBwi0xNDZCC8sy+tS6Boe2mzcrD2uubv5JKAUOrpN186S1DtU4WgBgw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.13.3.tgz}
     name: esbuild-linux-mips64le
     version: 0.13.3
     cpu: [mips64el]
@@ -4165,7 +4165,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-ppc64le/0.13.3:
-    resolution: {integrity: sha1-pGLPQurj1/wpqfJ3Z59a3ucK+mc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.13.3.tgz}
+    resolution: {integrity: sha512-GU6CqqKtJEoyxC2QWHiJtmuOz9wc/jMv8ZloK2WwiGY5yMvAmM3PI103Dj7xcjebNTHBqITTUw/aigY1wx5A3w==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.13.3.tgz}
     name: esbuild-linux-ppc64le
     version: 0.13.3
     cpu: [ppc64]
@@ -4175,7 +4175,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-openbsd-64/0.13.3:
-    resolution: {integrity: sha1-DLFb2G0g6xnLVItTDxpTMZdTLPk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/download/esbuild-openbsd-64-0.13.3.tgz}
+    resolution: {integrity: sha512-HVpkgpn4BQt4BPDAjTOpeMub6mzNWw6Y3gaLQJrpbO24pws6ZwYkY24OI3/Uo3LDCbH6856MM81JxECt92OWjA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.13.3.tgz}
     name: esbuild-openbsd-64
     version: 0.13.3
     cpu: [x64]
@@ -4185,7 +4185,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-sunos-64/0.13.3:
-    resolution: {integrity: sha1-U6lBJB+IEBCWnMjxrLGtpJxM08I=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/download/esbuild-sunos-64-0.13.3.tgz}
+    resolution: {integrity: sha512-XncBVOtnEfUbPV4CaiFBxh38ychnBfwCxuTm9iAqcHzIwkmeNRN5qMzDyfE1jyfJje+Bbt6AvIfz6SdYt8/UEQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/-/esbuild-sunos-64-0.13.3.tgz}
     name: esbuild-sunos-64
     version: 0.13.3
     cpu: [x64]
@@ -4195,7 +4195,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-32/0.13.3:
-    resolution: {integrity: sha1-Jl3A0M21N0aFqFHFhIVwVeEoZaQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-32/download/esbuild-windows-32-0.13.3.tgz}
+    resolution: {integrity: sha512-ZlgDz7d1nk8wQACi+z8IDzNZVUlN9iprAme+1YSTsfFDlkyI8jeaGWPk9EQFNY7rJzsLVYm6eZ2mhPioc7uT5A==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-32/-/esbuild-windows-32-0.13.3.tgz}
     name: esbuild-windows-32
     version: 0.13.3
     cpu: [ia32]
@@ -4205,7 +4205,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-64/0.13.3:
-    resolution: {integrity: sha1-rnEMBinsjDnF7x9p6G7VWSu0Eo8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-64/download/esbuild-windows-64-0.13.3.tgz}
+    resolution: {integrity: sha512-YX7KvRez3TR+GudlQm9tND/ssj2FsF9vb8ZWzAoZOLxpPzE3y+3SFJNrfDzzQKPzJ0Pnh9KBP4gsaMwJjKHDhw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.13.3.tgz}
     name: esbuild-windows-64
     version: 0.13.3
     cpu: [x64]
@@ -4215,7 +4215,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-arm64/0.13.3:
-    resolution: {integrity: sha1-ojYZmiaxIFVz3LVx+WYYkyakyVM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/download/esbuild-windows-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-nP7H0Y2a6OJd3Qi1Q8sehhyP4x4JoXK4S5y6FzH2vgaJgiyEurzFxjUufGdMaw+RxtxiwD/uRndUgwaZ2JD8lg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.13.3.tgz}
     name: esbuild-windows-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4782,7 +4782,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fsevents/download/fsevents-2.3.2.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
     name: fsevents
     version: 2.3.2
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -7050,16 +7050,16 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2:
-    resolution: {integrity: sha1-sgPuneXIWEymUt4T6IlkkIfyizY=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-oidc-context/download/react-oidc-context-1.1.0.tgz}
-    id: registry.npmmirror.com/react-oidc-context/1.1.0
+  registry.npmmirror.com/react-oidc-context/2.1.0_react@17.0.2:
+    resolution: {integrity: sha512-7u+bAhjDunHS08/6GkmzNkZxSR7Xzx+HnKyWpJlQk6NQYCK4UkpdkDgPILDUbvjDYHsjCRecoYrtK90lg2jRAA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-oidc-context/-/react-oidc-context-2.1.0.tgz}
+    id: registry.npmmirror.com/react-oidc-context/2.1.0
     name: react-oidc-context
-    version: 1.1.0
-    engines: {node: '>=10'}
+    version: 2.1.0
+    engines: {node: '>=12.13.0'}
     peerDependencies:
-      react: '>=16'
+      oidc-client-ts: ^2.0.0
+      react: '>=16.8.0'
     dependencies:
-      oidc-client: registry.npmmirror.com/oidc-client/1.11.5
       react: registry.npmmirror.com/react/17.0.2
     dev: false
 
