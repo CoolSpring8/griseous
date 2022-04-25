@@ -44,7 +44,7 @@ specifiers:
   react-markdown: 7.0.1
   react-oidc-context: 1.1.0
   react-query: 3.27.0
-  react-router-dom: 5.3.0
+  react-router-dom: 6.3.0
   react-use: 17.3.1
   remark-gfm: 3.0.0
   rollup-plugin-visualizer: 5.5.2
@@ -77,7 +77,7 @@ dependencies:
   react-markdown: registry.npmmirror.com/react-markdown/7.0.1_0d9ae6029f9b6856f7d6fb45bd27ecc7
   react-oidc-context: registry.npmmirror.com/react-oidc-context/1.1.0_react@17.0.2
   react-query: registry.npmmirror.com/react-query/3.27.0_react-dom@17.0.2+react@17.0.2
-  react-router-dom: registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2
+  react-router-dom: registry.npmmirror.com/react-router-dom/6.3.0_react-dom@17.0.2+react@17.0.2
   react-use: registry.npmmirror.com/react-use/17.3.1_react-dom@17.0.2+react@17.0.2
   remark-gfm: registry.npmmirror.com/remark-gfm/3.0.0
   zustand: registry.npmmirror.com/zustand/3.5.13_react@17.0.2
@@ -1929,7 +1929,7 @@ packages:
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
 
   registry.npmmirror.com/@babel/runtime/7.15.4:
-    resolution: {integrity: sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz}
+    resolution: {integrity: sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@babel/runtime/-/runtime-7.15.4.tgz}
     name: '@babel/runtime'
     version: 7.15.4
     engines: {node: '>=6.9.0'}
@@ -4065,7 +4065,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/esbuild-android-arm64/0.13.3:
-    resolution: {integrity: sha1-73NMdu7/QujFOs3/6QHaCQFkqJA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/download/esbuild-android-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-jc9E8vGTHkzb0Vwl74H8liANV9BWsqtzLHaKvcsRgf1M+aVCBSF0gUheduAKfDsbDMT0judeMLhwBP34EUesTA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/-/esbuild-android-arm64-0.13.3.tgz}
     name: esbuild-android-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4075,7 +4075,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-darwin-64/0.13.3:
-    resolution: {integrity: sha1-NfKTdrdFGt158GQJgGg++SM2U4U=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/download/esbuild-darwin-64-0.13.3.tgz}
+    resolution: {integrity: sha512-8bG3Zq+ZNuLlIJebOO2+weI7P2LVf33sOzaUfHj8MuJ+1Ixe4KtQxfYp7qhFnP6xP2ToJaYHxGUfLeiUCEz9hw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/-/esbuild-darwin-64-0.13.3.tgz}
     name: esbuild-darwin-64
     version: 0.13.3
     cpu: [x64]
@@ -4085,7 +4085,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-darwin-arm64/0.13.3:
-    resolution: {integrity: sha1-UwoTJufRjWLJpUttznDyt37VDuw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-5E81eImYtTgh8pY7Gq4WQHhWkR/LvYadUXmuYeZBiP+3ADZJZcG60UFceZrjqNPaFOWKr/xmh4aNocwagEubcA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.13.3.tgz}
     name: esbuild-darwin-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4095,7 +4095,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-64/0.13.3:
-    resolution: {integrity: sha1-ziiWrDYuBuuCyl3sBrJWiQHrWvw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/download/esbuild-freebsd-64-0.13.3.tgz}
+    resolution: {integrity: sha512-ou+f91KkTGexi8HvF/BdtsITL6plbciQfZGys7QX6/QEwyE96PmL5KnU6ZQwoU7E99Ts6Sc9bUDq8HXJubKtBA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.13.3.tgz}
     name: esbuild-freebsd-64
     version: 0.13.3
     cpu: [x64]
@@ -4105,7 +4105,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-freebsd-arm64/0.13.3:
-    resolution: {integrity: sha1-ogRU+Z4GC+pORl0TFVap8FM/QD8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-F1zV7nySjHswJuvIgjkiG5liZ63MeazDGXGKViTCeegjZ71sAhOChcaGhKcu6vq9+vqZxlfEi1fmXlx6Pc3coQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.13.3.tgz}
     name: esbuild-freebsd-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4115,7 +4115,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-32/0.13.3:
-    resolution: {integrity: sha1-rVbxggjs8AfNmrFs05YmygMSuO4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-32/download/esbuild-linux-32-0.13.3.tgz}
+    resolution: {integrity: sha512-mHHc2v6uLrHH4zaaq5RB/5IWzgimEJ1HGldzf1qtGI513KZWfH0HRRQ8p1di4notJgBn7tDzWQ1f34ZHy69viQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-32/-/esbuild-linux-32-0.13.3.tgz}
     name: esbuild-linux-32
     version: 0.13.3
     cpu: [ia32]
@@ -4125,7 +4125,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-64/0.13.3:
-    resolution: {integrity: sha1-vh6rrfaNFTiX7Yh2ePdJbTlJgQ8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-64/download/esbuild-linux-64-0.13.3.tgz}
+    resolution: {integrity: sha512-FJ1De2O89mrOuqtaEXu41qIYJU6R41F+OA6vheNwcAQcX8fu0aiA13FJeLABq29BYJuTVgRj3cyC8q+tz19/dQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.13.3.tgz}
     name: esbuild-linux-64
     version: 0.13.3
     cpu: [x64]
@@ -4135,7 +4135,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-arm/0.13.3:
-    resolution: {integrity: sha1-s7MWfJ1dMDiJT7x1sZSk++k+rwk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/download/esbuild-linux-arm-0.13.3.tgz}
+    resolution: {integrity: sha512-9BJNRtLwBh3OP22cln9g3AJdbAQUcjRHqA4BScx9k4RZpGqPokFr548zpeplxWhcwrIjT8qPebwH9CrRVy8Bsw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/-/esbuild-linux-arm-0.13.3.tgz}
     name: esbuild-linux-arm
     version: 0.13.3
     cpu: [arm]
@@ -4145,7 +4145,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-arm64/0.13.3:
-    resolution: {integrity: sha1-MpNIu0oZz7XpBGzF2XulAX2PdK0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/download/esbuild-linux-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-Cauhr45KSo+wRUojs+1qfycQqQCAXTOvsWvkZ6xmEMAXLAm+f8RQGDQeP8CAf8Yeelnegcn6UNdvzdzLHhWDFg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.13.3.tgz}
     name: esbuild-linux-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4155,7 +4155,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-mips64le/0.13.3:
-    resolution: {integrity: sha1-6haH8o6iyFOZ7ML+I6SKs0O3s10=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.13.3.tgz}
+    resolution: {integrity: sha512-YVzJUGCncuuLm2boYyVeuMFsak4ZAhdiBwi0xNDZCC8sy+tS6Boe2mzcrD2uubv5JKAUOrpN186S1DtU4WgBgw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.13.3.tgz}
     name: esbuild-linux-mips64le
     version: 0.13.3
     cpu: [mips64el]
@@ -4165,7 +4165,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-linux-ppc64le/0.13.3:
-    resolution: {integrity: sha1-pGLPQurj1/wpqfJ3Z59a3ucK+mc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.13.3.tgz}
+    resolution: {integrity: sha512-GU6CqqKtJEoyxC2QWHiJtmuOz9wc/jMv8ZloK2WwiGY5yMvAmM3PI103Dj7xcjebNTHBqITTUw/aigY1wx5A3w==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.13.3.tgz}
     name: esbuild-linux-ppc64le
     version: 0.13.3
     cpu: [ppc64]
@@ -4175,7 +4175,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-openbsd-64/0.13.3:
-    resolution: {integrity: sha1-DLFb2G0g6xnLVItTDxpTMZdTLPk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/download/esbuild-openbsd-64-0.13.3.tgz}
+    resolution: {integrity: sha512-HVpkgpn4BQt4BPDAjTOpeMub6mzNWw6Y3gaLQJrpbO24pws6ZwYkY24OI3/Uo3LDCbH6856MM81JxECt92OWjA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.13.3.tgz}
     name: esbuild-openbsd-64
     version: 0.13.3
     cpu: [x64]
@@ -4185,7 +4185,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-sunos-64/0.13.3:
-    resolution: {integrity: sha1-U6lBJB+IEBCWnMjxrLGtpJxM08I=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/download/esbuild-sunos-64-0.13.3.tgz}
+    resolution: {integrity: sha512-XncBVOtnEfUbPV4CaiFBxh38ychnBfwCxuTm9iAqcHzIwkmeNRN5qMzDyfE1jyfJje+Bbt6AvIfz6SdYt8/UEQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/-/esbuild-sunos-64-0.13.3.tgz}
     name: esbuild-sunos-64
     version: 0.13.3
     cpu: [x64]
@@ -4195,7 +4195,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-32/0.13.3:
-    resolution: {integrity: sha1-Jl3A0M21N0aFqFHFhIVwVeEoZaQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-32/download/esbuild-windows-32-0.13.3.tgz}
+    resolution: {integrity: sha512-ZlgDz7d1nk8wQACi+z8IDzNZVUlN9iprAme+1YSTsfFDlkyI8jeaGWPk9EQFNY7rJzsLVYm6eZ2mhPioc7uT5A==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-32/-/esbuild-windows-32-0.13.3.tgz}
     name: esbuild-windows-32
     version: 0.13.3
     cpu: [ia32]
@@ -4205,7 +4205,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-64/0.13.3:
-    resolution: {integrity: sha1-rnEMBinsjDnF7x9p6G7VWSu0Eo8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-64/download/esbuild-windows-64-0.13.3.tgz}
+    resolution: {integrity: sha512-YX7KvRez3TR+GudlQm9tND/ssj2FsF9vb8ZWzAoZOLxpPzE3y+3SFJNrfDzzQKPzJ0Pnh9KBP4gsaMwJjKHDhw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.13.3.tgz}
     name: esbuild-windows-64
     version: 0.13.3
     cpu: [x64]
@@ -4215,7 +4215,7 @@ packages:
     optional: true
 
   registry.npmmirror.com/esbuild-windows-arm64/0.13.3:
-    resolution: {integrity: sha1-ojYZmiaxIFVz3LVx+WYYkyakyVM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/download/esbuild-windows-arm64-0.13.3.tgz}
+    resolution: {integrity: sha512-nP7H0Y2a6OJd3Qi1Q8sehhyP4x4JoXK4S5y6FzH2vgaJgiyEurzFxjUufGdMaw+RxtxiwD/uRndUgwaZ2JD8lg==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.13.3.tgz}
     name: esbuild-windows-arm64
     version: 0.13.3
     cpu: [arm64]
@@ -4782,7 +4782,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fsevents/download/fsevents-2.3.2.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
     name: fsevents
     version: 2.3.2
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -4957,17 +4957,12 @@ packages:
     version: 1.1.0
     dev: true
 
-  registry.npmmirror.com/history/4.10.1:
-    resolution: {integrity: sha1-MzcaZeOoOyZ0NOKz87G0xYqtTPM=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/history/download/history-4.10.1.tgz}
+  registry.npmmirror.com/history/5.3.0:
+    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/history/-/history-5.3.0.tgz}
     name: history
-    version: 4.10.1
+    version: 5.3.0
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
-      loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      resolve-pathname: registry.npmmirror.com/resolve-pathname/3.0.0
-      tiny-invariant: registry.npmmirror.com/tiny-invariant/1.1.0
-      tiny-warning: registry.npmmirror.com/tiny-warning/1.0.3
-      value-equal: registry.npmmirror.com/value-equal/1.0.1
     dev: false
 
   registry.npmmirror.com/hoist-non-react-statics/3.3.2:
@@ -5423,12 +5418,6 @@ packages:
     dependencies:
       is-docker: registry.npmmirror.com/is-docker/2.2.1
     dev: true
-
-  registry.npmmirror.com/isarray/0.0.1:
-    resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/isarray/download/isarray-0.0.1.tgz}
-    name: isarray
-    version: 0.0.1
-    dev: false
 
   registry.npmmirror.com/isexe/2.0.0:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/isexe/download/isexe-2.0.0.tgz}
@@ -6254,21 +6243,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  registry.npmmirror.com/mini-create-react-context/0.4.1_prop-types@15.7.2+react@17.0.2:
-    resolution: {integrity: sha1-ByFxVhv9ySLaCKYMIZekl8wtHV4=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mini-create-react-context/download/mini-create-react-context-0.4.1.tgz}
-    id: registry.npmmirror.com/mini-create-react-context/0.4.1
-    name: mini-create-react-context
-    version: 0.4.1
-    peerDependencies:
-      prop-types: ^15.0.0
-      react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-    dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
-      prop-types: registry.npmmirror.com/prop-types/15.7.2
-      react: registry.npmmirror.com/react/17.0.2
-      tiny-warning: registry.npmmirror.com/tiny-warning/1.0.3
-    dev: false
-
   registry.npmmirror.com/mini-svg-data-uri/1.3.3:
     resolution: {integrity: sha1-kdLAn0XgVuXhBDNAuLN7p7UPT6w=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/mini-svg-data-uri/download/mini-svg-data-uri-1.3.3.tgz}
     name: mini-svg-data-uri
@@ -6639,14 +6613,6 @@ packages:
     resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/path-parse/download/path-parse-1.0.7.tgz}
     name: path-parse
     version: 1.0.7
-
-  registry.npmmirror.com/path-to-regexp/1.8.0:
-    resolution: {integrity: sha1-iHs7qdhDk+h6CgufTLdWGYtTVIo=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/path-to-regexp/download/path-to-regexp-1.8.0.tgz?cache=0&sync_timestamp=1632963669854&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpath-to-regexp%2Fdownload%2Fpath-to-regexp-1.8.0.tgz}
-    name: path-to-regexp
-    version: 1.8.0
-    dependencies:
-      isarray: registry.npmmirror.com/isarray/0.0.1
-    dev: false
 
   registry.npmmirror.com/path-type/4.0.0:
     resolution: {integrity: sha1-hO0BwKe6OAr+CdkKjBgNzZ0DBDs=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/path-type/download/path-type-4.0.0.tgz}
@@ -7092,43 +7058,31 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/react-router-dom/5.3.0_react@17.0.2:
-    resolution: {integrity: sha1-2hv7U1oOiacSqTuX3Xb0etHzI2M=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-router-dom/download/react-router-dom-5.3.0.tgz}
-    id: registry.npmmirror.com/react-router-dom/5.3.0
+  registry.npmmirror.com/react-router-dom/6.3.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-router-dom/-/react-router-dom-6.3.0.tgz}
+    id: registry.npmmirror.com/react-router-dom/6.3.0
     name: react-router-dom
-    version: 5.3.0
+    version: 6.3.0
     peerDependencies:
-      react: '>=15'
+      react: '>=16.8'
+      react-dom: '>=16.8'
     dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
-      history: registry.npmmirror.com/history/4.10.1
-      loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      prop-types: registry.npmmirror.com/prop-types/15.7.2
+      history: registry.npmmirror.com/history/5.3.0
       react: registry.npmmirror.com/react/17.0.2
-      react-router: registry.npmmirror.com/react-router/5.2.1_react@17.0.2
-      tiny-invariant: registry.npmmirror.com/tiny-invariant/1.1.0
-      tiny-warning: registry.npmmirror.com/tiny-warning/1.0.3
+      react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
+      react-router: registry.npmmirror.com/react-router/6.3.0_react@17.0.2
     dev: false
 
-  registry.npmmirror.com/react-router/5.2.1_react@17.0.2:
-    resolution: {integrity: sha1-TS5OnVrpQlCRhFuNvG2dJ2I5d00=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-router/download/react-router-5.2.1.tgz}
-    id: registry.npmmirror.com/react-router/5.2.1
+  registry.npmmirror.com/react-router/6.3.0_react@17.0.2:
+    resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/react-router/-/react-router-6.3.0.tgz}
+    id: registry.npmmirror.com/react-router/6.3.0
     name: react-router
-    version: 5.2.1
+    version: 6.3.0
     peerDependencies:
-      react: '>=15'
+      react: '>=16.8'
     dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.15.4
-      history: registry.npmmirror.com/history/4.10.1
-      hoist-non-react-statics: registry.npmmirror.com/hoist-non-react-statics/3.3.2
-      loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      mini-create-react-context: registry.npmmirror.com/mini-create-react-context/0.4.1_prop-types@15.7.2+react@17.0.2
-      path-to-regexp: registry.npmmirror.com/path-to-regexp/1.8.0
-      prop-types: registry.npmmirror.com/prop-types/15.7.2
+      history: registry.npmmirror.com/history/5.3.0
       react: registry.npmmirror.com/react/17.0.2
-      react-is: registry.npmmirror.com/react-is/16.13.1
-      tiny-invariant: registry.npmmirror.com/tiny-invariant/1.1.0
-      tiny-warning: registry.npmmirror.com/tiny-warning/1.0.3
     dev: false
 
   registry.npmmirror.com/react-transition-group/4.4.2_react-dom@17.0.2+react@17.0.2:
@@ -7232,7 +7186,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/regenerator-runtime/0.13.9:
-    resolution: {integrity: sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz}
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz}
     name: regenerator-runtime
     version: 0.13.9
 
@@ -7362,12 +7316,6 @@ packages:
     version: 5.0.0
     engines: {node: '>=8'}
     dev: true
-
-  registry.npmmirror.com/resolve-pathname/3.0.0:
-    resolution: {integrity: sha1-mdAiJNPPJjaJvsuzk7xWAxMCXc0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/resolve-pathname/download/resolve-pathname-3.0.0.tgz}
-    name: resolve-pathname
-    version: 3.0.0
-    dev: false
 
   registry.npmmirror.com/resolve/1.20.0:
     resolution: {integrity: sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/resolve/download/resolve-1.20.0.tgz?cache=0&sync_timestamp=1634015220979&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fresolve%2Fdownload%2Fresolve-1.20.0.tgz}
@@ -8002,12 +7950,6 @@ packages:
     version: 2.3.8
     dev: true
 
-  registry.npmmirror.com/tiny-invariant/1.1.0:
-    resolution: {integrity: sha1-Y0xfjv3CdxS384bDXmdgmR0jCHU=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/tiny-invariant/download/tiny-invariant-1.1.0.tgz}
-    name: tiny-invariant
-    version: 1.1.0
-    dev: false
-
   registry.npmmirror.com/tiny-warning/1.0.3:
     resolution: {integrity: sha1-lKMNtFPfTGQ9D9VmBg1gqHXYR1Q=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/tiny-warning/download/tiny-warning-1.0.3.tgz}
     name: tiny-warning
@@ -8361,12 +8303,6 @@ packages:
     name: v8-compile-cache
     version: 2.3.0
     dev: true
-
-  registry.npmmirror.com/value-equal/1.0.1:
-    resolution: {integrity: sha1-Hgt5THNMXAyt4XnEN9NW2TGjTWw=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/value-equal/download/value-equal-1.0.1.tgz}
-    name: value-equal
-    version: 1.0.1
-    dev: false
 
   registry.npmmirror.com/vfile-message/3.0.2:
     resolution: {integrity: sha1-236uvn/suFMBDy7xZkQn9Suvj3Q=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/vfile-message/download/vfile-message-3.0.2.tgz}
