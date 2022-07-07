@@ -2,6 +2,12 @@
 
 An alternative frontend for Zhejiang University CC98 Forum.
 
+## Preview
+
+![未登录](assets/screenshots/home_unauthenticated.png)
+![新帖](assets/screenshots/home_new-topics.png)
+![帖子](assets/screenshots/home_topic-posts.png)
+
 ## 特性
 
 - 侧边 Drawer 打开帖子，避免浏览体验被切换标签页或后退操作打断
